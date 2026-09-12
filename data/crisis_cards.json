@@ -1,0 +1,600 @@
+{
+  "version": "1.1",
+  "total_events": 22,
+  "events": [
+    {
+      "id": "EVENT_MONETARY_HIKE",
+      "title": "Emergency 100bps Central Bank Rate Hike",
+      "event_type": "Sudden",
+      "category": "Monetary Policy",
+      "headline": "Central Bank Announces Emergency 100bps Policy Rate Hike Amid Persistent Inflation",
+      "context_description": "With core CPI reading above 7.8%, the central bank enacts aggressive monetary tightening to crush inflation expectations. Borrowing costs surge across the banking system, discounting future earnings multiples.",
+      "planning_window_available": false,
+      "historical_precedent": "Similar to the Federal Reserve Volcker-era tightening (1980) and the aggressive 2022 global rate hike cycle.",
+      "investor_wisdom_quote": "Ray Dalio (Principles for Navigating Big Debt Crises): When inflation rises and central banks tighten credit, cash becomes king in the short run, while long-duration equities and bonds suffer valuation compression.",
+      "sector_impacts": {
+        "Information Technology": -0.14,
+        "FMCG & Consumer Staples": -0.02,
+        "Banking & Financial Services": 0.03,
+        "Healthcare & Pharmaceuticals": -0.03,
+        "Energy & Utilities": -0.05,
+        "Real Estate & Infrastructure": -0.11
+      },
+      "asset_impacts": {
+        "COMM_GOLD": -0.03,
+        "COMM_SILVER": -0.05,
+        "FI_TBILL_SHORT": 0.015,
+        "FI_BOND_LONG": -0.09,
+        "CASH_MMF": 0.012,
+        "CRYPTO_BENCH": -0.18
+      }
+    },
+    {
+      "id": "EVENT_MONSOON_DEFICIT",
+      "title": "Monsoon Drought Forecast (El Nino Pattern)",
+      "event_type": "Seasonal",
+      "category": "Climate & Seasonal",
+      "headline": "Meteorological Agencies Confirm Severe El Nino Drought Warning Across Agricultural Belts",
+      "context_description": "Seasonal forecasts indicate a 35% shortfall in monsoon precipitation. Rural purchasing power is projected to collapse over the coming quarters, while food inflation pressures begin mounting.",
+      "planning_window_available": true,
+      "historical_precedent": "Similar to the 2009 and 2014-2015 El Niño droughts that severely impacted South Asian rural domestic consumption.",
+      "investor_wisdom_quote": "Peter Lynch (One Up On Wall Street): Beware of cyclical businesses pretending to be growth companies. When the macro agricultural cycle turns against rural spending, consumer discretionary and farm equipment stocks face severe earnings downgrades.",
+      "sector_impacts": {
+        "Information Technology": 0.01,
+        "FMCG & Consumer Staples": -0.09,
+        "Banking & Financial Services": -0.04,
+        "Healthcare & Pharmaceuticals": 0.02,
+        "Energy & Utilities": 0.04,
+        "Real Estate & Infrastructure": -0.05
+      },
+      "asset_impacts": {
+        "COMM_GOLD": 0.04,
+        "COMM_SILVER": 0.02,
+        "FI_TBILL_SHORT": 0.005,
+        "FI_BOND_LONG": -0.02,
+        "CASH_MMF": 0.01,
+        "CRYPTO_BENCH": -0.02
+      }
+    },
+    {
+      "id": "EVENT_TARIFF_CHIPS",
+      "title": "30% Punitive Tariff on Semiconductor & Tech Imports",
+      "event_type": "Sudden",
+      "category": "Fiscal & Trade Policy",
+      "headline": "Government Slaps 30% Retaliatory Import Tariffs on Advanced Electronics and Microchips",
+      "context_description": "National security tensions trigger immediate trade sanctions and component tariffs. Tech hardware manufacturers face skyrocketing production input costs and delayed delivery contracts.",
+      "planning_window_available": false,
+      "historical_precedent": "Similar to the US-China Section 301 tariffs on electronics and semiconductors enacted in 2018-2019.",
+      "investor_wisdom_quote": "Howard Marks (Mastering the Market Cycle): In investing, risk is what happens when assumptions of frictionless global supply chains meet geopolitical reality. Pricing power is the only true defense against tariff shocks.",
+      "sector_impacts": {
+        "Information Technology": -0.16,
+        "FMCG & Consumer Staples": -0.01,
+        "Banking & Financial Services": -0.03,
+        "Healthcare & Pharmaceuticals": 0.0,
+        "Energy & Utilities": 0.02,
+        "Real Estate & Infrastructure": -0.03
+      },
+      "asset_impacts": {
+        "COMM_GOLD": 0.03,
+        "COMM_SILVER": 0.01,
+        "FI_TBILL_SHORT": 0.005,
+        "FI_BOND_LONG": 0.01,
+        "CASH_MMF": 0.01,
+        "CRYPTO_BENCH": -0.1
+      }
+    },
+    {
+      "id": "EVENT_PANDEMIC_LOCKDOWN",
+      "title": "Global Pandemic Emergency & Border Closures",
+      "event_type": "Sudden",
+      "category": "Pandemic & Health",
+      "headline": "WHO Declares Global Health Emergency; Nationwide Travel Bans and Stay-at-Home Orders Enacted",
+      "context_description": "Urban activity halts overnight. Physical retail, hotels, and commercial real estate suffer immediate revenue evaporation, while cloud software, healthcare, and home entertainment experience surge demand.",
+      "planning_window_available": false,
+      "historical_precedent": "The March 2020 COVID-19 pandemic liquidity freeze and subsequent stay-at-home rotation.",
+      "investor_wisdom_quote": "Nassim Nicholas Taleb (The Black Swan & Antifragile): Extreme fragilities in hyper-optimized just-in-time systems are revealed instantly during black swans. Assets that cannot survive months without revenue face immediate solvency crises.",
+      "sector_impacts": {
+        "Information Technology": 0.08,
+        "FMCG & Consumer Staples": 0.05,
+        "Banking & Financial Services": -0.12,
+        "Healthcare & Pharmaceuticals": 0.16,
+        "Energy & Utilities": -0.14,
+        "Real Estate & Infrastructure": -0.19
+      },
+      "asset_impacts": {
+        "COMM_GOLD": 0.09,
+        "COMM_SILVER": 0.03,
+        "FI_TBILL_SHORT": 0.01,
+        "FI_BOND_LONG": 0.08,
+        "CASH_MMF": 0.01,
+        "CRYPTO_BENCH": -0.15
+      }
+    },
+    {
+      "id": "EVENT_FISCAL_TAX_LOSS",
+      "title": "Fiscal Year-End Rebalancing & Tax-Loss Selling",
+      "event_type": "Seasonal",
+      "category": "Institutional Calendar",
+      "headline": "Q4 Fiscal Year-End Window Opens: Institutional Funds Execute Tax-Loss Harvesting and Window-Dressing",
+      "context_description": "Asset managers actively lock in losses on underperforming mid and small caps to offset capital gains taxes before fiscal year close. Broad equities experience temporary structural selling pressure irrespective of positive fundamentals.",
+      "planning_window_available": true,
+      "historical_precedent": "The well-documented December/March fiscal year-end seasonal tax-loss selling effect observed across global bourses.",
+      "investor_wisdom_quote": "Benjamin Graham (The Intelligent Investor): In the short run, the market is a voting machine driven by calendar technicalities and institutional rebalancing, but in the long run, it is a weighing machine. Temporary tax-loss dumps create bargains for the patient investor.",
+      "sector_impacts": {
+        "Information Technology": -0.04,
+        "FMCG & Consumer Staples": -0.01,
+        "Banking & Financial Services": -0.02,
+        "Healthcare & Pharmaceuticals": -0.02,
+        "Energy & Utilities": -0.02,
+        "Real Estate & Infrastructure": -0.05
+      },
+      "asset_impacts": {
+        "COMM_GOLD": 0.01,
+        "COMM_SILVER": 0.0,
+        "FI_TBILL_SHORT": 0.012,
+        "FI_BOND_LONG": 0.01,
+        "CASH_MMF": 0.01,
+        "CRYPTO_BENCH": -0.06
+      }
+    },
+    {
+      "id": "EVENT_GEOPOLITICAL_OIL",
+      "title": "Maritime Strait Blockade & Crude Oil Spike (/bbl)",
+      "event_type": "Sudden",
+      "category": "Geopolitical Conflict",
+      "headline": "Military Escalation Blocks Vital Strait; Brent Crude Spikes 40% Past /Barrel",
+      "context_description": "Supply disruptions choke international maritime transport. Energy producers reap windfall margins, while net energy-importing economies face immediate currency depreciation, transport cost inflation, and consumer spending contraction.",
+      "planning_window_available": false,
+      "historical_precedent": "The 1973 Yom Kippur War oil embargo and the 1990 Gulf War energy spike.",
+      "investor_wisdom_quote": "Ray Dalio (Principles for Navigating Big Debt Crises): Geopolitical supply shocks create cost-push stagflation. The only assets that reliably maintain purchasing power are energy commodities and gold.",
+      "sector_impacts": {
+        "Information Technology": -0.07,
+        "FMCG & Consumer Staples": -0.05,
+        "Banking & Financial Services": -0.04,
+        "Healthcare & Pharmaceuticals": -0.01,
+        "Energy & Utilities": 0.18,
+        "Real Estate & Infrastructure": -0.08
+      },
+      "asset_impacts": {
+        "COMM_GOLD": 0.12,
+        "COMM_SILVER": 0.08,
+        "FI_TBILL_SHORT": 0.01,
+        "FI_BOND_LONG": -0.06,
+        "CASH_MMF": 0.01,
+        "CRYPTO_BENCH": -0.05
+      }
+    },
+    {
+      "id": "EVENT_SUBSIDY_GREEN",
+      "title": "S Billion Sovereign Green Infrastructure Fund Launch",
+      "event_type": "Seasonal",
+      "category": "Fiscal & Trade Policy",
+      "headline": "Sovereign Investment Fund Deploys S Direct Capital Injection for Green Logistics & Power Grids",
+      "context_description": "New multi-year legislative subsidies provide 30% tax credits for solar installations, grid modernization, and commercial building energy retrofits, catalyzing capital deployment across energy utilities.",
+      "planning_window_available": true,
+      "historical_precedent": "Similar to the US Inflation Reduction Act (IRA) of 2022 and the European Green Deal transition stimulus.",
+      "investor_wisdom_quote": "Peter Lynch (One Up On Wall Street): When the government decides to pour direct subsidies into an industry with bipartisan backing, you do not need to guess if earnings will grow. The tailwind is guaranteed by the treasury.",
+      "sector_impacts": {
+        "Information Technology": 0.03,
+        "FMCG & Consumer Staples": 0.01,
+        "Banking & Financial Services": 0.02,
+        "Healthcare & Pharmaceuticals": 0.0,
+        "Energy & Utilities": 0.14,
+        "Real Estate & Infrastructure": 0.06
+      },
+      "asset_impacts": {
+        "COMM_GOLD": -0.01,
+        "COMM_SILVER": 0.06,
+        "FI_TBILL_SHORT": 0.01,
+        "FI_BOND_LONG": -0.01,
+        "CASH_MMF": 0.01,
+        "CRYPTO_BENCH": 0.04
+      }
+    },
+    {
+      "id": "EVENT_BANK_RUN_PANIC",
+      "title": "Regional Banking Liquidity Crisis & Deposit Flight",
+      "event_type": "Sudden",
+      "category": "Financial Contagion",
+      "headline": "Mid-Tier Commercial Lenders Face Heavy Deposit Withdrawals; Interbank Credit Spreads Blow Out",
+      "context_description": "Unrealized bond portfolio losses trigger fears of insolvency at regional lenders. Depositors rush to pull funds, forcing emergency credit facilities and flight into safe sovereign paper.",
+      "planning_window_available": false,
+      "historical_precedent": "The March 2023 Silicon Valley Bank and Signature Bank collapse in the US, and the 2008 Lehman interbank freeze.",
+      "investor_wisdom_quote": "Howard Marks (The Most Important Thing): In a crisis, liquidity is like oxygen: you do not notice it when it is present, but when it is gone, it is the only thing that matters. Financial leverage magnifies fragility.",
+      "sector_impacts": {
+        "Information Technology": -0.06,
+        "FMCG & Consumer Staples": 0.01,
+        "Banking & Financial Services": -0.17,
+        "Healthcare & Pharmaceuticals": 0.02,
+        "Energy & Utilities": -0.03,
+        "Real Estate & Infrastructure": -0.09
+      },
+      "asset_impacts": {
+        "COMM_GOLD": 0.08,
+        "COMM_SILVER": 0.03,
+        "FI_TBILL_SHORT": 0.02,
+        "FI_BOND_LONG": 0.07,
+        "CASH_MMF": 0.012,
+        "CRYPTO_BENCH": -0.12
+      }
+    },
+    {
+      "id": "EVENT_RATE_CUT_QE",
+      "title": "Coordinated Central Bank 75bps Rate Cut & QE",
+      "event_type": "Sudden",
+      "category": "Monetary Policy",
+      "headline": "Central Banks Enact Coordinated 75bps Rate Cut and Open Multi-Billion Dollar Liquidity Facilities",
+      "context_description": "Facing growth deceleration, monetary authorities slash benchmark rates and restart asset purchase programs. Yields collapse, flooding financial assets with surplus liquidity.",
+      "planning_window_available": false,
+      "historical_precedent": "The post-2008 Zero Interest Rate Policy (ZIRP) and March 2020 global monetary bazooka.",
+      "investor_wisdom_quote": "Ray Dalio (Principles for Navigating Big Debt Crises): When central banks engage in quantitative easing and print money to lower real interest rates, all financial assets reprice higher, with long-duration equities and gold benefiting most.",
+      "sector_impacts": {
+        "Information Technology": 0.15,
+        "FMCG & Consumer Staples": 0.03,
+        "Banking & Financial Services": -0.02,
+        "Healthcare & Pharmaceuticals": 0.04,
+        "Energy & Utilities": 0.06,
+        "Real Estate & Infrastructure": 0.12
+      },
+      "asset_impacts": {
+        "COMM_GOLD": 0.07,
+        "COMM_SILVER": 0.09,
+        "FI_TBILL_SHORT": -0.01,
+        "FI_BOND_LONG": 0.11,
+        "CASH_MMF": -0.015,
+        "CRYPTO_BENCH": 0.24
+      }
+    },
+    {
+      "id": "EVENT_GST_CONSUMPTION_BOOST",
+      "title": "Consumption Tax Rebate & Minimum Wage Increase",
+      "event_type": "Seasonal",
+      "category": "Fiscal & Trade Policy",
+      "headline": "Finance Ministry Announces 2% GST Holiday on Household Essentials and 8% Minimum Wage Boost",
+      "context_description": "Targeted fiscal policy stimulates lower-to-middle income purchasing power. Mass-market retail footfall and consumer staple consumption surge over the following two quarters.",
+      "planning_window_available": true,
+      "historical_precedent": "Similar to Japan and Singapore temporary household consumption vouchers and goods tax rebates.",
+      "investor_wisdom_quote": "Peter Lynch (One Up On Wall Street): Look for companies where customer volumes increase without requiring capital-intensive factory expansions. FMCG staples with entrenched shelf space capture wage stimulus instantly.",
+      "sector_impacts": {
+        "Information Technology": 0.02,
+        "FMCG & Consumer Staples": 0.11,
+        "Banking & Financial Services": 0.03,
+        "Healthcare & Pharmaceuticals": 0.02,
+        "Energy & Utilities": 0.01,
+        "Real Estate & Infrastructure": 0.03
+      },
+      "asset_impacts": {
+        "COMM_GOLD": 0.01,
+        "COMM_SILVER": 0.01,
+        "FI_TBILL_SHORT": 0.01,
+        "FI_BOND_LONG": -0.01,
+        "CASH_MMF": 0.01,
+        "CRYPTO_BENCH": 0.03
+      }
+    },
+    {
+      "id": "EVENT_CRYPTO_CRACKDOWN",
+      "title": "Strict Digital Asset Licensing & Exchange Oversight",
+      "event_type": "Sudden",
+      "category": "Regulatory & Technology",
+      "headline": "Securities Regulators Ban Unlicensed Crypto Derivatives and Mandate Full Reserve Audits",
+      "context_description": "Global financial watchdogs crack down on speculative offshore digital asset platforms. Excessive leverage unwinds rapidly, driving capital into traditional regulated havens.",
+      "planning_window_available": false,
+      "historical_precedent": "The 2021 China crypto ban and the 2022 FTX collapse-induced regulatory tightening.",
+      "investor_wisdom_quote": "Benjamin Graham (The Intelligent Investor): An investment operation is one which, upon thorough analysis, promises safety of principal and an adequate return. Operations not meeting these requirements are speculative. When regulation strikes, speculation suffers first.",
+      "sector_impacts": {
+        "Information Technology": -0.04,
+        "FMCG & Consumer Staples": 0.0,
+        "Banking & Financial Services": 0.02,
+        "Healthcare & Pharmaceuticals": 0.0,
+        "Energy & Utilities": 0.0,
+        "Real Estate & Infrastructure": 0.0
+      },
+      "asset_impacts": {
+        "COMM_GOLD": 0.04,
+        "COMM_SILVER": 0.02,
+        "FI_TBILL_SHORT": 0.01,
+        "FI_BOND_LONG": 0.01,
+        "CASH_MMF": 0.01,
+        "CRYPTO_BENCH": -0.32
+      }
+    },
+    {
+      "id": "EVENT_REAL_ESTATE_COOLING",
+      "title": "Macroprudential Property Cooling Measures",
+      "event_type": "Seasonal",
+      "category": "Fiscal & Trade Policy",
+      "headline": "Monetary Authority Enacts Higher Stamp Duties and Lowers Loan-to-Value (LTV) Borrowing Ratios",
+      "context_description": "To prevent housing market overheating, regulators hike property purchase stamp duties by 5% and tighten bank debt-servicing limits. Residential transaction volumes stall.",
+      "planning_window_available": true,
+      "historical_precedent": "Similar to Singapore periodic property market cooling measures (ABSD hikes and TDSR adjustments).",
+      "investor_wisdom_quote": "Howard Marks (Mastering the Market Cycle): Real estate cycles are notoriously prone to regulatory and credit intervention at the peak. When leverage is restricted by decree, developer margins face protracted compression.",
+      "sector_impacts": {
+        "Information Technology": 0.0,
+        "FMCG & Consumer Staples": 0.01,
+        "Banking & Financial Services": -0.03,
+        "Healthcare & Pharmaceuticals": 0.01,
+        "Energy & Utilities": 0.01,
+        "Real Estate & Infrastructure": -0.14
+      },
+      "asset_impacts": {
+        "COMM_GOLD": 0.02,
+        "COMM_SILVER": 0.01,
+        "FI_TBILL_SHORT": 0.012,
+        "FI_BOND_LONG": 0.02,
+        "CASH_MMF": 0.01,
+        "CRYPTO_BENCH": 0.01
+      }
+    },
+    {
+      "id": "EVENT_WINTER_ENERGY_FREEZE",
+      "title": "Severe Polar Vortex & Natural Gas Depletion",
+      "event_type": "Seasonal",
+      "category": "Climate & Seasonal",
+      "headline": "Sub-Zero Polar Vortex Sweeps Major Industrial Continents; Energy Reserves Fall Below 20% Capacity",
+      "context_description": "Unprecedented seasonal winter freezes drive heating electricity and gas consumption to historic highs. Wholesale power prices quadruple, straining industrial factories while power generators log record revenue.",
+      "planning_window_available": true,
+      "historical_precedent": "The European winter energy crunch of 2022-2023 and the 2021 Texas winter storm power grid crisis.",
+      "investor_wisdom_quote": "Ray Dalio (The All Weather Portfolio): Physical commodity demand has structural seasonality that cannot be postponed. In extreme weather, baseline commodities deliver anti-correlated protection against broader manufacturing slow-downs.",
+      "sector_impacts": {
+        "Information Technology": -0.03,
+        "FMCG & Consumer Staples": -0.02,
+        "Banking & Financial Services": -0.01,
+        "Healthcare & Pharmaceuticals": 0.01,
+        "Energy & Utilities": 0.16,
+        "Real Estate & Infrastructure": -0.04
+      },
+      "asset_impacts": {
+        "COMM_GOLD": 0.05,
+        "COMM_SILVER": 0.04,
+        "FI_TBILL_SHORT": 0.01,
+        "FI_BOND_LONG": -0.03,
+        "CASH_MMF": 0.01,
+        "CRYPTO_BENCH": -0.04
+      }
+    },
+    {
+      "id": "EVENT_SOVEREIGN_DEBT_DOWNGRADE",
+      "title": "Major Credit Agency Downgrades Global Sovereign Outlook",
+      "event_type": "Sudden",
+      "category": "Financial Contagion",
+      "headline": "Ratings Agency Cuts Sovereign Outlook to Negative; 10-Year Bond Yields Surge 45bps in Minutes",
+      "context_description": "Ballooning fiscal deficits prompt an unexpected credit rating warning. Bond prices tumble worldwide as foreign funds demand higher term premiums, sending shockwaves through leveraged real estate and equities.",
+      "planning_window_available": false,
+      "historical_precedent": "The August 2011 US debt downgrade by S&P and the 2010-2012 European Sovereign Debt Crisis.",
+      "investor_wisdom_quote": "Ray Dalio (How the Economic Machine Works): When governments borrow excessively to fund deficits, lenders eventually demand higher yields to compensate for inflation and debasement risk. Long-term bonds cease to act as safe havens.",
+      "sector_impacts": {
+        "Information Technology": -0.09,
+        "FMCG & Consumer Staples": -0.02,
+        "Banking & Financial Services": -0.06,
+        "Healthcare & Pharmaceuticals": -0.02,
+        "Energy & Utilities": -0.04,
+        "Real Estate & Infrastructure": -0.1
+      },
+      "asset_impacts": {
+        "COMM_GOLD": 0.09,
+        "COMM_SILVER": 0.05,
+        "FI_TBILL_SHORT": 0.015,
+        "FI_BOND_LONG": -0.12,
+        "CASH_MMF": 0.01,
+        "CRYPTO_BENCH": -0.07
+      }
+    },
+    {
+      "id": "EVENT_DEFENSE_BUDGET_SURGE",
+      "title": "Emergency 25% Increase in National Defense & Cyber Budgets",
+      "event_type": "Sudden",
+      "category": "Geopolitical Conflict",
+      "headline": "Parliament Authorizes Emergency S Supplemental Defense and Cybersecurity Procurement Act",
+      "context_description": "Escalating regional territorial friction spurs immediate allocation toward satellite communications, cybersecurity defense systems, and aerospace hardware suppliers.",
+      "planning_window_available": false,
+      "historical_precedent": "European defense budget expansions following the 2022 Ukraine geopolitical crisis.",
+      "investor_wisdom_quote": "Peter Lynch (One Up On Wall Street): Look for companies that have government contracts with guaranteed cost-plus margins. Defense spending acts as an economic stabilizer during periods of geopolitical uncertainty.",
+      "sector_impacts": {
+        "Information Technology": 0.06,
+        "FMCG & Consumer Staples": 0.0,
+        "Banking & Financial Services": 0.01,
+        "Healthcare & Pharmaceuticals": 0.01,
+        "Energy & Utilities": 0.03,
+        "Real Estate & Infrastructure": 0.04
+      },
+      "asset_impacts": {
+        "COMM_GOLD": 0.05,
+        "COMM_SILVER": 0.02,
+        "FI_TBILL_SHORT": 0.01,
+        "FI_BOND_LONG": -0.01,
+        "CASH_MMF": 0.01,
+        "CRYPTO_BENCH": -0.01
+      }
+    },
+    {
+      "id": "EVENT_BIOTECH_FAST_TRACK",
+      "title": "Healthcare Deregulation & Priority Drug Approval Pathway",
+      "event_type": "Seasonal",
+      "category": "Fiscal & Trade Policy",
+      "headline": "Health Sciences Authority Launches Accelerated 90-Day Priority Review for Generic & Novel Therapeutics",
+      "context_description": "Regulatory reform shortens clinical commercialization timelines by half. Pharmaceutical R&D and hospital networks see rapid margin expansion and renewed investment flows.",
+      "planning_window_available": true,
+      "historical_precedent": "Similar to the FDA Breakthrough Therapy designation and the 21st Century Cures Act.",
+      "investor_wisdom_quote": "Benjamin Graham (The Intelligent Investor): Real competitive moats are strengthened when bureaucratic barriers to bringing essential medicines to consumers are cleared. Look for established pharmaceutical firms with robust development pipelines.",
+      "sector_impacts": {
+        "Information Technology": 0.01,
+        "FMCG & Consumer Staples": 0.01,
+        "Banking & Financial Services": 0.01,
+        "Healthcare & Pharmaceuticals": 0.13,
+        "Energy & Utilities": 0.0,
+        "Real Estate & Infrastructure": 0.01
+      },
+      "asset_impacts": {
+        "COMM_GOLD": 0.0,
+        "COMM_SILVER": 0.0,
+        "FI_TBILL_SHORT": 0.01,
+        "FI_BOND_LONG": 0.0,
+        "CASH_MMF": 0.01,
+        "CRYPTO_BENCH": 0.02
+      }
+    },
+    {
+      "id": "EVENT_AI_PRODUCTIVITY_BOOM",
+      "title": "Generative AI & Enterprise Automation Breakthrough",
+      "event_type": "Sudden",
+      "category": "Technology & Innovation",
+      "headline": "Enterprise AI Adoption Hits Inflection Point; Corporate Operating Margins Expand 400bps",
+      "context_description": "Breakthroughs in autonomous software agents and neural processors trigger an unprecedented enterprise productivity upgrade cycle. Technology providers and semiconductor foundries log record enterprise backlog orders.",
+      "planning_window_available": false,
+      "historical_precedent": "The mid-1990s Internet commercialization boom and the 2023-2024 Generative AI infrastructure capex expansion.",
+      "investor_wisdom_quote": "Peter Lynch (One Up On Wall Street): When technological revolutions occur, look for companies that supply the essential tools and infrastructure. During a gold rush, sell the picks and shovels.",
+      "sector_impacts": {
+        "Information Technology": 0.19,
+        "FMCG & Consumer Staples": 0.03,
+        "Banking & Financial Services": 0.05,
+        "Healthcare & Pharmaceuticals": 0.06,
+        "Energy & Utilities": 0.04,
+        "Real Estate & Infrastructure": 0.02
+      },
+      "asset_impacts": {
+        "COMM_GOLD": -0.02,
+        "COMM_SILVER": 0.03,
+        "FI_TBILL_SHORT": 0.01,
+        "FI_BOND_LONG": -0.01,
+        "CASH_MMF": 0.01,
+        "CRYPTO_BENCH": 0.22
+      }
+    },
+    {
+      "id": "EVENT_BUMPER_MONSOON",
+      "title": "Bumper Monsoon Harvest & Rural Wealth Surge",
+      "event_type": "Seasonal",
+      "category": "Climate & Seasonal",
+      "headline": "Meteorological Agencies Record 108% Optimal Monsoon Rainfall; Agricultural Yields Reach Record High",
+      "context_description": "Ideal rainfall distribution across key breadbaskets yields historic harvests. Food inflation collapses to 1.2%, while rural disposable income and farm tractor/packaged goods sales surge by double digits.",
+      "planning_window_available": true,
+      "historical_precedent": "The 2016 bumper monsoon recovery following consecutive drought years in emerging South Asian markets.",
+      "investor_wisdom_quote": "Howard Marks (Mastering the Market Cycle): When climatic and cyclical conditions turn from headwind to powerful tailwind, operating leverage delivers massive positive earnings surprises.",
+      "sector_impacts": {
+        "Information Technology": 0.02,
+        "FMCG & Consumer Staples": 0.15,
+        "Banking & Financial Services": 0.06,
+        "Healthcare & Pharmaceuticals": 0.03,
+        "Energy & Utilities": -0.01,
+        "Real Estate & Infrastructure": 0.07
+      },
+      "asset_impacts": {
+        "COMM_GOLD": 0.04,
+        "COMM_SILVER": 0.05,
+        "FI_TBILL_SHORT": 0.01,
+        "FI_BOND_LONG": 0.03,
+        "CASH_MMF": 0.01,
+        "CRYPTO_BENCH": 0.03
+      }
+    },
+    {
+      "id": "EVENT_CORPORATE_TAX_CUT",
+      "title": "Landmark Corporate Tax Cut (25% -> 17%)",
+      "event_type": "Sudden",
+      "category": "Fiscal & Trade Policy",
+      "headline": "Parliament Slashes Corporate Tax Rate to 17% to Supercharge Foreign Direct Investment",
+      "context_description": "Government announces bold fiscal tax rationalization, reducing the corporate income tax rate by 800 basis points. Net corporate profits and return on equity (ROE) jump across all domestic industries.",
+      "planning_window_available": false,
+      "historical_precedent": "The US Tax Cuts and Jobs Act of 2017 and the 1986 Reagan corporate tax reforms.",
+      "investor_wisdom_quote": "Benjamin Graham (The Intelligent Investor): Intrinsic value is the discounted value of future cash distributions to shareholders. When tax burdens are permanently reduced, intrinsic valuation increases immediately across every productive enterprise.",
+      "sector_impacts": {
+        "Information Technology": 0.11,
+        "FMCG & Consumer Staples": 0.09,
+        "Banking & Financial Services": 0.13,
+        "Healthcare & Pharmaceuticals": 0.08,
+        "Energy & Utilities": 0.07,
+        "Real Estate & Infrastructure": 0.1
+      },
+      "asset_impacts": {
+        "COMM_GOLD": -0.01,
+        "COMM_SILVER": 0.02,
+        "FI_TBILL_SHORT": 0.01,
+        "FI_BOND_LONG": -0.02,
+        "CASH_MMF": 0.01,
+        "CRYPTO_BENCH": 0.12
+      }
+    },
+    {
+      "id": "EVENT_GOLDILOCKS_SOFT_LANDING",
+      "title": "Disinflation & The Goldilocks Soft Landing",
+      "event_type": "Seasonal",
+      "category": "Monetary Policy",
+      "headline": "Inflation Cools to Exact 2.0% Target While GDP Growth Accelerates to 5.4%; Soft Landing Achieved",
+      "context_description": "Consumer prices stabilize without triggering an economic contraction. Central banks declare the inflation cycle conquered and signal a stable, predictable interest rate environment.",
+      "planning_window_available": true,
+      "historical_precedent": "The 1994-1995 Federal Reserve soft landing and the post-WWII economic productivity expansions.",
+      "investor_wisdom_quote": "Ray Dalio (How the Economic Machine Works): The Goldilocks equilibrium occurs when growth is strong enough to expand profits but inflation is moderate enough that monetary policy remains neutral. It is the most hospitable environment for broad asset appreciation.",
+      "sector_impacts": {
+        "Information Technology": 0.12,
+        "FMCG & Consumer Staples": 0.05,
+        "Banking & Financial Services": 0.08,
+        "Healthcare & Pharmaceuticals": 0.04,
+        "Energy & Utilities": 0.03,
+        "Real Estate & Infrastructure": 0.09
+      },
+      "asset_impacts": {
+        "COMM_GOLD": 0.01,
+        "COMM_SILVER": 0.03,
+        "FI_TBILL_SHORT": 0.01,
+        "FI_BOND_LONG": 0.06,
+        "CASH_MMF": 0.01,
+        "CRYPTO_BENCH": 0.14
+      }
+    },
+    {
+      "id": "EVENT_FREE_TRADE_ACCORD",
+      "title": "Comprehensive Regional Free Trade Accord Signed",
+      "event_type": "Seasonal",
+      "category": "Fiscal & Trade Policy",
+      "headline": "Major 12-Nation Free Trade Accord Takes Effect; Tariffs Eliminated on 90% of Goods & Tech",
+      "context_description": "Borders open for tariff-free trade across electronic components, medical supplies, and consumer goods. Export volumes surge while maritime supply chain congestion clears.",
+      "planning_window_available": true,
+      "historical_precedent": "The signing of NAFTA in 1994 and the ASEAN Free Trade Area (AFTA) implementation.",
+      "investor_wisdom_quote": "John Bogle (The Little Book of Common Sense Investing): Real economic wealth is generated by productive businesses serving expanding markets with lower structural costs. Free trade expands the total economic pie.",
+      "sector_impacts": {
+        "Information Technology": 0.1,
+        "FMCG & Consumer Staples": 0.07,
+        "Banking & Financial Services": 0.05,
+        "Healthcare & Pharmaceuticals": 0.09,
+        "Energy & Utilities": 0.02,
+        "Real Estate & Infrastructure": 0.06
+      },
+      "asset_impacts": {
+        "COMM_GOLD": -0.01,
+        "COMM_SILVER": 0.04,
+        "FI_TBILL_SHORT": 0.01,
+        "FI_BOND_LONG": 0.01,
+        "CASH_MMF": 0.01,
+        "CRYPTO_BENCH": 0.06
+      }
+    },
+    {
+      "id": "EVENT_SOVEREIGN_INFRA_INJECTION",
+      "title": "S Billion Sovereign Green Infrastructure Fund Launch",
+      "event_type": "Sudden",
+      "category": "Fiscal & Trade Policy",
+      "headline": "Sovereign Investment Fund Deploys S Direct Capital Injection for Green Logistics & Power Grids",
+      "context_description": "Massive institutional public-private partnership capital lands on domestic industrial REITs, grid modernization utilities, and high-tech manufacturing parks.",
+      "planning_window_available": false,
+      "historical_precedent": "Singapore GIC/Temasek strategic national cluster investments and the European NextGenerationEU recovery stimulus.",
+      "investor_wisdom_quote": "Peter Lynch (One Up On Wall Street): Follow the institutional capital flows. When sovereign money anchors long-term infrastructure projects, contracting firms and real estate developers reap years of guaranteed revenue.",
+      "sector_impacts": {
+        "Information Technology": 0.04,
+        "FMCG & Consumer Staples": 0.01,
+        "Banking & Financial Services": 0.04,
+        "Healthcare & Pharmaceuticals": 0.01,
+        "Energy & Utilities": 0.16,
+        "Real Estate & Infrastructure": 0.15
+      },
+      "asset_impacts": {
+        "COMM_GOLD": 0.02,
+        "COMM_SILVER": 0.06,
+        "FI_TBILL_SHORT": 0.01,
+        "FI_BOND_LONG": 0.0,
+        "CASH_MMF": 0.01,
+        "CRYPTO_BENCH": 0.05
+      }
+    }
+  ]
+}
