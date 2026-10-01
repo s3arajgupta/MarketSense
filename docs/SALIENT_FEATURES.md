@@ -5,6 +5,7 @@ This document provides a continuous, institutional-grade catalog of the core arc
 ---
 
 ## 1. Multi-Asset Institutional Universe
+
 - **24 Granular Financial Instruments:**
   - **Equities (18 Assets):** 6 sectors (Information Technology, Financials, Healthcare, Consumer Discretionary, Industrials, Energy) $\times$ 3 market capitalizations (Large Cap, Mid Cap, Small Cap).
   - **Commodities (2 Assets):** Gold (`COMM_GOLD`) and Crude Energy Basket (`COMM_OIL`).
@@ -17,6 +18,7 @@ This document provides a continuous, institutional-grade catalog of the core arc
 ---
 
 ## 2. Macroeconomic Crisis & Event Engine
+
 - **22 Historically Grounded Crisis Cards:**
   - Spans **Seasonal / Structural** cycles (Earnings Season, Tech Breakthrough, Tax Year-End) and **Sudden Black Swan Shocks** (1973 Oil Embargo, 1997 Asian Financial Crisis, 2000 Dot-Com Crash, 2008 Global Financial Crisis, 2011 Sovereign Debt Crisis, 2020 COVID Crash, 2022 Fed Rate Hike Shock, 2023 Bank Run / SVB Collapse).
 - **Two-Phase Event Lifecycle:**
@@ -26,6 +28,7 @@ This document provides a continuous, institutional-grade catalog of the core arc
 ---
 
 ## 3. Circuit Breaker & Behavioral Discipline
+
 - **Locked Selling During Black Swan Shocks:**
   - In a sudden macro shock, the simulation freezes selling to emulate real-world market halts and liquidity evaporation.
   - Investors cannot front-run crashes at pre-shock valuations; they must advance the quarter and let pre-existing diversification and cash buffers absorb the shock.
@@ -34,6 +37,7 @@ This document provides a continuous, institutional-grade catalog of the core arc
 ---
 
 ## 4. Institutional Financial Friction & Tax Drag
+
 - **Differential Capital Gains Tax (STCG vs. LTCG):**
   - **Short-Term Capital Gains (STCG - 25%):** Applied to profitable positions held for fewer than 4 quarters (<1 year).
   - **Long-Term Capital Gains (LTCG - 10%):** Rewarded to patient investors holding assets for 4 or more quarters ($\ge$1 year).
@@ -45,7 +49,9 @@ This document provides a continuous, institutional-grade catalog of the core arc
 ---
 
 ## 5. Parallel Passive Institutional Benchmarks
+
 Tracks three institutional reference portfolios dynamically alongside the trainee:
+
 1. **100% Pure Equity Index:** Unhedged market risk proxy.
 2. **Classic 60/40 Benchmark:** 60% Global Equities, 20% Short T-Bills, 20% Long Sovereign Bonds.
 3. **Ray Dalio All-Weather Portfolio (Risk Parity):**
@@ -55,6 +61,7 @@ Tracks three institutional reference portfolios dynamically alongside the traine
 ---
 
 ## 6. Institutional Hybrid Inflation & Purchasing Power Hurdle
+
 - **Dynamic Event-Driven Inflation:**
   - Every macro crisis card dynamically sets the macroeconomic inflation rate (e.g., Oil Shocks at 8.9% p.a., Rate Hikes at 7.8% p.a., Tech Booms at 1.8% p.a., Baseline at 2.5% p.a.).
 - **Cumulative CPI Hurdle Line:**
@@ -68,6 +75,7 @@ Tracks three institutional reference portfolios dynamically alongside the traine
 ---
 
 ## 7. Dual-Engine AI Mentor (Cloud Gemini vs. Air-Gapped Ollama)
+
 - **Runtime Selector in Sidebar:**
   - **☁️ Cloud (Google Gemini 2.5 Flash):** High-speed (~1.5s) token streaming via Google GenAI SDK.
   - **💻 Local (Air-Gapped Ollama):** 100% private, offline inference over local HTTP daemon (`localhost:11434`), zero cloud telemetry.
@@ -77,6 +85,7 @@ Tracks three institutional reference portfolios dynamically alongside the traine
 ---
 
 ## 8. Socratic Grounded AI Reasoning (RAG)
+
 - **Curated Wisdom Corpus:**
   - Vectorized knowledge base containing wisdom chunks from **Benjamin Graham**, **Ray Dalio**, **Howard Marks**, **Peter Lynch**, **John Bogle**, and **Nassim Nicholas Taleb**, plus 7 landmark historical crisis case studies.
 - **Hard Guardrails:**
@@ -87,6 +96,7 @@ Tracks three institutional reference portfolios dynamically alongside the traine
 ---
 
 ## 9. Comprehensive Automated Test Suite
+
 - **13 Automated Pytest Verifications (`tests/`):**
   - Asset universe schema & attribute integrity.
   - Crisis event categorization & inflation rates.
@@ -104,6 +114,7 @@ Tracks three institutional reference portfolios dynamically alongside the traine
 ---
 
 ## 10. Simulation Flight Controls: Continuous Time Travel (Play / Pause / Fast Forward)
+
 - **Interactive Simulation Player:**
   - **▶️ Play Simulation:** Runs continuously quarter-by-quarter (~0.8s per quarter). In each step, an authentic crisis card event is drawn from the library, macroeconomic price shocks are calculated, benchmarks compound dynamic inflation, and the chart updates dynamically.
   - **⏸️ Pause Simulation:** Halts playback instantly on the current quarter so the trainee can inspect the event headline/precedent/inflation in the right column, execute tactical trades, review holdings, or request a Socratic debrief from the AI Mentor.
@@ -117,4 +128,3 @@ Tracks three institutional reference portfolios dynamically alongside the traine
   - Calculates total lifetime friction drag (taxes vs brokerage fees).
 - **AI Mentor Multi-Decade Career Retrospective:**
   - Socratic evaluation analyzing whether the trainee's strategy defeated inflation, suffered from cash drag, or surrendered excessive wealth to portfolio turnover.
-
