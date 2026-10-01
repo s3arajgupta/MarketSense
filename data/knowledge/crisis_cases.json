@@ -1,0 +1,72 @@
+[
+  {
+    "id": "crisis_1973_oil_embargo",
+    "text": "In 1973, OPEC proclaimed an oil embargo, quadrupling oil prices and triggering rampant stagflation. Equities plummeted and fixed income suffered due to high inflation, while commodities, specifically energy, surged. The key lesson: broad commodity exposure is essential to hedge against geopolitical supply shocks and stagflation.",
+    "source": "Historical Crisis Case Studies",
+    "author": "Financial Historian",
+    "tags": ["inflation", "crisis_management", "energy", "commodities", "geopolitics"],
+    "applicable_events": ["polar_vortex_energy", "maritime_strait_blockade", "defense_budget_surge"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["commodities", "equities", "fixed_income"]
+  },
+  {
+    "id": "crisis_1997_asian_financial",
+    "text": "The 1997 Asian Financial Crisis began when Thailand unpegged the baht, leading to massive currency devaluations across Asia. Emerging market equities collapsed and sovereign debt plunged. The key lesson: heavy reliance on foreign-denominated debt and fixed exchange rates creates immense structural fragility.",
+    "source": "Historical Crisis Case Studies",
+    "author": "Financial Historian",
+    "tags": ["currency", "debt_cycles", "crisis_management", "emerging_markets"],
+    "applicable_events": ["sovereign_debt_downgrade", "banking_liquidity_crisis", "emergency_rate_hike"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["equities", "fixed_income", "cash"]
+  },
+  {
+    "id": "crisis_2000_dot_com",
+    "text": "The 2000 Dot-Com Bubble burst when internet stocks with massive valuations and zero earnings faced rising rates. Tech equities suffered a devastating crash, while value stocks and fixed income offered safety. The key lesson: valuation always matters eventually, and unproven business models are highly vulnerable to tightening liquidity.",
+    "source": "Historical Crisis Case Studies",
+    "author": "Financial Historian",
+    "tags": ["market_cycles", "technology", "value_investing", "behavioral_finance"],
+    "applicable_events": ["generative_ai_breakthrough", "crypto_crackdown", "emergency_rate_hike"],
+    "market_cycle": "peak",
+    "asset_class_relevance": ["equities", "fixed_income"]
+  },
+  {
+    "id": "crisis_2008_gfc",
+    "text": "In 2008, the Global Financial Crisis was triggered by a subprime mortgage meltdown, leading to a massive banking liquidity crisis. Equities and real estate globally cratered, while US Treasuries and gold rallied. The key lesson: highly leveraged, opaque financial derivatives can cause systemic contagion, underscoring the need for safe havens.",
+    "source": "Historical Crisis Case Studies",
+    "author": "Financial Historian",
+    "tags": ["debt_cycles", "real_estate", "banking_liquidity", "safe_havens"],
+    "applicable_events": ["banking_liquidity_crisis", "property_cooling_measures", "coordinated_rate_cut_qe"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["equities", "real_estate", "fixed_income", "commodities"]
+  },
+  {
+    "id": "crisis_2013_taper_tantrum",
+    "text": "The 2013 Taper Tantrum occurred when the US Federal Reserve hinted at reducing quantitative easing, causing a sudden spike in Treasury yields. Fixed income sold off sharply, and emerging markets faced capital flight, though equities eventually recovered. The key lesson: markets can react violently to shifts in central bank liquidity expectations.",
+    "source": "Historical Crisis Case Studies",
+    "author": "Financial Historian",
+    "tags": ["monetary_policy", "interest_rates", "fixed_income"],
+    "applicable_events": ["emergency_rate_hike", "sovereign_debt_downgrade"],
+    "market_cycle": "recovery",
+    "asset_class_relevance": ["fixed_income", "equities"]
+  },
+  {
+    "id": "crisis_2020_covid",
+    "text": "The 2020 COVID-19 pandemic caused the fastest, steepest equity market crash in history, followed by unprecedented global stimulus. Every asset crashed initially in a rush to cash, before coordinated monetary and fiscal injections triggered a massive V-shaped rally. The key lesson: extreme central bank intervention can rapidly reverse fundamental economic damage in financial markets.",
+    "source": "Historical Crisis Case Studies",
+    "author": "Financial Historian",
+    "tags": ["monetary_policy", "fiscal_policy", "healthcare", "crisis_management"],
+    "applicable_events": ["global_pandemic", "coordinated_rate_cut_qe", "biotech_fast_track"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["equities", "cash", "commodities"]
+  },
+  {
+    "id": "crisis_2022_rate_hikes",
+    "text": "In 2022, global central banks aggressively hiked interest rates to combat generationally high inflation. Both equities and fixed income fell simultaneously, breaking the traditional 60/40 portfolio correlation, while cash and energy outperformed. The key lesson: inflation-driven tightening cycles eliminate the diversification benefit of bonds, requiring alternatives like commodities.",
+    "source": "Historical Crisis Case Studies",
+    "author": "Financial Historian",
+    "tags": ["inflation", "interest_rates", "monetary_policy", "diversification"],
+    "applicable_events": ["emergency_rate_hike", "polar_vortex_energy", "crypto_crackdown"],
+    "market_cycle": "peak",
+    "asset_class_relevance": ["equities", "fixed_income", "commodities", "cash"]
+  }
+]

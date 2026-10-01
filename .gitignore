@@ -1,4 +1,29 @@
+# Notes & Reports
 /#Notes
-/.venv
-/__pycache__
 /#OpusReports
+
+# Environment
+.env
+.venv/
+__pycache__/
+.pytest_cache
+*.pyc
+*.pyo
+
+# ChromaDB persistent storage
+chroma_db/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Distribution
+*.egg-info/
+dist/
+build/

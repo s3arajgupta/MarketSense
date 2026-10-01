@@ -1,4 +1,4 @@
-﻿"""
+"""
 MarketSense AI Portfolio State & Trade Management Engine
 Handles:
 - Multi-asset holdings & cash tracking in SGD
@@ -226,3 +226,66 @@ class Portfolio:
         self.history.append(snapshot)
 
         return snapshot
+
+    def get_max_drawdown(self) -> float:
+        """Calculates historical peak-to-trough maximum drawdown percentage."""
+        if not self.history:
+            return 0.0
+        peak = self.initial_cash
+        max_dd = 0.0
+        for entry in self.history:
+            nav = entry.get("nav", self.initial_cash)
+            if nav > peak:
+                peak = nav
+            elif peak > 0:
+                dd = (peak - nav) / peak * 100.0
+                if dd > max_dd:
+                    max_dd = dd
+        return round(max_dd, 2)
+
+    def rebalance(
+        self,
+        target_weights: Dict[str, float],
+        current_prices: Dict[str, float],
+        fee_rate: float = 0.0015,
+        stcg_rate: float = 0.25,
+        ltcg_rate: float = 0.10,
+    ) -> Dict[str, Any]:
+        """
+        Rebalances the portfolio back to target weights.
+        target_weights: Dict[asset_id, weight] where sum of non-cash weights <= 1.0
+        """
+        total_nav = self.get_nav(current_prices)
+        if total_nav <= 0:
+            return {"success": False, "message": "Zero NAV"}
+
+        # 1. First pass: Sell overweight positions to liberate cash
+        for a_id, h in list(self.holdings.items()):
+            if h["units"] <= 0:
+                continue
+            cur_p = current_prices.get(a_id, h["avg_cost"])
+            cur_val = h["units"] * cur_p
+            target_val = target_weights.get(a_id, 0.0) * total_nav
+
+            if cur_val > target_val:
+                val_to_trim = cur_val - target_val
+                units_to_sell = min(h["units"], val_to_trim / cur_p)
+                if units_to_sell > 0.0001:
+                    self.sell(a_id, units_to_sell, cur_p, fee_rate, stcg_rate, ltcg_rate)
+
+        # 2. Second pass: Buy underweight positions with available cash
+        total_nav = self.get_nav(current_prices)
+        for a_id, target_weight in target_weights.items():
+            if a_id in ["CASH_MMF", "CASH-SGD"] or target_weight <= 0:
+                continue
+            cur_p = current_prices.get(a_id, 100.0)
+            existing_units = self.holdings.get(a_id, {}).get("units", 0.0)
+            cur_val = existing_units * cur_p
+            target_val = target_weight * total_nav
+
+            if target_val > cur_val and self.cash > 10.0:
+                amount_to_invest = min(self.cash * 0.99, target_val - cur_val)
+                if amount_to_invest >= 10.0:
+                    self.buy(a_id, amount_to_invest, cur_p, fee_rate)
+
+        return {"success": True, "nav": self.get_nav(current_prices)}

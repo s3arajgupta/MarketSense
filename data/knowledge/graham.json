@@ -1,0 +1,52 @@
+[
+  {
+    "id": "graham_margin_safety_01",
+    "text": "The function of the margin of safety is, in essence, that of rendering unnecessary an accurate estimate of the future. By demanding a significant discount to intrinsic value, the investor creates a buffer against errors in judgment or unforeseen market developments.",
+    "source": "Benjamin Graham — The Intelligent Investor",
+    "author": "Benjamin Graham",
+    "tags": ["value_investing", "risk_management", "margin_of_safety"],
+    "applicable_events": ["banking_liquidity_crisis", "emergency_rate_hike", "sovereign_debt_downgrade"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["equities", "fixed_income"]
+  },
+  {
+    "id": "graham_mr_market_01",
+    "text": "Imagine you are partners with 'Mr. Market', who tells you what he thinks your interest is worth and offers to buy or sell. When he is gripped by panic, you should ignore his irrationality or take advantage of it, rather than letting it dictate your own valuation.",
+    "source": "Benjamin Graham — The Intelligent Investor",
+    "author": "Benjamin Graham",
+    "tags": ["behavioral_finance", "market_cycles", "value_investing"],
+    "applicable_events": ["global_pandemic", "banking_liquidity_crisis", "fiscal_year_end_tax_selling"],
+    "market_cycle": "peak",
+    "asset_class_relevance": ["equities"]
+  },
+  {
+    "id": "graham_intrinsic_value_01",
+    "text": "In the short run, the market is a voting machine but in the long run, it is a weighing machine. Market price often diverges from intrinsic value due to emotional extremes, providing the disciplined investor opportunities to acquire solid assets cheaply.",
+    "source": "Benjamin Graham — Security Analysis",
+    "author": "Benjamin Graham",
+    "tags": ["value_investing", "market_cycles"],
+    "applicable_events": ["chip_tariff_30pct", "corporate_tax_cut", "generative_ai_breakthrough"],
+    "market_cycle": "recovery",
+    "asset_class_relevance": ["equities"]
+  },
+  {
+    "id": "graham_defensive_vs_enterprising_01",
+    "text": "The defensive investor must confine himself to the shares of important companies with a long record of profitable operations and in strong financial condition. The enterprising investor may look further afield, but only if they are willing to dedicate the time to continuous analysis.",
+    "source": "Benjamin Graham — The Intelligent Investor",
+    "author": "Benjamin Graham",
+    "tags": ["portfolio_construction", "defensive_investing", "risk_management"],
+    "applicable_events": ["banking_liquidity_crisis", "property_cooling_measures", "monsoon_drought"],
+    "market_cycle": "peak",
+    "asset_class_relevance": ["equities"]
+  },
+  {
+    "id": "graham_bond_allocation_01",
+    "text": "We have suggested as a fundamental guiding rule that the investor should never have less than 25% or more than 75% of his funds in common stocks, with a consequent inverse range of between 75% and 25% in bonds. This prevents complete capitulation during severe bear markets.",
+    "source": "Benjamin Graham — The Intelligent Investor",
+    "author": "Benjamin Graham",
+    "tags": ["diversification", "portfolio_construction", "fixed_income"],
+    "applicable_events": ["emergency_rate_hike", "coordinated_rate_cut_qe", "sovereign_debt_downgrade"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["equities", "fixed_income"]
+  }
+]

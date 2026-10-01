@@ -27,7 +27,8 @@
         "FI_BOND_LONG": -0.09,
         "CASH_MMF": 0.012,
         "CRYPTO_BENCH": -0.18
-      }
+      },
+      "annualized_inflation": 0.078
     },
     {
       "id": "EVENT_MONSOON_DEFICIT",
@@ -54,7 +55,8 @@
         "FI_BOND_LONG": -0.02,
         "CASH_MMF": 0.01,
         "CRYPTO_BENCH": -0.02
-      }
+      },
+      "annualized_inflation": 0.052
     },
     {
       "id": "EVENT_TARIFF_CHIPS",
@@ -81,7 +83,8 @@
         "FI_BOND_LONG": 0.01,
         "CASH_MMF": 0.01,
         "CRYPTO_BENCH": -0.1
-      }
+      },
+      "annualized_inflation": 0.045
     },
     {
       "id": "EVENT_PANDEMIC_LOCKDOWN",
@@ -108,7 +111,8 @@
         "FI_BOND_LONG": 0.08,
         "CASH_MMF": 0.01,
         "CRYPTO_BENCH": -0.15
-      }
+      },
+      "annualized_inflation": 0.065
     },
     {
       "id": "EVENT_FISCAL_TAX_LOSS",
@@ -135,7 +139,8 @@
         "FI_BOND_LONG": 0.01,
         "CASH_MMF": 0.01,
         "CRYPTO_BENCH": -0.06
-      }
+      },
+      "annualized_inflation": 0.024
     },
     {
       "id": "EVENT_GEOPOLITICAL_OIL",
@@ -162,7 +167,8 @@
         "FI_BOND_LONG": -0.06,
         "CASH_MMF": 0.01,
         "CRYPTO_BENCH": -0.05
-      }
+      },
+      "annualized_inflation": 0.089
     },
     {
       "id": "EVENT_SUBSIDY_GREEN",
@@ -189,7 +195,8 @@
         "FI_BOND_LONG": -0.01,
         "CASH_MMF": 0.01,
         "CRYPTO_BENCH": 0.04
-      }
+      },
+      "annualized_inflation": 0.028
     },
     {
       "id": "EVENT_BANK_RUN_PANIC",
@@ -216,7 +223,8 @@
         "FI_BOND_LONG": 0.07,
         "CASH_MMF": 0.012,
         "CRYPTO_BENCH": -0.12
-      }
+      },
+      "annualized_inflation": 0.012
     },
     {
       "id": "EVENT_RATE_CUT_QE",
@@ -243,7 +251,8 @@
         "FI_BOND_LONG": 0.11,
         "CASH_MMF": -0.015,
         "CRYPTO_BENCH": 0.24
-      }
+      },
+      "annualized_inflation": 0.035
     },
     {
       "id": "EVENT_GST_CONSUMPTION_BOOST",
@@ -270,7 +279,8 @@
         "FI_BOND_LONG": -0.01,
         "CASH_MMF": 0.01,
         "CRYPTO_BENCH": 0.03
-      }
+      },
+      "annualized_inflation": 0.042
     },
     {
       "id": "EVENT_CRYPTO_CRACKDOWN",
@@ -297,7 +307,8 @@
         "FI_BOND_LONG": 0.01,
         "CASH_MMF": 0.01,
         "CRYPTO_BENCH": -0.32
-      }
+      },
+      "annualized_inflation": 0.025
     },
     {
       "id": "EVENT_REAL_ESTATE_COOLING",
@@ -324,7 +335,8 @@
         "FI_BOND_LONG": 0.02,
         "CASH_MMF": 0.01,
         "CRYPTO_BENCH": 0.01
-      }
+      },
+      "annualized_inflation": 0.022
     },
     {
       "id": "EVENT_WINTER_ENERGY_FREEZE",
@@ -351,7 +363,8 @@
         "FI_BOND_LONG": -0.03,
         "CASH_MMF": 0.01,
         "CRYPTO_BENCH": -0.04
-      }
+      },
+      "annualized_inflation": 0.075
     },
     {
       "id": "EVENT_SOVEREIGN_DEBT_DOWNGRADE",
@@ -378,7 +391,8 @@
         "FI_BOND_LONG": -0.12,
         "CASH_MMF": 0.01,
         "CRYPTO_BENCH": -0.07
-      }
+      },
+      "annualized_inflation": 0.058
     },
     {
       "id": "EVENT_DEFENSE_BUDGET_SURGE",
@@ -405,7 +419,8 @@
         "FI_BOND_LONG": -0.01,
         "CASH_MMF": 0.01,
         "CRYPTO_BENCH": -0.01
-      }
+      },
+      "annualized_inflation": 0.038
     },
     {
       "id": "EVENT_BIOTECH_FAST_TRACK",
@@ -432,7 +447,8 @@
         "FI_BOND_LONG": 0.0,
         "CASH_MMF": 0.01,
         "CRYPTO_BENCH": 0.02
-      }
+      },
+      "annualized_inflation": 0.021
     },
     {
       "id": "EVENT_AI_PRODUCTIVITY_BOOM",
@@ -459,7 +475,8 @@
         "FI_BOND_LONG": -0.01,
         "CASH_MMF": 0.01,
         "CRYPTO_BENCH": 0.22
-      }
+      },
+      "annualized_inflation": 0.018
     },
     {
       "id": "EVENT_BUMPER_MONSOON",
@@ -486,7 +503,8 @@
         "FI_BOND_LONG": 0.03,
         "CASH_MMF": 0.01,
         "CRYPTO_BENCH": 0.03
-      }
+      },
+      "annualized_inflation": 0.015
     },
     {
       "id": "EVENT_CORPORATE_TAX_CUT",
@@ -513,7 +531,8 @@
         "FI_BOND_LONG": -0.02,
         "CASH_MMF": 0.01,
         "CRYPTO_BENCH": 0.12
-      }
+      },
+      "annualized_inflation": 0.032
     },
     {
       "id": "EVENT_GOLDILOCKS_SOFT_LANDING",
@@ -540,7 +559,8 @@
         "FI_BOND_LONG": 0.06,
         "CASH_MMF": 0.01,
         "CRYPTO_BENCH": 0.14
-      }
+      },
+      "annualized_inflation": 0.02
     },
     {
       "id": "EVENT_FREE_TRADE_ACCORD",
@@ -567,7 +587,8 @@
         "FI_BOND_LONG": 0.01,
         "CASH_MMF": 0.01,
         "CRYPTO_BENCH": 0.06
-      }
+      },
+      "annualized_inflation": 0.016
     },
     {
       "id": "EVENT_SOVEREIGN_INFRA_INJECTION",
@@ -594,7 +615,8 @@
         "FI_BOND_LONG": 0.0,
         "CASH_MMF": 0.01,
         "CRYPTO_BENCH": 0.05
-      }
+      },
+      "annualized_inflation": 0.03
     }
   ]
 }

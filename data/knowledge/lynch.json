@@ -1,0 +1,42 @@
+[
+  {
+    "id": "lynch_invest_in_what_you_know_01",
+    "text": "During a normal day, a consumer or professional might encounter a massive local trend long before Wall Street analysts notice it. Investing in what you know gives you an incredible informational edge.",
+    "source": "Peter Lynch — One Up On Wall Street",
+    "author": "Peter Lynch",
+    "tags": ["growth_investing", "value_investing", "technology"],
+    "applicable_events": ["generative_ai_breakthrough", "biotech_fast_track", "green_infrastructure_subsidy"],
+    "market_cycle": "expansion",
+    "asset_class_relevance": ["equities"]
+  },
+  {
+    "id": "lynch_ten_bagger_01",
+    "text": "A 'ten-bagger' is a stock that returns ten times your initial investment. You only need a few of these in a lifetime to make serious money, but they require the patience to hold onto great companies through market fluctuations.",
+    "source": "Peter Lynch — One Up On Wall Street",
+    "author": "Peter Lynch",
+    "tags": ["growth_investing", "market_cycles"],
+    "applicable_events": ["generative_ai_breakthrough", "corporate_tax_cut", "goldilocks_soft_landing"],
+    "market_cycle": "expansion",
+    "asset_class_relevance": ["equities"]
+  },
+  {
+    "id": "lynch_peg_ratio_01",
+    "text": "The P/E ratio of any company that's fairly priced will equal its growth rate. If a company is growing at 15 percent a year and trading at a P/E of 15, it's fairly priced; if it trades at a P/E of 10, it's a bargain.",
+    "source": "Peter Lynch — One Up On Wall Street",
+    "author": "Peter Lynch",
+    "tags": ["value_investing", "growth_investing"],
+    "applicable_events": ["corporate_tax_cut", "biotech_fast_track", "fiscal_year_end_tax_selling"],
+    "market_cycle": "recovery",
+    "asset_class_relevance": ["equities"]
+  },
+  {
+    "id": "lynch_diworsification_01",
+    "text": "When companies acquire businesses they know nothing about in the name of diversification, it almost always leads to a drop in earnings and stock price. This is what I call 'diworsification'.",
+    "source": "Peter Lynch — One Up On Wall Street",
+    "author": "Peter Lynch",
+    "tags": ["diversification", "risk_management"],
+    "applicable_events": ["banking_liquidity_crisis", "corporate_tax_cut"],
+    "market_cycle": "peak",
+    "asset_class_relevance": ["equities"]
+  }
+]

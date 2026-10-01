@@ -1,0 +1,52 @@
+[
+  {
+    "id": "marks_second_level_01",
+    "text": "First-level thinking says, 'It's a good company; let's buy the stock.' Second-level thinking says, 'It's a good company, but everyone thinks it's a great company, and it's not. So the stock is overrated and overpriced; let's sell.'",
+    "source": "Howard Marks — The Most Important Thing",
+    "author": "Howard Marks",
+    "tags": ["behavioral_finance", "value_investing", "contrarian_investing"],
+    "applicable_events": ["generative_ai_breakthrough", "biotech_fast_track"],
+    "market_cycle": "peak",
+    "asset_class_relevance": ["equities"]
+  },
+  {
+    "id": "marks_risk_permanent_loss_01",
+    "text": "Risk is not volatility; volatility is just the temporary fluctuation of prices. Real risk is the probability of a permanent loss of capital, which occurs when an investor overpays for an asset or is forced to sell at the bottom.",
+    "source": "Howard Marks — The Most Important Thing",
+    "author": "Howard Marks",
+    "tags": ["risk_management", "value_investing"],
+    "applicable_events": ["banking_liquidity_crisis", "crypto_crackdown", "emergency_rate_hike"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["equities", "fixed_income", "crypto"]
+  },
+  {
+    "id": "marks_market_pendulum_01",
+    "text": "The market is a pendulum that forever swings between unsustainable optimism (which makes stocks too expensive) and unjustified pessimism (which makes them too cheap). The intelligent investor must act contrary to these emotional swings.",
+    "source": "Howard Marks — Mastering the Market Cycle",
+    "author": "Howard Marks",
+    "tags": ["market_cycles", "behavioral_finance"],
+    "applicable_events": ["global_pandemic", "generative_ai_breakthrough", "banking_liquidity_crisis"],
+    "market_cycle": "peak",
+    "asset_class_relevance": ["equities"]
+  },
+  {
+    "id": "marks_contrarian_01",
+    "text": "You can't do the same things others do and expect to outperform. To achieve superior investment results, you must hold non-consensus views regarding value, and they must be accurate.",
+    "source": "Howard Marks — The Most Important Thing",
+    "author": "Howard Marks",
+    "tags": ["contrarian_investing", "value_investing"],
+    "applicable_events": ["sovereign_debt_downgrade", "crypto_crackdown", "maritime_strait_blockade"],
+    "market_cycle": "recovery",
+    "asset_class_relevance": ["equities", "commodities"]
+  },
+  {
+    "id": "marks_defensive_investing_01",
+    "text": "Defensive investing requires ensuring that your portfolio can survive adverse outcomes. It is more important to ensure survival under negative scenarios than it is to maximize returns under positive ones.",
+    "source": "Howard Marks — The Most Important Thing",
+    "author": "Howard Marks",
+    "tags": ["defensive_investing", "risk_management", "portfolio_construction"],
+    "applicable_events": ["emergency_rate_hike", "property_cooling_measures", "monsoon_drought"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["cash", "fixed_income"]
+  }
+]

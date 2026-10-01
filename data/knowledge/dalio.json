@@ -1,0 +1,52 @@
+[
+  {
+    "id": "dalio_debt_cycles_01",
+    "text": "There are two main types of debt cycles: the short-term business cycle, which lasts 5-8 years, and the long-term debt cycle, which peaks every 50-75 years when debt burdens become unsustainably large relative to incomes.",
+    "source": "Ray Dalio — How the Economic Machine Works",
+    "author": "Ray Dalio",
+    "tags": ["debt_cycles", "monetary_policy", "market_cycles"],
+    "applicable_events": ["banking_liquidity_crisis", "sovereign_debt_downgrade"],
+    "market_cycle": "peak",
+    "asset_class_relevance": ["fixed_income", "equities"]
+  },
+  {
+    "id": "dalio_deleveraging_01",
+    "text": "In a deleveraging, people cut spending, incomes fall, credit disappears, and asset prices drop. Unlike a standard recession, lowering interest rates doesn't work because they are already near zero, rendering traditional monetary policy ineffective.",
+    "source": "Ray Dalio — Principles for Navigating Big Debt Crises",
+    "author": "Ray Dalio",
+    "tags": ["deflation", "debt_cycles", "monetary_policy"],
+    "applicable_events": ["banking_liquidity_crisis", "coordinated_rate_cut_qe"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["cash", "fixed_income"]
+  },
+  {
+    "id": "dalio_all_weather_01",
+    "text": "An all-weather portfolio is balanced based on risk, not dollar amounts, to perform across the four economic environments: rising growth, falling growth, rising inflation, and falling inflation. By balancing risk parity, the portfolio survives regardless of structural shifts.",
+    "source": "Ray Dalio — Principles for Navigating Big Debt Crises",
+    "author": "Ray Dalio",
+    "tags": ["portfolio_construction", "diversification", "risk_management"],
+    "applicable_events": ["goldilocks_soft_landing", "polar_vortex_energy", "monsoon_drought"],
+    "market_cycle": "expansion",
+    "asset_class_relevance": ["equities", "fixed_income", "commodities", "cash"]
+  },
+  {
+    "id": "dalio_central_bank_01",
+    "text": "When short-term interest rates hit zero, central banks must turn to printing money and buying financial assets, commonly known as quantitative easing. This drives up asset prices but exacerbates wealth inequality.",
+    "source": "Ray Dalio — How the Economic Machine Works",
+    "author": "Ray Dalio",
+    "tags": ["monetary_policy", "inflation", "currency"],
+    "applicable_events": ["coordinated_rate_cut_qe", "global_pandemic"],
+    "market_cycle": "recovery",
+    "asset_class_relevance": ["equities", "fixed_income", "commodities"]
+  },
+  {
+    "id": "dalio_beautiful_deleveraging_01",
+    "text": "A 'beautiful deleveraging' occurs when policymakers successfully balance deflationary forces (debt restructuring and austerity) with inflationary forces (money printing), keeping the economy stable and allowing nominal growth to exceed interest rates.",
+    "source": "Ray Dalio — Principles for Navigating Big Debt Crises",
+    "author": "Ray Dalio",
+    "tags": ["monetary_policy", "fiscal_policy", "crisis_management"],
+    "applicable_events": ["coordinated_rate_cut_qe", "gst_rebate_stimulus"],
+    "market_cycle": "recovery",
+    "asset_class_relevance": ["equities", "fixed_income"]
+  }
+]

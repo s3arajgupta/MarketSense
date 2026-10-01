@@ -1,0 +1,42 @@
+[
+  {
+    "id": "bogle_cost_matters_01",
+    "text": "In investing, you get what you don't pay for. High management fees, trading costs, and taxes severely eat into the compounding returns of an investor over a long time horizon.",
+    "source": "John Bogle — The Little Book of Common Sense Investing",
+    "author": "John Bogle",
+    "tags": ["portfolio_construction", "tax_efficiency"],
+    "applicable_events": ["fiscal_year_end_tax_selling", "corporate_tax_cut"],
+    "market_cycle": "expansion",
+    "asset_class_relevance": ["equities", "fixed_income"]
+  },
+  {
+    "id": "bogle_passive_vs_active_01",
+    "text": "Don't look for the needle in the haystack; just buy the haystack. Broad-market passive index funds will consistently outperform the vast majority of active managers over the long term due to lower costs and broader exposure.",
+    "source": "John Bogle — The Little Book of Common Sense Investing",
+    "author": "John Bogle",
+    "tags": ["diversification", "portfolio_construction"],
+    "applicable_events": ["goldilocks_soft_landing", "global_pandemic"],
+    "market_cycle": "recovery",
+    "asset_class_relevance": ["equities"]
+  },
+  {
+    "id": "bogle_reversion_to_mean_01",
+    "text": "Reversion to the mean is the iron rule of the financial markets. The high-flying mutual funds of yesterday invariably crash back to earth, and the forgotten sectors eventually rise again.",
+    "source": "John Bogle — The Little Book of Common Sense Investing",
+    "author": "John Bogle",
+    "tags": ["market_cycles", "behavioral_finance"],
+    "applicable_events": ["generative_ai_breakthrough", "crypto_crackdown", "chip_tariff_30pct"],
+    "market_cycle": "peak",
+    "asset_class_relevance": ["equities"]
+  },
+  {
+    "id": "bogle_stay_the_course_01",
+    "text": "The greatest enemy of a good plan is the dream of a perfect plan. Stick to the good plan. Time is your friend; impulse is your enemy. Stay the course through market turbulence.",
+    "source": "John Bogle — The Little Book of Common Sense Investing",
+    "author": "John Bogle",
+    "tags": ["behavioral_finance", "risk_management"],
+    "applicable_events": ["global_pandemic", "emergency_rate_hike", "banking_liquidity_crisis"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["equities", "fixed_income"]
+  }
+]
