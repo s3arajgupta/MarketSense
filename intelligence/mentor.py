@@ -88,7 +88,8 @@ class AIMentor:
             portfolio_state: Dict with nav, cash, holdings, alpha, etc.
         """
         event_id = event.get("id", "")
-        event_type = event.get("type", "unknown")
+        event_name = event.get("title", event.get("name", "Unknown Event"))
+        event_type = event.get("event_type", event.get("type", "unknown"))
 
         # Format price impacts for prompt
         impacts_text = self._format_price_impacts(price_impacts)
@@ -97,7 +98,7 @@ class AIMentor:
         top_holdings = self._format_top_holdings(portfolio_state.get("holdings", []))
 
         # Retrieve relevant wisdom
-        query = f"{event.get('name', '')} {event.get('context_description', '')} {event.get('headline', '')}"
+        query = f"{event_name} {event.get('context_description', '')} {event.get('headline', '')}"
         wisdom_context = self._rag.get_context_for_prompt(
             query=query,
             event_id=event_id,
@@ -113,7 +114,7 @@ class AIMentor:
         # Assemble prompt
         user_prompt = POST_EVENT_DEBRIEF.format(
             quarter=quarter,
-            event_name=event.get("name", "Unknown Event"),
+            event_name=event_name,
             event_type=event_type.replace("_", " ").title(),
             event_description=event.get("context_description", ""),
             historical_precedent=event.get("historical_precedent", "N/A"),
@@ -147,12 +148,13 @@ class AIMentor:
             tuple: (generator_of_text_chunks, citations, provider_name, model_name)
         """
         event_id = event.get("id", "")
-        event_type = event.get("type", "unknown")
+        event_name = event.get("title", event.get("name", "Unknown Event"))
+        event_type = event.get("event_type", event.get("type", "unknown"))
 
         impacts_text = self._format_price_impacts(price_impacts)
         top_holdings = self._format_top_holdings(portfolio_state.get("holdings", []))
 
-        query = f"{event.get('name', '')} {event.get('context_description', '')} {event.get('headline', '')}"
+        query = f"{event_name} {event.get('context_description', '')} {event.get('headline', '')}"
         wisdom_context = self._rag.get_context_for_prompt(
             query=query,
             event_id=event_id,
@@ -167,7 +169,7 @@ class AIMentor:
 
         user_prompt = POST_EVENT_DEBRIEF.format(
             quarter=quarter,
-            event_name=event.get("name", "Unknown Event"),
+            event_name=event_name,
             event_type=event_type.replace("_", " ").title(),
             event_description=event.get("context_description", ""),
             historical_precedent=event.get("historical_precedent", "N/A"),
@@ -210,8 +212,8 @@ class AIMentor:
             trade: Dict with action, asset_name, sector, cap_size, amount, costs.
             portfolio_state: Current portfolio state.
         """
-        event_name = event.get("name", "No active event") if event else "No active event"
-        event_type = event.get("type", "none") if event else "none"
+        event_name = (event.get("title") or event.get("name") or "No active event") if event else "No active event"
+        event_type = (event.get("event_type") or event.get("type") or "none") if event else "none"
         event_id = event.get("id", "") if event else ""
 
         # Retrieve relevant wisdom

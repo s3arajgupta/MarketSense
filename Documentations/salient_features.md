@@ -7,11 +7,11 @@ This document provides a continuous, institutional-grade catalog of the core arc
 ## 1. Multi-Asset Institutional Universe
 
 - **24 Granular Financial Instruments:**
-  - **Equities (18 Assets):** 6 sectors (Information Technology, Financials, Healthcare, Consumer Discretionary, Industrials, Energy) $\times$ 3 market capitalizations (Large Cap, Mid Cap, Small Cap).
-  - **Commodities (2 Assets):** Gold (`COMM_GOLD`) and Crude Energy Basket (`COMM_OIL`).
+  - **Equities (18 Assets):** 6 sectors (Banking & Financial Services, Energy & Utilities, FMCG & Consumer Staples, Healthcare & Pharmaceuticals, Information Technology, Real Estate & Infrastructure) $\times$ 3 market capitalizations (Large Cap, Mid Cap, Small Cap).
+  - **Commodities (2 Assets):** Physical Gold Trust (`COMM_GOLD`) and Physical Silver & Industrial Metals (`COMM_SILVER`).
   - **Fixed Income (2 Assets):** Short-Term Sovereign T-Bills (`FI_TBILL_SHORT`) and 10-Year Sovereign Bonds (`FI_BOND_LONG`).
   - **Cash Equivalents (1 Asset):** High-yield Singapore Dollar Money Market Fund (`CASH_MMF`).
-  - **Digital Assets (1 Asset):** Bitcoin (`CRYPTO_BTC`).
+  - **Digital Assets (1 Asset):** Digital Asset Benchmark ETF (`CRYPTO_BENCH`).
 - **Asset Metadata & Fundamental Sensitivity:**
   - Every asset models `beta`, `debt_ratio` (vulnerability to rate hikes), `cash_resilience` (survival probability during credit freezes), and `dividend_yield` (quarterly cash-flow generation).
 
@@ -96,20 +96,22 @@ Tracks three institutional reference portfolios dynamically alongside the traine
 ---
 
 ## 9. Comprehensive Automated Test Suite
-
-- **13 Automated Pytest Verifications (`tests/`):**
-  - Asset universe schema & attribute integrity.
-  - Crisis event categorization & inflation rates.
-  - Deterministic pricing engine bounds & cash non-negativity.
-  - Buy/Sell mechanics, average cost basis, and cash accounting.
-  - STCG (25%) vs. LTCG (10%) threshold calculations.
-  - Passive benchmark tracking (100% Equity, 60/40, All-Weather).
-  - CPI Hurdle quarterly compounding and Fisher equation real return accuracy.
-  - 30-year (120-quarter) accelerated simulation execution & drawdown validity.
-  - RAG hybrid retrieval and metadata citations.
-  - Prompt template formatting and guardrails.
-  - Mock offline inference simulation for air-gapped environments.
-  - Multi-decade career retrospective prompt formatting and streaming.
+ 
+- **15 Automated Pytest Verifications (`tests/`):**
+   - Asset universe schema & attribute integrity.
+   - Crisis event categorization & inflation rates.
+   - Deterministic pricing engine bounds & cash non-negativity.
+   - Buy/Sell mechanics, average cost basis, and cash accounting.
+   - STCG (25%) vs. LTCG (10%) threshold calculations.
+   - Passive benchmark tracking (100% Equity, 60/40, All-Weather).
+   - CPI Hurdle quarterly compounding and Fisher equation real return accuracy.
+   - 30-year (120-quarter) accelerated simulation execution & drawdown validity.
+   - RAG hybrid retrieval and metadata citations.
+   - Prompt template formatting and guardrails.
+   - Mock offline inference simulation for air-gapped environments.
+   - Multi-decade career retrospective prompt formatting and streaming.
+   - Quarterly macro event progression variety across 10+ quarters.
+   - Pre-drawn pending event absorption without double-stepping.
 
 ---
 
@@ -119,7 +121,7 @@ Tracks three institutional reference portfolios dynamically alongside the traine
   - **▶️ Play Simulation:** Runs continuously quarter-by-quarter (~0.8s per quarter). In each step, an authentic crisis card event is drawn from the library, macroeconomic price shocks are calculated, benchmarks compound dynamic inflation, and the chart updates dynamically.
   - **⏸️ Pause Simulation:** Halts playback instantly on the current quarter so the trainee can inspect the event headline/precedent/inflation in the right column, execute tactical trades, review holdings, or request a Socratic debrief from the AI Mentor.
   - **⏩ Fast Forward:** Runs continuously at accelerated speed (~0.2s per quarter / 3x speed), allowing 30 years (120 quarters) to unfold in under 20 seconds while still executing all crisis events and updating charts.
-  - **🎲 Draw Event & ➡️ Advance Qtr:** Full manual single-step mode remains intact for tactical turn-based play.
+  - **➡️ Next Quarter / ➡️ Absorb Shock & 🎲 Draw Event:** Full manual single-step mode remains intact for tactical turn-based play, dynamically signaling whether a pending shock needs to be absorbed.
 - **Dynamic Event Transmission:**
   - Every quarter processed in Play or Fast Forward mode accounts for real crisis card impacts: sector shifts, dividend accrual, cash money market interest, and capital gains tax aging.
 - **Multi-Decade Horizon Scorecard (Paused after 3+ Years):**

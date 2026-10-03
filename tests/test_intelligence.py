@@ -73,7 +73,13 @@ class MockOfflineClient(LLMClient):
     Simulated Offline / Local LLM provider.
     Verifies that the mentor orchestrator functions in fully air-gapped / offline environments.
     """
+    def __init__(self):
+        self.last_user_prompt = ""
+        self.last_system_prompt = ""
+
     def generate(self, user_prompt: str, system_prompt: str = "", temperature: float = 0.7, max_tokens: int = 1024) -> LLMResponse:
+        self.last_user_prompt = user_prompt
+        self.last_system_prompt = system_prompt
         return LLMResponse(
             text="### 📉 What Happened\nMarkets dropped.\n\n### 🔗 Causal Chain\nRate hike -> Selloff.\n\n### 📚 Wisdom\n'Cash is oxygen' — Dalio.\n\n### 💡 Your Portfolio\nDiversification protected your NAV.",
             model="offline-mock-7b",
@@ -83,6 +89,8 @@ class MockOfflineClient(LLMClient):
         )
 
     def generate_stream(self, user_prompt: str, system_prompt: str = "", temperature: float = 0.7, max_tokens: int = 2048):
+        self.last_user_prompt = user_prompt
+        self.last_system_prompt = system_prompt
         for word in ["### 📉 What Happened\n", "Markets ", "dropped.\n\n", "### 📚 Wisdom\n", "'Cash is oxygen'"]:
             yield word
 
@@ -128,17 +136,30 @@ def test_offline_inference_simulation():
     assert resp.provider == "offline-simulated"
     assert "What Happened" in resp.text
     assert resp.has_citations is True
+    assert "Rate Hike Shock" in mock_client.last_user_prompt
+    assert "Sudden" in mock_client.last_user_prompt
 
-    # Test offline streaming generator
+    # Test offline streaming generator with real crisis_cards.json schema (title + event_type)
+    real_crisis_card = {
+        "id": "EVENT_MONETARY_HIKE",
+        "title": "Emergency 100bps Central Bank Rate Hike",
+        "event_type": "Sudden",
+        "context_description": "With core CPI reading above 7.8%...",
+        "headline": "Central Bank Announces Emergency 100bps Policy Rate Hike",
+        "historical_precedent": "1994 Fed Tightening Cycle",
+        "annualized_inflation": 0.078,
+    }
     stream, citations, provider, model = mentor.post_event_debrief_stream(
         quarter=1,
-        event=dummy_event,
+        event=real_crisis_card,
         price_impacts={"Tech Large Cap": -10.0},
         portfolio_state=dummy_portfolio,
     )
     chunks = list(stream)
     assert len(chunks) > 0
     assert provider == "Offline-Simulated" or "offline" in provider.lower()
+    assert "Emergency 100bps Central Bank Rate Hike" in mock_client.last_user_prompt
+    assert "Sudden" in mock_client.last_user_prompt
 
 
 def test_career_retrospective_simulation():

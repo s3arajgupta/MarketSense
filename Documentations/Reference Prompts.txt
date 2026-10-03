@@ -1,0 +1,4 @@
+if unable to edit files, let me I will delete telemetry and restart
+I have changed Gemini model to Opus
+Refer documentation folder, let me know if there are inconsistencies with phases_information.md.
+We have implemented and tested phase 2. I want to validate/refactor all things done in phase 2. Ask me for question if some previous conversation is missing, I will answer them first. I want to produce a report in Reports by Opus folder like phase 1 if all things are perfect.

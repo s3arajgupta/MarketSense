@@ -15,7 +15,7 @@ MarketSense is an interactive portfolio flight simulator that teaches macroecono
 
 ## Architecture
 
-![System Architecture](docs/architecture.jpg)
+![System Architecture](Documentations/architecture.jpg)
 
 **Key Design Principle:** The LLM never generates prices. Mathematics handles numbers; AI handles explanation.
 
@@ -44,7 +44,7 @@ MarketSense is an interactive portfolio flight simulator that teaches macroecono
 - **Dual LLM support** — Gemini API (default, recommended) or Ollama (offline, privacy-preserving)
 - **Graceful degradation** — app runs perfectly without LLM configured
 
-> 📖 **Comprehensive Architectural & Pedagogical Details:** See [docs/SALIENT_FEATURES.md](docs/SALIENT_FEATURES.md) for the complete catalog of all 9 institutional mechanisms (Circuit Breakers, STCG/LTCG tax drag, Fisher Equation Real Returns, Dalio All-Weather benchmarks, etc.).
+> 📖 **Comprehensive Architectural & Pedagogical Details:** See [Documentations/salient_features.md](Documentations/salient_features.md) for the complete catalog of all 10 institutional mechanisms (Circuit Breakers, STCG/LTCG tax drag, Fisher Equation Real Returns, Dalio All-Weather benchmarks, Flight Controls, etc.).
 
 ---
 
@@ -111,7 +111,9 @@ MarketSense/
 │       ├── bogle.json        # John Bogle — cost matters, passive indexing
 │       └── crisis_cases.json # 7 historical crises (1973–2022) with lessons
 │
-└── docs/
+└── Documentations/
+    ├── salient_features.md   # Comprehensive catalog of implemented features
+    ├── phases_information.md # Master project roadmap
     └── architecture.jpg      # System architecture diagram
 ```
 

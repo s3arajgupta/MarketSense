@@ -55,7 +55,7 @@ flowchart LR
 
 - [x] **24-Asset Financial Universe ([data/assets.json](file:///e:/NUS-ISS/GC1%20Practice%20Module/MarketSense/data/assets.json)):**
   - 18 Equities (6 Sectors $\times$ Large/Mid/Small Cap).
-  - 2 Commodities (Gold, Energy Basket).
+  - 2 Commodities (Physical Gold Trust, Silver & Industrial Metals).
   - 2 Fixed Income (Short Sovereign T-Bills, 10-Yr Long Bonds).
   - 1 Cash Equivalent (SGD Money Market Fund with quarterly interest accrual).
   - 1 Digital Asset benchmark.
@@ -201,7 +201,6 @@ MarketSense/
 ├── config.py                    # Environment & LLM provider configurations
 ├── requirements.txt             # Project dependencies (Streamlit, Plotly, ChromaDB, etc.)
 ├── .env.example                 # Configuration template
-├── phases+extra information.md  # Master Project Plan & Execution Roadmap (This Document)
 ├── README.md                    # Project README & offline Ollama setup guide
 │
 ├── engine/                      # Core Financial & Mathematical Engine
@@ -212,7 +211,7 @@ MarketSense/
 │   └── simulator.py             # Multi-quarter batch time travel and fast-forward engine
 │
 ├── intelligence/                # AI Mentorship & Explainability Layer
-│   ├── gemini_provider.py       # Cloud Google Gemini 2.5 Flash streaming client
+│   ├── gemini_provider.py       # Cloud Google Gemini Flash streaming client
 │   ├── ollama_provider.py       # Local Air-Gapped Ollama HTTP client (localhost:11434)
 │   ├── llm_client.py            # Unified LLM provider interface
 │   ├── mentor.py                # Socratic debrief & 30-year retrospective coordinator
@@ -226,12 +225,19 @@ MarketSense/
 │   └── knowledge/               # Wisdom corpus (Graham, Dalio, Marks, Lynch, Bogle, Crises)
 │
 ├── tests/                       # Automated Verification Test Suite
-│   ├── test_engine.py           # Core engine, pricing, friction, benchmarks & progression tests
-│   └── test_intelligence.py     # AI mentor, RAG retrieval, prompt templates & offline tests
+│   ├── test_engine.py           # Core engine, pricing, friction, benchmarks & progression tests (10 tests)
+│   └── test_intelligence.py     # AI mentor, RAG retrieval, prompt templates & offline tests (5 tests)
 │
-└── docs/                        # Architecture & Documentation
-    ├── SALIENT_FEATURES.md      # Comprehensive catalog of implemented features
-    └── architecture.jpg         # High-level system architecture diagram
+├── Documentations/              # Architecture, Proposals & Documentation
+│   ├── phases_information.md    # Master Project Plan & Execution Roadmap (This Document)
+│   ├── salient_features.md      # Comprehensive catalog of implemented features
+│   └── architecture.jpg         # High-level system architecture diagram
+│
+├── Reports by Opus/             # Phase Verification Reports by Opus
+│   └── Phase1.md                # Phase 1 Verification Report
+│
+└── Reports by Gemini/           # Phase Verification Reports by Gemini
+    └── Phase2.md                # Phase 2 Verification Report
 ```
 
 ---
