@@ -21,30 +21,36 @@ MarketSense is an interactive portfolio flight simulator that teaches macroecono
 
 | Layer | Responsibility |
 |-------|---------------|
-| **Presentation** | Interactive Streamlit dashboard — portfolio view, event console, benchmarks, trading |
-| **Simulation Engine** | Deterministic pricing, portfolio & trade management, benchmark evaluation |
-| **Intelligent Reasoning** | RAG-augmented LLM advisor with hybrid retrieval (tag-filter + semantic search) |
-| **Knowledge & Data** | 24 asset instruments, 22 macro events, 30 curated investor wisdom chunks |
+| **Presentation** | Interactive Streamlit dashboard — portfolio view, event console, benchmarks, XAI graph, trading desk |
+| **Simulation Engine** | Deterministic pricing, portfolio & trade management, benchmark evaluation, counterfactual sandbox |
+| **Intelligent Reasoning** | RAG v2 vector retrieval (52 chunks) + Socratic LLM mentor with grounded causal citations |
+| **Causal Knowledge Graph** | 36-node, 48-edge NetworkX graph mapping transmission pathways for all 22 crisis scenarios |
+| **Knowledge & Data** | 24 asset instruments, 22 macro events, 52 wisdom & historical twin precedent chunks |
 
 ---
 
 ## Features
 
-### Simulation Engine
+### Simulation Engine (Phase 1)
 - **24 multi-asset instruments** across equities (6 sectors × 3 caps), commodities, fixed income, cash, and crypto
 - **22 curated macro events** — seasonal (forecastable) and sudden (black swan) with historical precedents
 - **Deterministic pricing** — reproducible, seed-based; no stochastic surprises
 - **Real-world friction** — brokerage fees (0.15%), STCG (25%) vs LTCG (10%) based on holding period
 - **3 passive benchmarks** — 100% Equity, Classic 60/40, Dalio All-Weather for alpha measurement
 
-### AI Mentor (Phase 2)
+### AI Mentor & Dual Runtimes (Phase 2)
 - **On-demand causal shock debriefs** — explains *why* prices moved using transmission chains + cited literature
 - **Zero-latency time travel** — quarter advancement is instantaneous (<10ms) without blocking LLM calls
-- **Grounded RAG** — 30 wisdom chunks from Graham, Dalio, Marks, Lynch, Bogle with source citations
 - **Dual LLM support** — Gemini API (default, recommended) or Ollama (offline, privacy-preserving)
 - **Graceful degradation** — app runs perfectly without LLM configured
 
-> 📖 **Comprehensive Architectural & Pedagogical Details:** See [Documentations/salient_features.md](Documentations/salient_features.md) for the complete catalog of all 10 institutional mechanisms (Circuit Breakers, STCG/LTCG tax drag, Fisher Equation Real Returns, Dalio All-Weather benchmarks, Flight Controls, etc.).
+### Knowledge Graph & Explainable AI (Phase 3)
+- **Symbolic Causal Graph (NetworkX)** — 36 nodes, 48 directed weighted edges, and shortest path Dijkstra extraction
+- **Interactive Physics Network (Pyvis)** — High-contrast labels, glowing active transmission pathways, on-screen navigation
+- **Counterfactual "What-If" Sandbox** — Evaluates user return vs 4 institutional strategies (All-Weather, Pure Cash, Gold Defense, Tech Aggressive)
+- **RAG v2 Historical Twin Precedents** — 52 ChromaDB chunks pairing simulated shocks to empirical crisis twins (1980 Volcker, 1973 OPEC, 1931 Creditanstalt, 1918 Flu, etc.)
+
+> 📖 **Comprehensive Architectural & Pedagogical Details:** See [Documentations/salient_features.md](Documentations/salient_features.md) and [Documentations/streamlit_ui.md](Documentations/streamlit_ui.md) for complete technical guides.
 
 ---
 
@@ -122,6 +128,7 @@ MarketSense/
 │
 └── Documentations/
     ├── salient_features.md   # Comprehensive catalog of implemented features
+    ├── streamlit_ui.md       # Streamlit UI design system & component specification
     ├── phases_information.md # Master project roadmap (Phases 1-3 Completed)
     └── architecture.jpg      # System architecture diagram
 ```
@@ -188,7 +195,7 @@ When deploying MarketSense to cloud environments (e.g., Azure Container Apps, Az
   - The Streamlit container requires only **0.5 vCPU and ~250 MB RAM**.
   - **Cost:** \$0 to \$5/month on Azure Container Apps (serverless scale-to-zero), easily running for an entire year within a **\$100 student/trial credit**.
   - **Avoid GPU Container Instances on Azure:** Hosting an 8B model locally in an Azure GPU container (e.g., `NC4as_T4_v3`) costs ~\$0.60–\$0.90/hour (\$400–\$650/month), which would deplete a \$100 credit within 5–7 days.
-- **ChromaDB Vector Store in Cloud:** MarketSense uses embedded persistent ChromaDB. The 30 curated wisdom chunks (~50 KB) are automatically ingested into `./chroma_db/` upon initialization in <1 second. In containerized environments, ChromaDB runs completely in-memory/ephemeral disk or can be bundled directly inside the Docker image without requiring external database servers or managed vector instances.
+- **ChromaDB Vector Store in Cloud:** MarketSense uses embedded persistent ChromaDB. The 52 curated wisdom and historical precedent chunks (~80 KB) are automatically ingested into `./chroma_db/` upon initialization in <1 second. In containerized environments, ChromaDB runs completely in-memory/ephemeral disk or can be bundled directly inside the Docker image without requiring external database servers or managed vector instances.
 
 ---
 

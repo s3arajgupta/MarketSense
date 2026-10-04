@@ -185,7 +185,7 @@ flowchart TD
 - [x] **Symbolic Prompt Injection:** Generates formatted ASCII transmission chains automatically injected into `POST_EVENT_DEBRIEF` prompts for grounded AI explanations.
 
 #### 3. Interactive Pyvis Physics Network Visualizer ([app.py](file:///e:/NUS-ISS/GC1%20Practice%20Module/MarketSense/app.py))
-- [x] **Streamlit Tab `"🌐 Causal XAI Graph"`:** Renders interactive physics graph using `st.components.v1.html()`.
+- [x] **Streamlit Tab `"🌐 Causal XAI Graph"`:** Renders interactive physics graph using modern `st.iframe(src, height=600, width="stretch")` (with backward-compatible fallback).
 - [x] **Color-Coded Nodes & Glowing Active Paths:**
   - Red nodes: Macro Drivers
   - Orange nodes: Transmission Channels
@@ -253,6 +253,7 @@ MarketSense/
 │   └── simulator.py             # Multi-quarter batch time travel and fast-forward engine
 │
 ├── intelligence/                # AI Mentorship & Explainability Layer
+│   ├── knowledge_graph.py       # NetworkX causal graph & shortest path extraction engine
 │   ├── gemini_provider.py       # Cloud Google Gemini Flash streaming client
 │   ├── ollama_provider.py       # Local Air-Gapped Ollama HTTP client (localhost:11434)
 │   ├── llm_client.py            # Unified LLM provider interface
@@ -264,22 +265,27 @@ MarketSense/
 ├── data/                        # Curated Financial & Knowledge Data
 │   ├── assets.json              # 24-asset multi-asset universe definitions
 │   ├── crisis_cards.json        # 22 curated historical macroeconomic crisis cards
-│   └── knowledge/               # Wisdom corpus (Graham, Dalio, Marks, Lynch, Bogle, Crises)
+│   └── knowledge/               # Wisdom corpus (Graham, Dalio, Marks, Lynch, Bogle, Crises, Twins, Graph)
+│       ├── causal_graph.json    # 36 nodes, 48 edges, 22 event mappings
+│       └── crisis_precedents.json # 22 twin historical precedents (52 ChromaDB chunks total)
 │
-├── tests/                       # Automated Verification Test Suite
+├── tests/                       # Automated Verification Test Suite (25/25 passing)
 │   ├── test_engine.py           # Core engine, pricing, friction, benchmarks & progression tests (10 tests)
-│   └── test_intelligence.py     # AI mentor, RAG retrieval, prompt templates & offline tests (5 tests)
+│   ├── test_intelligence.py     # AI mentor, RAG retrieval, prompt templates & offline tests (5 tests)
+│   └── test_knowledge_graph.py  # NetworkX graph, Pyvis, XAI & counterfactual tests (10 tests)
 │
 ├── Documentations/              # Architecture, Proposals & Documentation
 │   ├── phases_information.md    # Master Project Plan & Execution Roadmap (This Document)
 │   ├── salient_features.md      # Comprehensive catalog of implemented features
+│   ├── streamlit_ui.md          # Streamlit UI design system & component specification
 │   └── architecture.jpg         # High-level system architecture diagram
 │
 ├── Reports by Opus/             # Phase Verification Reports by Opus
 │   └── Phase1.md                # Phase 1 Verification Report
 │
 └── Reports by Gemini/           # Phase Verification Reports by Gemini
-    └── Phase2.md                # Phase 2 Verification Report
+    ├── Phase2.md                # Phase 2 Verification Report
+    └── Phase3.md                # Phase 3 Verification Report
 ```
 
 ---

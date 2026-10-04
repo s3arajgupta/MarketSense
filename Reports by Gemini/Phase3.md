@@ -6,7 +6,7 @@
 
 This milestone completes the **Neuro-Symbolic AI core** of MarketSense:
 1. **Deterministic Symbolic Graph Layer:** A 36-node, 48-edge directed weighted macroeconomic transmission graph implemented with `NetworkX`, featuring resistance-weighted shortest path extraction and cumulative sign polarity tracking.
-2. **Interactive Visual Explainability (XAI):** A physics-based force-directed interactive graph visualizer powered by `Pyvis` (`Vis.js`), directly embedded into Streamlit via `st.components.v1.html`, highlighting active macroeconomic shock pathways in glowing colors.
+2. **Interactive Visual Explainability (XAI):** A physics-based force-directed interactive graph visualizer powered by `Pyvis` (`Vis.js`), directly embedded into Streamlit via modern `st.iframe()` (with backward-compatible fallback), highlighting active macroeconomic shock pathways with 20–24px bold labels, glowing halos, and high-contrast contrast outlines.
 3. **RAG v2 Historical Twin Precedents:** An expanded vector corpus of 52 knowledge chunks in ChromaDB with native list metadata, pairing every single simulated crisis card with twin empirical precedents (1980 Volcker Shock, 1973 OPEC, 1931 Creditanstalt, 1918 Spanish Flu, 1999 Dot-Com, etc.) and comparative metrics.
 4. **Counterfactual "What-If" Simulator:** A real-time allocation sandbox enabling trainees to test what their NAV and drawdowns *would have been* under 4 reference institutional strategies during the exact macroeconomic shock just resolved.
 
@@ -55,7 +55,7 @@ This milestone completes the **Neuro-Symbolic AI core** of MarketSense:
 | **Color-Coded Node Taxonomy** | Intuitive visual separation of macroeconomic tiers | Red (Drivers), Orange (Channels), Blue (Sectors), Green (Asset Classes) | ✅ |
 | **Active Pathway Highlighting** | Shock transmission highlighted in glowing colors | Expansionary edges glow `#22c55e` (green), Contractionary edges glow `#ef4444` (red) | ✅ |
 | **Physics Layout & Interaction** | Drag, zoom, pan, hover tooltips, smooth physics | Vis.js Barnes-Hut physics simulation with node physics enabled | ✅ |
-| **UI Integration** | Seamless Streamlit embedding without iframe clipping | Rendered in dedicated tab `"🌐 Causal XAI Graph"` via `st.components.v1.html(height=540)` | ✅ |
+| **UI Integration** | Seamless Streamlit embedding without iframe clipping | Rendered in dedicated tab `"🌐 Causal XAI Graph"` via modern `st.iframe(src, height=600, width="stretch")` (with fallback) | ✅ |
 | **Scenario Inspector** | Dropdown to explore any of the 22 crisis scenarios | Real-time event selector re-renders network and displays active path badges | ✅ |
 
 ### 3.4 — RAG v2 Historical Crisis Twin Precedents
