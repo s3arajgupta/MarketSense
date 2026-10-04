@@ -10,19 +10,19 @@
 | :--- | :--- | :---: | :---: | :--- |
 | **Phase 1** | **The Playable MVP** | Weeks 1–3 | **100% COMPLETED** ✅ | 24 multi-asset instruments, 22 crisis cards, deterministic pricing engine, portfolio accounting, 3 parallel benchmarks (Equity, 60/40, All-Weather), dynamic CPI hurdle, Streamlit v1. |
 | **Phase 2** | **AI Mentor, Dual Runtimes & Friction Layer** | Weeks 3–5 | **100% COMPLETED** ✅ | Dual LLM runtime (Gemini 2.5 Flash + Air-Gapped Ollama), ChromaDB RAG with 6 masters + 7 crisis cases, Socratic debriefs, STCG (25%) / LTCG (10%) + brokerage friction, continuous flight controls (Play/Pause/Fast-Forward), 30-yr career scorecard & AI retrospective, 15/15 tests passing. |
-| **Phase 3** | **Knowledge Graph & Explainable AI (XAI)** | Weeks 6–8 | **UP NEXT / IN PROGRESS** 🚀 | NetworkX macro causal graph, shortest causal path extraction, interactive visualizer (`pyvis`/`streamlit-agraph`), RAG v2 crisis precedents, counterfactual "What-If" simulator. |
-| **Phase 4** | **Polish, Archetypes & Themed Campaigns** | Weeks 9–10 | **PLANNED** 📅 | Geographic archetypes (US, India/Monsoon, Commodity Exporter), 4-round story arc campaigns, macro cycle inertia, session persistence. |
+| **Phase 3** | **Knowledge Graph & Explainable AI (XAI)** | Weeks 6–8 | **100% COMPLETED** ✅ | NetworkX macro causal graph (36 nodes, 48 edges, all 22 events mapped), shortest causal path extraction engine, interactive Pyvis physics visualizer, RAG v2 crisis twin precedents (52 chunks), counterfactual "What-If" sandbox, 25/25 automated unit tests passing. |
+| **Phase 4** | **Polish, Archetypes & Themed Campaigns** | Weeks 9–10 | **UP NEXT / PLANNED** 📅 | Geographic archetypes (US, India/Monsoon, Commodity Exporter), 4-round story arc campaigns, macro cycle inertia, session persistence. |
 
 ```mermaid
 flowchart LR
     P1["Phase 1: Playable MVP\n(Completed ✅)"] --> P2["Phase 2: AI Mentor + Friction\n(Completed ✅)"]
-    P2 --> P3["Phase 3: Knowledge Graph + XAI\n(Fast-Tracking 🚀)"]
+    P2 --> P3["Phase 3: Knowledge Graph + XAI\n(Completed ✅)"]
     P3 --> P4["Phase 4: Polish + Archetypes\n(Planned 📅)"]
 
     style P1 fill:#1b4332,stroke:#2d6a4f,stroke-width:2px,color:#d8f3dc
     style P2 fill:#1b4332,stroke:#2d6a4f,stroke-width:2px,color:#d8f3dc
-    style P3 fill:#003049,stroke:#0077b6,stroke-width:2px,color:#ade8f4
-    style P4 fill:#2b2d42,stroke:#8d99ae,stroke-width:1px,color:#edf2f4
+    style P3 fill:#1b4332,stroke:#2d6a4f,stroke-width:2px,color:#d8f3dc
+    style P4 fill:#003049,stroke:#0077b6,stroke-width:2px,color:#ade8f4
 ```
 
 ---
@@ -40,9 +40,9 @@ flowchart LR
 | **CPI Inflation Hurdle & Real Return** | Fisher Equation purchasing power compounding & cash drag visualization | ✅ **Production Ready** ([engine/benchmarks.py](file:///e:/NUS-ISS/GC1%20Practice%20Module/MarketSense/engine/benchmarks.py)) |
 | **Financial Friction & Tax Drag** | STCG (25%) vs LTCG (10%) + 0.15% brokerage with live pre-trade preview | ✅ **Production Ready** ([engine/friction.py](file:///e:/NUS-ISS/GC1%20Practice%20Module/MarketSense/engine/friction.py)) |
 | **Dual AI Mentor Runtime** | Cloud Google Gemini 2.5 Flash + Air-Gapped Local Ollama (Daemon Switcher) | ✅ **Production Ready** ([intelligence/mentor.py](file:///e:/NUS-ISS/GC1%20Practice%20Module/MarketSense/intelligence/mentor.py)) |
-| **RAG Knowledge Base** | ChromaDB with vector embeddings & citations across 6 investment titans | ✅ **Production Ready** ([intelligence/rag_engine.py](file:///e:/NUS-ISS/GC1%20Practice%20Module/MarketSense/intelligence/rag_engine.py)) |
+| **RAG Knowledge Base** | ChromaDB with vector embeddings & citations across 6 titans + 22 twin precedents | ✅ **Production Ready** ([intelligence/rag_engine.py](file:///e:/NUS-ISS/GC1%20Practice%20Module/MarketSense/intelligence/rag_engine.py)) |
 | **Flight Simulator Controls** | Continuous playback (Play @ 0.8s, Fast Forward @ 0.2s, Pause, Next Qtr) | ✅ **Production Ready** ([app.py](file:///e:/NUS-ISS/GC1%20Practice%20Module/MarketSense/app.py)) |
-| **Knowledge Graph & XAI** | NetworkX causal graph + shortest transmission paths + interactive rendering | 🚀 **Phase 3 Fast-Track Priority** |
+| **Knowledge Graph & XAI** | NetworkX causal graph + shortest transmission paths + interactive Pyvis rendering | ✅ **Production Ready** ([intelligence/knowledge_graph.py](file:///e:/NUS-ISS/GC1%20Practice%20Module/MarketSense/intelligence/knowledge_graph.py)) |
 | **Market Archetypes & Campaigns** | Themed multi-quarter story campaigns + geographic macro profiles | 📅 **Phase 4 Target** |
 
 ---
@@ -154,29 +154,71 @@ flowchart LR
 
 ---
 
-### 4. Phase 3: Knowledge Graph & Explainable AI (XAI) — [FAST-TRACK SPRINT 🚀]
+### 4. Phase 3: Knowledge Graph & Explainable AI (XAI) — [COMPLETED ✅]
 
-**Goal:** Provide visual, inspectable causal transparency showing *how* a macroeconomic shock ripples through the financial ecosystem into asset prices, paired with counterfactual "what-if" scenario modeling.
+**Goal:** Provide visual, inspectable causal transparency showing *how* a macroeconomic shock ripples through the financial ecosystem into asset prices, paired with counterfactual "what-if" scenario modeling and RAG v2 historical twin precedents.
 
 ```mermaid
 flowchart TD
     Event["Macro Event\n(e.g., Central Bank Rate Hike)"] --> KG["Knowledge Graph Engine\n(NetworkX Directed Graph)"]
     KG --> Path["Shortest Causal Path Extraction\nRate Hike → Borrowing Costs ↑ → Equity Discount Rate ↑ → Tech P/E Multiples ↓"]
-    Path --> Visual["Interactive Graph Visualizer\n(Pyvis / Streamlit-Agraph)"]
-    Path --> Mentor["Grounded Socratic Explanation\n(Cites Path Nodes in AI Debrief)"]
+    Path --> Visual["Interactive Graph Visualizer\n(Pyvis Physics Canvas)"]
+    Path --> Mentor["Grounded Socratic Explanation\n(Cites Verified Graph Nodes in AI Debrief)"]
     Event --> Counterfactual["Counterfactual Simulator\n'What if you held 25% Gold instead of 5%?'"]
+    Event --> RAG2["RAG v2 Twin Historical Precedents\n'1980 Volcker Shock Comparative Metrics'"]
 ```
 
-#### Detailed Phase 3 Execution Backlog
+#### Deliverables Completed
 
-| # | Task | Technical Specifications & Implementation Plan | Target Artifacts |
-| :---: | :--- | :--- | :--- |
-| **3.1** | **NetworkX Causal Knowledge Graph** | Construct directed weighted graph of ~40 nodes and ~80 edges: Macro Drivers (Interest Rates, Inflation, Oil Prices, FX, Fiscal Deficit), Financial Channels (Borrowing Costs, Discount Rates, CAPEX, Consumer Demand), Sectors (IT, FMCG, Banks, Energy, Healthcare, Real Estate), and Asset Classes (Gold, T-Bills, Long Bonds, Crypto). | `intelligence/knowledge_graph.py`, `data/knowledge/causal_graph.json` |
-| **3.2** | **Causal Path Extraction Engine** | Algorithm finding shortest weighted causal paths from an active event's primary shock node to affected sectors and asset classes. Outputs structured chain of nodes and transmission relationships. | `intelligence/knowledge_graph.py::extract_causal_chain()` |
-| **3.3** | **Interactive Graph Visualizer** | Embed interactive graph component in Streamlit. Renders the active subgraph, highlighting active causal pathways in distinct glowing colors (green for expansionary, red for contractionary) with hoverable edge explanations. | Streamlit Tab: "🗺️ Causal XAI Map", using `pyvis` or SVG graph rendering. |
-| **3.4** | **RAG v2 — Historical Crisis Precedents** | Expand ChromaDB collection to match current shocks with twin historical precedents (e.g., 2022 Rate Shock vs 1980 Volcker Shock; 2020 COVID vs 1918 Flu). Ingests detailed comparative metrics. | `data/knowledge/crisis_precedents.json`, `intelligence/rag_engine.py` |
-| **3.5** | **Counterfactual "What-If" Engine** | Simulates what the user's NAV and drawdown *would have been* under alternative allocations (e.g., Dalio All-Weather, 100% Cash, or +15% Gold) during the exact shock just experienced. | `engine/simulator.py::compute_counterfactual()`, Streamlit UI comparison widget |
-| **3.6** | **XAI Unit Tests** | Automated tests validating graph connectivity, path extraction validity, no orphaned nodes, and counterfactual mathematical parity. | `tests/test_knowledge_graph.py` |
+#### 1. NetworkX Causal Knowledge Graph ([data/knowledge/causal_graph.json](file:///e:/NUS-ISS/GC1%20Practice%20Module/MarketSense/data/knowledge/causal_graph.json), [intelligence/knowledge_graph.py](file:///e:/NUS-ISS/GC1%20Practice%20Module/MarketSense/intelligence/knowledge_graph.py))
+- [x] **36 Economic & Financial Nodes:**
+  - **11 Macro Drivers:** Policy rates, inflation, crude oil, GDP growth, sovereign debt, currency valuation, corporate taxes, etc.
+  - **12 Financial Channels:** Borrowing costs, equity discount rates, CAPEX demand, consumer spending, interbank liquidity, etc.
+  - **6 Economic Sectors:** Information Technology, FMCG, Banking, Healthcare, Energy, Real Estate.
+  - **7 Asset Classes:** Cash MMF, Gold, Silver, Short T-Bills, Long Bonds, Crypto Benchmark.
+- [x] **48 Directed Weighted Causal Edges:** Each edge defines causal transmission polarity ($+1$ or $-1$), weight ($0.0 \dots 1.0$), resistance ($1.05 - \text{weight}$), and economic rationale.
+- [x] **100% Mapping for All 22 Crisis Cards:** Every scenario in `crisis_cards.json` mapped to primary macro driver, event polarity, and key transmission targets.
+
+#### 2. Shortest Causal Path & Polarity Extraction Engine ([intelligence/knowledge_graph.py](file:///e:/NUS-ISS/GC1%20Practice%20Module/MarketSense/intelligence/knowledge_graph.py))
+- [x] **Dijkstra Shortest Resistance Path:** Calculates strongest transmission path between any macro driver and downstream sectors/assets using edge resistance.
+- [x] **Cumulative Polarity Propagation:** Accurately calculates sign multiplication along path steps (e.g., Rate Hike $(+) \times$ Borrowing Cost $(+) \times$ Discount Rate $(+) \times$ Tech Multiple $(-1) = -1$ Contractionary).
+- [x] **Symbolic Prompt Injection:** Generates formatted ASCII transmission chains automatically injected into `POST_EVENT_DEBRIEF` prompts for grounded AI explanations.
+
+#### 3. Interactive Pyvis Physics Network Visualizer ([app.py](file:///e:/NUS-ISS/GC1%20Practice%20Module/MarketSense/app.py))
+- [x] **Streamlit Tab `"🌐 Causal XAI Graph"`:** Renders interactive physics graph using `st.components.v1.html()`.
+- [x] **Color-Coded Nodes & Glowing Active Paths:**
+  - Red nodes: Macro Drivers
+  - Orange nodes: Transmission Channels
+  - Blue nodes: Economic Sectors
+  - Green nodes: Asset Classes
+  - Glowing edges with directional arrows and transmission tooltips.
+- [x] **Event Selector & Path Inspector:** Lets users explore any macro scenario and inspect step-by-step transmission pathways.
+
+#### 4. RAG v2 — Historical Twin Precedents ([data/knowledge/crisis_precedents.json](file:///e:/NUS-ISS/GC1%20Practice%20Module/MarketSense/data/knowledge/crisis_precedents.json), [intelligence/rag_engine.py](file:///e:/NUS-ISS/GC1%20Practice%20Module/MarketSense/intelligence/rag_engine.py))
+- [x] **22 Deep Comparative Precedents:** Matches each crisis card with twin historical episodes (1980 Volcker Shock, 1973 OPEC, 1931 Creditanstalt, 1918 Spanish Flu, 1999 Dot-Com, 1990 Tokyo Real Estate, 1987 Black Monday, 1992 Black Wednesday, etc.).
+- [x] **ChromaDB Corpus Expanded to 52 Chunks:** Ingests native list metadata (`applicable_events`, `tags`) supporting fast `$contains` filtering.
+- [x] **Prompt & UI Integration:** Dedicated historical twin precedent callouts displayed in Streamlit XAI tab and injected into AI Mentor prompt context.
+
+#### 5. Counterfactual "What-If" Simulation Sandbox ([engine/simulator.py](file:///e:/NUS-ISS/GC1%20Practice%20Module/MarketSense/engine/simulator.py), [app.py](file:///e:/NUS-ISS/GC1%20Practice%20Module/MarketSense/app.py))
+- [x] **Streamlit Tab `"🔮 Counterfactual 'What-If'"`:** Real-time sandbox comparing user actual return against 4 institutional benchmark strategies:
+  1. *Ray Dalio All-Weather* (30% Equities, 40% Long Bonds, 15% T-Bills, 7.5% Gold, 7.5% Commodities)
+  2. *Pure Cash Fortress* (100% Cash MMF)
+  3. *Gold Defense Hedge* (50% Gold, 25% Silver, 25% Cash)
+  4. *Tech Aggressive Growth* (100% IT Large/Mid/Small Cap)
+- [x] **Delta NAV & Pedagogical Verdict:** Displays Alpha / Drag vs counterfactual, asset-by-asset movement breakdown, and contextual evaluation.
+
+#### 6. Unit Test Suite ([tests/test_knowledge_graph.py](file:///e:/NUS-ISS/GC1%20Practice%20Module/MarketSense/tests/test_knowledge_graph.py))
+- [x] **10 Knowledge Graph & XAI Unit Tests (25 Total Suite Passing):**
+  - Graph integrity, schema, node categories, and edge weight resistance bounds.
+  - Verification that all 22 crisis cards have valid primary driver mappings in graph.
+  - Shortest path extraction and sign polarity calculation (Rate Hike to Tech).
+  - Oil shock transmission to energy sector.
+  - Graceful handling of unreachable or unknown nodes.
+  - Multi-target transmission paths extraction for events.
+  - Formatted ASCII prompt grounding generation.
+  - Interactive Pyvis HTML string generation and valid node labels.
+  - Counterfactual simulation NAV math, asset movements, and verdict generation.
+  - RAG v2 twin historical precedent retrieval and prompt context injection.
 
 ---
 

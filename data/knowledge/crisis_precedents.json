@@ -1,0 +1,222 @@
+[
+  {
+    "id": "precedent_volcker_1980",
+    "text": "1980 Volcker Rate Shock (Fed Funds Rate 20%): In 1980, Federal Reserve Chairman Paul Volcker pushed the discount rate to 20% to break 14.8% inflation. Equities suffered a -27% valuation drawdown due to discount rate expansion, while long bonds fell -18%. Short-term cash yields reached 17%, but disinflation eventually ignited a secular 20-year bull market once terminal rates stabilized. Comparative metric: 100bps rate shocks compress high-P/E growth equities by 3-4x more than defensive staples.",
+    "source": "Historical Crisis Twin Precedents (1980 Volcker Shock)",
+    "author": "Macro History Archive",
+    "tags": ["monetary_policy", "interest_rates", "inflation", "discount_rates", "twin_precedent"],
+    "applicable_events": ["EVENT_MONETARY_HIKE", "emergency_rate_hike", "EVENT_STAGFLATION_SPIRAL"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["equities", "fixed_income", "cash"]
+  },
+  {
+    "id": "precedent_el_nino_2009",
+    "text": "2009 South Asian Drought & Global Agrishock: A 22% shortfall in monsoon precipitation caused domestic food inflation to spike to 14.2%, severely dampening rural consumer discretionary demand and farm vehicle sales (-18%). FMCG margins compressed by 380bps due to agricultural input costs, while defensive healthcare and sovereign short bills protected real purchasing power.",
+    "source": "Historical Crisis Twin Precedents (2009 Climate Shock)",
+    "author": "Macro History Archive",
+    "tags": ["climate", "rural_economy", "fmcg", "inflation", "twin_precedent"],
+    "applicable_events": ["EVENT_MONSOON_DEFICIT", "EVENT_FOOD_SECURITY_CRISIS"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["equities", "commodities", "fixed_income"]
+  },
+  {
+    "id": "precedent_smoot_hawley_1930",
+    "text": "1930 Smoot-Hawley Tariff Act & 2018 Tech Sanctions: Punitive import tariffs triggered immediate retaliatory tariffs across 25 trading partners. Global trade volume contracted by 66% between 1929 and 1934. In 2018, 25% tariffs on semiconductors caused semiconductor capital equipment orders to plunge 22% over 3 quarters before supply chains re-shored.",
+    "source": "Historical Crisis Twin Precedents (1930 Tariff Wars)",
+    "author": "Macro History Archive",
+    "tags": ["trade_tariffs", "supply_chain", "technology", "geopolitics", "twin_precedent"],
+    "applicable_events": ["EVENT_TARIFF_CHIPS", "trade_tariff_war"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["equities", "commodities"]
+  },
+  {
+    "id": "precedent_spanish_flu_1918",
+    "text": "1918 Spanish Flu & 2020 COVID Liquidity Shock: Sudden urban lockdowns produced an unprecedented -34% drop in global equity indices within 23 trading days. Service sectors and commercial real estate plummeted -45%, while central banks injected $4.5T in coordinated liquidity, sparking a rapid 4-quarter V-shaped recovery led by defensive tech and healthcare.",
+    "source": "Historical Crisis Twin Precedents (1918/2020 Pandemics)",
+    "author": "Macro History Archive",
+    "tags": ["pandemic", "lockdown", "healthcare", "monetary_stimulus", "twin_precedent"],
+    "applicable_events": ["EVENT_PANDEMIC_LOCKDOWN", "global_pandemic"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["equities", "cash", "commodities"]
+  },
+  {
+    "id": "precedent_opec_1973",
+    "text": "1973 OPEC Oil Embargo & Energy Stagflation: Crude oil quadrupled from $3 to $12 per barrel in 6 months. Headline inflation surged to 12.3%, devastating energy-importing nations. Global equities plunged -48% while energy producers saw earnings surge +120%. Gold and commodities were the only asset classes generating positive real purchasing power returns (+67%).",
+    "source": "Historical Crisis Twin Precedents (1973 OPEC Embargo)",
+    "author": "Macro History Archive",
+    "tags": ["energy", "oil_shock", "stagflation", "commodities", "twin_precedent"],
+    "applicable_events": ["EVENT_OIL_SHOCK", "polar_vortex_energy"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["commodities", "equities", "fixed_income"]
+  },
+  {
+    "id": "precedent_creditanstalt_1931",
+    "text": "1931 Creditanstalt Collapse & 2023 SVB Run: Rapid interest rate hikes caused massive unrealized mark-to-market losses on bank bond portfolios. Digital and counter runs drained 42% of uninsured deposits in 36 hours. Interbank lending froze and financial sector indices fell -32% until emergency central bank liquidity backstops and deposit guarantees restored stability.",
+    "source": "Historical Crisis Twin Precedents (1931/2023 Bank Runs)",
+    "author": "Macro History Archive",
+    "tags": ["banking_crisis", "liquidity", "run_on_banks", "systemic_risk", "twin_precedent"],
+    "applicable_events": ["EVENT_BANK_RUN", "banking_liquidity_crisis"],
+    "market_cycle": "trough",
+    "asset_class_relevance": ["equities", "fixed_income", "cash"]
+  },
+  {
+    "id": "precedent_dotcom_1999",
+    "text": "1999 Dot-Com Infrastructure Boom & 1950s Electrification: Transformative technological breakthroughs trigger massive front-loaded capex cycles. Nasdaq rallied 85% in 1999 on speculative P/E multiple expansion above 100x before separating into real cash-flow winners (telecom/software infrastructure) and bankrupt speculative concepts. Real winners compounded at 24% CAGR over subsequent decades.",
+    "source": "Historical Crisis Twin Precedents (1999 Tech Mania)",
+    "author": "Macro History Archive",
+    "tags": ["technology", "ai", "capex_boom", "growth_equities", "twin_precedent"],
+    "applicable_events": ["EVENT_AI_BREAKTHROUGH", "generative_ai_breakthrough"],
+    "market_cycle": "expansion",
+    "asset_class_relevance": ["equities", "cash"]
+  },
+  {
+    "id": "precedent_japan_real_estate_1990",
+    "text": "1990 Tokyo Real Estate Deflation & Singapore ABSD Shocks: Regulatory intervention to prick speculative property bubbles (loan-to-value caps, macroprudential stamp duties) led to a multi-year freeze in transaction volumes (-65%). Real estate developer equities de-rated by 40%, while rental yields stabilized only after highly leveraged holding entities completed forced balance sheet deleveraging.",
+    "source": "Historical Crisis Twin Precedents (1990 Tokyo Real Estate)",
+    "author": "Macro History Archive",
+    "tags": ["real_estate", "property_bubble", "macroprudential", "deleveraging", "twin_precedent"],
+    "applicable_events": ["EVENT_PROPERTY_COOLING", "property_cooling_measures"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["real_estate", "equities", "fixed_income"]
+  },
+  {
+    "id": "precedent_us_downgrade_2011",
+    "text": "2011 S&P US Sovereign Downgrade & Eurozone Debt Crisis: When S&P downgraded US federal debt from AAA to AA+, paradoxical flight-to-quality dynamics caused Treasury yields to fall rather than rise, but global equities sold off -16% in 10 days as risk premiums expanded. Gold rallied +14% as fiat currency sovereign credibility was questioned.",
+    "source": "Historical Crisis Twin Precedents (2011 Debt Downgrade)",
+    "author": "Macro History Archive",
+    "tags": ["sovereign_debt", "credit_rating", "safe_havens", "gold", "twin_precedent"],
+    "applicable_events": ["EVENT_SOVEREIGN_DOWNGRADE", "sovereign_debt_downgrade"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["fixed_income", "commodities", "equities"]
+  },
+  {
+    "id": "precedent_qe1_2008",
+    "text": "2008-2009 Global Central Bank Coordinated QE & Zero Rates: Emergency coordinated monetary easing (Federal Reserve, ECB, BOJ) expanded balance sheets by $3.2T and slashed policy rates to 0%. Risk assets bottomed within 2 quarters, embarking on a 10-year bull market, while cash yields fell to 0%, inflicting severe cash drag on defensive holders who failed to rebalance into equities and credit.",
+    "source": "Historical Crisis Twin Precedents (2008 Quantitative Easing)",
+    "author": "Macro History Archive",
+    "tags": ["monetary_policy", "qe", "liquidity_injection", "bull_market", "twin_precedent"],
+    "applicable_events": ["EVENT_QE_STIMULUS", "coordinated_rate_cut_qe"],
+    "market_cycle": "recovery",
+    "asset_class_relevance": ["equities", "fixed_income", "cash"]
+  },
+  {
+    "id": "precedent_crypto_winter_2022",
+    "text": "2022 Terra-Luna / FTX Contagion & 2021 China Mining Ban: Regulatory crackdowns and leverage collapses in digital assets triggered a -75% drawdown across cryptocurrency markets in 3 quarters. Traditional financial contagion was contained due to limited institutional banking exposure, while high-quality sovereign money market funds and cash preserved 100% nominal capital.",
+    "source": "Historical Crisis Twin Precedents (2022 Crypto Contagion)",
+    "author": "Macro History Archive",
+    "tags": ["crypto", "digital_assets", "contagion", "cash_safety", "twin_precedent"],
+    "applicable_events": ["EVENT_CRYPTO_BAN", "crypto_crackdown"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["crypto", "cash", "fixed_income"]
+  },
+  {
+    "id": "precedent_reagan_defense_1981",
+    "text": "1981 Reagan Defense Expansion & 2022 NATO Military Spending Re-arm: Geopolitical conflict drove defense outlays from 4.9% to 6.2% of GDP. Aerospace, defense contractors, and specialized industrial manufacturing outperformed broad indices by +18% annualized over 4 years, driven by multi-year sovereign procurement contracts with guaranteed cost-plus margins.",
+    "source": "Historical Crisis Twin Precedents (1981 Defense Surge)",
+    "author": "Macro History Archive",
+    "tags": ["defense", "geopolitics", "fiscal_spending", "manufacturing", "twin_precedent"],
+    "applicable_events": ["EVENT_DEFENSE_SURGE", "defense_budget_surge"],
+    "market_cycle": "expansion",
+    "asset_class_relevance": ["equities", "commodities"]
+  },
+  {
+    "id": "precedent_new_deal_1933",
+    "text": "1933 New Deal Infrastructure Works & 2021 US Infrastructure Investment Act: Direct fiscal deployment into bridges, energy grids, and water systems generated a 1.4x economic multiplier. Industrial, construction material, and utility sectors saw backlogs surge 35%, outperforming consumer staples by 14% over the subsequent 8 quarters.",
+    "source": "Historical Crisis Twin Precedents (1933 New Deal Works)",
+    "author": "Macro History Archive",
+    "tags": ["infrastructure", "fiscal_stimulus", "capex", "industrials", "twin_precedent"],
+    "applicable_events": ["EVENT_INFRA_BILL", "infrastructure_stimulus_bill"],
+    "market_cycle": "expansion",
+    "asset_class_relevance": ["equities", "fixed_income"]
+  },
+  {
+    "id": "precedent_polio_vaccine_1955",
+    "text": "1955 Salk Polio Vaccine Approval & 2020 Operation Warp Speed: Regulatory fast-track status and guaranteed procurement compressed drug development timelines from 10 years to 11 months. Pharmaceutical and biotech commercial leaders experienced a 120% surge in enterprise valuations, while non-communicable disease clinical trials faced temporary resource crowding.",
+    "source": "Historical Crisis Twin Precedents (1955 Vaccine Fast-Track)",
+    "author": "Macro History Archive",
+    "tags": ["healthcare", "biotech", "regulatory_approval", "pharma", "twin_precedent"],
+    "applicable_events": ["EVENT_BIOTECH_FASTTRACK", "biotech_fast_track"],
+    "market_cycle": "expansion",
+    "asset_class_relevance": ["equities"]
+  },
+  {
+    "id": "precedent_black_monday_1987",
+    "text": "1987 Black Monday & 2010 Flash Crash: Automated portfolio insurance algorithms and algorithmic market-maker stop cascades triggered a -22.6% single-day crash on October 19, 1987, despite unchanged economic fundamentals. Liquidity completely vanished for 4 hours. Patient investors with available dry-powder cash who bought high-quality blue chips recovered 100% of losses within 15 months.",
+    "source": "Historical Crisis Twin Precedents (1987 Black Monday)",
+    "author": "Macro History Archive",
+    "tags": ["flash_crash", "market_liquidity", "algorithmic_trading", "volatility", "twin_precedent"],
+    "applicable_events": ["EVENT_FLASH_CRASH", "flash_crash_algo_failure"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["equities", "cash"]
+  },
+  {
+    "id": "precedent_uk_stagflation_1974",
+    "text": "1974-1976 UK & Global Stagflation Spiral: Simultaneous 24% wage-price inflation and -3.5% economic GDP contraction crushed consumer purchasing power and corporate profit margins. The FT 30 index fell -73% in real terms. Only real assets (gold, physical commodities, real estate with positive cash flow) protected purchasing power against hyper-inflationary currency debasement.",
+    "source": "Historical Crisis Twin Precedents (1974 UK Stagflation)",
+    "author": "Macro History Archive",
+    "tags": ["stagflation", "inflation", "recession", "gold", "twin_precedent"],
+    "applicable_events": ["EVENT_STAGFLATION_SPIRAL"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["commodities", "equities", "fixed_income"]
+  },
+  {
+    "id": "precedent_att_breakup_1982",
+    "text": "1982 AT&T Bell System Antitrust Breakup & 1998 US vs Microsoft: Regulatory consent decrees broke AT&T into seven regional 'Baby Bells', initially depressing parent stock by -15%. However, unbundled enterprise value unlocked fierce competition and innovation, causing the aggregate valuation of the spun-off entities to surpass the original parent market cap by 45% within 5 years.",
+    "source": "Historical Crisis Twin Precedents (1982 AT&T Antitrust)",
+    "author": "Macro History Archive",
+    "tags": ["antitrust", "regulation", "monopoly", "technology", "twin_precedent"],
+    "applicable_events": ["EVENT_TECH_ANTITRUST"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["equities"]
+  },
+  {
+    "id": "precedent_german_energiewende_2011",
+    "text": "2011 German Energiewende & 2022 US Inflation Reduction Act: Generous sovereign feed-in tariffs and clean energy production tax credits sparked an 80% collapse in solar levelized costs over a decade. Renewable utilities and clean-tech equipment makers enjoyed double-digit revenue growth, while unhedged fossil fuel generation assets faced accelerated economic obsolescence and write-downs.",
+    "source": "Historical Crisis Twin Precedents (2011 Clean Energy Shift)",
+    "author": "Macro History Archive",
+    "tags": ["clean_energy", "subsidies", "utilities", "energy_transition", "twin_precedent"],
+    "applicable_events": ["EVENT_RENEWABLE_SUBSIDY"],
+    "market_cycle": "expansion",
+    "asset_class_relevance": ["equities", "commodities"]
+  },
+  {
+    "id": "precedent_uk_pound_exit_1992",
+    "text": "1992 Black Wednesday (UK Pound Exit from ERM): Speculative pressures forced the Bank of England to withdraw sterling from the European Exchange Rate Mechanism, devaluing the pound by 15% against the Deutsche Mark. While import inflation surged, British multinational exporters with overseas earnings rallied +22%, providing a sharp equity hedge against domestic currency weakness.",
+    "source": "Historical Crisis Twin Precedents (1992 ERM Black Wednesday)",
+    "author": "Macro History Archive",
+    "tags": ["currency", "devaluation", "fx", "exporters", "twin_precedent"],
+    "applicable_events": ["EVENT_CURRENCY_DEVALUATION"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["equities", "fixed_income", "cash"]
+  },
+  {
+    "id": "precedent_clinton_tax_1993",
+    "text": "1993 Clinton Deficit Reduction Tax Act & 2021 Global Minimum Tax: Raising corporate tax rates compressed net corporate margins by 150-250bps across capital-intensive equities. Domestic corporate buybacks slowed, favoring high free-cash-flow companies with low debt and international revenue diversification over highly leveraged domestic firms.",
+    "source": "Historical Crisis Twin Precedents (1993 Corporate Tax Reform)",
+    "author": "Macro History Archive",
+    "tags": ["fiscal_policy", "tax_hikes", "corporate_earnings", "dividends", "twin_precedent"],
+    "applicable_events": ["EVENT_CORPORATE_TAX_HIKE"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["equities"]
+  },
+  {
+    "id": "precedent_black_sea_grain_2022",
+    "text": "2022 Black Sea Agricultural Export Shock & 2011 Arab Spring Food Spikes: Port blockades removed 30% of global wheat and sunflower oil exports from global trade, pushing UN Food Price Index to all-time highs (+34%). Agricultural chemical and fertilizer producers saw operating margins jump from 12% to 31%, while food processing and consumer staples suffered gross margin compression of 450bps.",
+    "source": "Historical Crisis Twin Precedents (2022 Black Sea Food Shock)",
+    "author": "Macro History Archive",
+    "tags": ["food_security", "agriculture", "fertilizer", "staples", "twin_precedent"],
+    "applicable_events": ["EVENT_FOOD_SECURITY_CRISIS"],
+    "market_cycle": "contraction",
+    "asset_class_relevance": ["commodities", "equities"]
+  },
+  {
+    "id": "precedent_peace_dividend_1991",
+    "text": "1991 Soviet Collapse Peace Dividend & 1998 Good Friday Accord: The cessation of major geopolitical hostilities slashed sovereign military spending, redirecting state budgets into civilian infrastructure, international trade, and education. Global equity markets experienced a sustained 5-year multiple expansion as geopolitical risk premiums collapsed and international trade grew at 7% annually.",
+    "source": "Historical Crisis Twin Precedents (1991 Peace Dividend)",
+    "author": "Macro History Archive",
+    "tags": ["geopolitics", "peace_dividend", "global_trade", "valuation_expansion", "twin_precedent"],
+    "applicable_events": ["EVENT_PEACE_ACCORD"],
+    "market_cycle": "expansion",
+    "asset_class_relevance": ["equities", "fixed_income"]
+  }
+]

@@ -1,0 +1,721 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "description": "MarketSense Macroeconomic Causal Knowledge Graph for Neuro-Symbolic Explainable AI (XAI)",
+    "node_count": 36,
+    "directed": true
+  },
+  "nodes": [
+    {
+      "id": "driver_policy_rate",
+      "label": "Central Bank Policy Rate",
+      "category": "driver",
+      "description": "Interbank headline target rate set by the monetary authority to control inflation and liquidity."
+    },
+    {
+      "id": "driver_inflation",
+      "label": "Headline & Core CPI Inflation",
+      "category": "driver",
+      "description": "Macroeconomic purchasing power erosion and consumer basket price escalation rate."
+    },
+    {
+      "id": "driver_crude_oil",
+      "label": "Global Crude Oil & Energy",
+      "category": "driver",
+      "description": "Upstream commodity benchmark price impacting transport, logistics, and power utility costs."
+    },
+    {
+      "id": "driver_geopolitical_risk",
+      "label": "Geopolitical Conflict & Border Risk",
+      "category": "driver",
+      "description": "Military escalations, strait blockades, sovereign sanctions, and global instability index."
+    },
+    {
+      "id": "driver_fiscal_stimulus",
+      "label": "Fiscal Policy & Government Spending",
+      "category": "driver",
+      "description": "Sovereign budget initiatives, tax incentives, infrastructure appropriations, and deficit programs."
+    },
+    {
+      "id": "driver_tech_breakthrough",
+      "label": "Tech Breakthrough & AI Boom",
+      "category": "driver",
+      "description": "Structural enterprise productivity enhancements, algorithmic automation, and semiconductor innovations."
+    },
+    {
+      "id": "driver_climate_weather",
+      "label": "Climate Disruption & Seasonal Shock",
+      "category": "driver",
+      "description": "Monsoon variations, severe polar freezes, agricultural crop yields, and renewable grid disruption."
+    },
+    {
+      "id": "driver_banking_stress",
+      "label": "Banking Solvency & Liquidity Stress",
+      "category": "driver",
+      "description": "Interbank counterparty distrust, deposit outflows, credit spread widening, and reserve shortfalls."
+    },
+    {
+      "id": "driver_trade_tariffs",
+      "label": "Trade Tariffs & Import Barriers",
+      "category": "driver",
+      "description": "Protectionist import duties, technology export bans, and supply-chain onshoring mandates."
+    },
+    {
+      "id": "driver_health_pandemic",
+      "label": "Pandemic & Mobility Freeze",
+      "category": "driver",
+      "description": "Biosecurity emergencies, lockdown orders, hospitality halts, and border travel restrictions."
+    },
+    {
+      "id": "driver_crypto_regulation",
+      "label": "Digital Asset Regulatory Enforcement",
+      "category": "driver",
+      "description": "Centralized exchange compliance orders, anti-money laundering licensing, and institutional liquidity oversight."
+    },
+    {
+      "id": "channel_borrowing_cost",
+      "label": "Corporate & Interbank Borrowing Costs",
+      "category": "channel",
+      "description": "Commercial paper and prime lending borrowing rates paid by firms to finance leverage."
+    },
+    {
+      "id": "channel_discount_rate",
+      "label": "Equity Discount Rate (WACC)",
+      "category": "channel",
+      "description": "Hurdle rate used in Discounted Cash Flow models to price future earnings of high-duration assets."
+    },
+    {
+      "id": "channel_consumer_demand",
+      "label": "Household Disposable Demand",
+      "category": "channel",
+      "description": "Real purchasing power available for non-essential discretionary and staple goods."
+    },
+    {
+      "id": "channel_capex_investment",
+      "label": "Corporate CAPEX & Enterprise Budgets",
+      "category": "channel",
+      "description": "Long-term capital expenditures on data centers, infrastructure, facilities, and fleet expansions."
+    },
+    {
+      "id": "channel_refining_margin",
+      "label": "Industrial Energy Input Costs",
+      "category": "channel",
+      "description": "Feedstock fuel and power utility tariffs absorbed across heavy industry and transport."
+    },
+    {
+      "id": "channel_supply_chain",
+      "label": "Supply Chain & Freight Logistics",
+      "category": "channel",
+      "description": "Container freight rates, customs wait times, and component lead times."
+    },
+    {
+      "id": "channel_credit_liquidity",
+      "label": "Bank Credit & Loan Origination",
+      "category": "channel",
+      "description": "Commercial bank lending willingness, debt underwriting volume, and money supply velocity."
+    },
+    {
+      "id": "channel_rural_income",
+      "label": "Rural & Agricultural Output",
+      "category": "channel",
+      "description": "Farm harvest yields and domestic rural consumption capacity."
+    },
+    {
+      "id": "channel_sovereign_yield",
+      "label": "Sovereign Benchmark Yield Curve",
+      "category": "channel",
+      "description": "Risk-free sovereign term premium on short and 10-year sovereign obligations."
+    },
+    {
+      "id": "channel_safe_haven_flow",
+      "label": "Flight-to-Safety Capital Flows",
+      "category": "channel",
+      "description": "Institutional rebalancing from volatile risk assets into anti-fragile hedges."
+    },
+    {
+      "id": "channel_corporate_earnings",
+      "label": "Corporate Net Profit Margins (EBITDA)",
+      "category": "channel",
+      "description": "Aggregate bottom-line profitability after taxes, energy, and debt servicing."
+    },
+    {
+      "id": "channel_mortgage_rate",
+      "label": "Mortgage Rates & Property Demand",
+      "category": "channel",
+      "description": "Residential and commercial real estate financing rates and buyer capitalization rates."
+    },
+    {
+      "id": "sector_it",
+      "label": "Information Technology",
+      "category": "sector",
+      "description": "High-growth software, semiconductor, enterprise cloud, and hardware producers."
+    },
+    {
+      "id": "sector_banks",
+      "label": "Banking & Financial Services",
+      "category": "sector",
+      "description": "Deposit-taking banks, investment firms, lending institutions, and asset managers."
+    },
+    {
+      "id": "sector_energy",
+      "label": "Energy & Utilities",
+      "category": "sector",
+      "description": "Oil & gas extraction, power utilities, renewable grid providers, and pipelines."
+    },
+    {
+      "id": "sector_fmcg",
+      "label": "FMCG & Consumer Staples",
+      "category": "sector",
+      "description": "Defensive consumer goods, food, beverage, household necessities, and agriculture."
+    },
+    {
+      "id": "sector_healthcare",
+      "label": "Healthcare & Pharmaceuticals",
+      "category": "sector",
+      "description": "Pharmaceuticals, biotech, hospitals, medical devices, and vaccine developers."
+    },
+    {
+      "id": "sector_realestate",
+      "label": "Real Estate & Infrastructure",
+      "category": "sector",
+      "description": "REITs, commercial property developments, logistics parks, and civil infrastructure."
+    },
+    {
+      "id": "asset_equities",
+      "label": "Broad Equities Basket",
+      "category": "asset_class",
+      "description": "Market-weighted composite of all equity sector capitalizations."
+    },
+    {
+      "id": "asset_tbill",
+      "label": "Short-Term Sovereign T-Bills",
+      "category": "asset_class",
+      "description": "Ultra-low duration sovereign cash proxy with principal preservation."
+    },
+    {
+      "id": "asset_long_bond",
+      "label": "10-Year Sovereign Bonds",
+      "category": "asset_class",
+      "description": "High-duration sovereign debt vulnerable to rate spikes but resilient in deflation."
+    },
+    {
+      "id": "asset_gold",
+      "label": "Physical Gold Trust",
+      "category": "asset_class",
+      "description": "Zero-counterparty-risk monetary hedge against fiat debasement and stagflation."
+    },
+    {
+      "id": "asset_silver",
+      "label": "Physical Silver & Industrial Metals",
+      "category": "asset_class",
+      "description": "Hybrid precious and industrial metal benefiting from manufacturing demand."
+    },
+    {
+      "id": "asset_cash_mmf",
+      "label": "SGD Money Market Cash",
+      "category": "asset_class",
+      "description": "Zero nominal volatility liquid cash reserve earning overnight policy yields."
+    },
+    {
+      "id": "asset_crypto",
+      "label": "Digital Asset Benchmark ETF",
+      "category": "asset_class",
+      "description": "Speculative high-beta liquidity barometer sensitive to systemic fiat flows."
+    }
+  ],
+  "edges": [
+    {
+      "source": "driver_policy_rate",
+      "target": "channel_borrowing_cost",
+      "sign": 1,
+      "weight": 0.95,
+      "description": "Policy rate hikes directly increase prime and interbank commercial lending rates."
+    },
+    {
+      "source": "driver_policy_rate",
+      "target": "channel_sovereign_yield",
+      "sign": 1,
+      "weight": 0.90,
+      "description": "Monetary tightening shifts the benchmark risk-free yield curve upward."
+    },
+    {
+      "source": "driver_policy_rate",
+      "target": "channel_mortgage_rate",
+      "sign": 1,
+      "weight": 0.88,
+      "description": "Higher benchmark policy rates immediately pass through to variable and fixed mortgage loans."
+    },
+    {
+      "source": "channel_borrowing_cost",
+      "target": "channel_discount_rate",
+      "sign": 1,
+      "weight": 0.90,
+      "description": "Cost of debt escalation elevates the weighted average cost of capital (WACC)."
+    },
+    {
+      "source": "channel_discount_rate",
+      "target": "sector_it",
+      "sign": -1,
+      "weight": 0.90,
+      "description": "Higher discount rates disproportionately compress P/E multiples of long-duration tech cash flows."
+    },
+    {
+      "source": "channel_discount_rate",
+      "target": "sector_realestate",
+      "sign": -1,
+      "weight": 0.85,
+      "description": "Rising hurdle rates depress real estate capitalization values and net asset valuations."
+    },
+    {
+      "source": "channel_mortgage_rate",
+      "target": "sector_realestate",
+      "sign": -1,
+      "weight": 0.92,
+      "description": "Mortgage affordability shocks depress homebuyer demand and developer transactions."
+    },
+    {
+      "source": "channel_sovereign_yield",
+      "target": "asset_long_bond",
+      "sign": -1,
+      "weight": 0.95,
+      "description": "Bond duration mechanics: rising yields force immediate capital loss on long-duration sovereign paper."
+    },
+    {
+      "source": "channel_sovereign_yield",
+      "target": "asset_tbill",
+      "sign": 1,
+      "weight": 0.85,
+      "description": "Short-dated paper rolls over quickly at higher coupon yields with near-zero duration loss."
+    },
+    {
+      "source": "channel_borrowing_cost",
+      "target": "sector_banks",
+      "sign": 1,
+      "weight": 0.75,
+      "description": "Modest rate increases expand Net Interest Margins (NIM) between loan assets and deposit liabilities."
+    },
+    {
+      "source": "driver_banking_stress",
+      "target": "channel_credit_liquidity",
+      "sign": -1,
+      "weight": 0.95,
+      "description": "Interbank counterparty fear causes lenders to hoard reserves and freeze credit lines."
+    },
+    {
+      "source": "channel_credit_liquidity",
+      "target": "sector_banks",
+      "sign": 1,
+      "weight": 0.90,
+      "description": "Credit contractions diminish bank fee income, loan origination volume, and asset quality."
+    },
+    {
+      "source": "driver_banking_stress",
+      "target": "channel_safe_haven_flow",
+      "sign": 1,
+      "weight": 0.92,
+      "description": "Banking panics trigger emergency capital flight from private balance sheets into physical bullion and sovereign paper."
+    },
+    {
+      "source": "channel_safe_haven_flow",
+      "target": "asset_gold",
+      "sign": 1,
+      "weight": 0.95,
+      "description": "Flight-to-safety flows drive strong institutional demand for physical gold as an unencumbered hedge."
+    },
+    {
+      "source": "channel_safe_haven_flow",
+      "target": "asset_tbill",
+      "sign": 1,
+      "weight": 0.80,
+      "description": "Investors park liquidity in risk-free sovereign short-term bills to evade credit default risk."
+    },
+    {
+      "source": "channel_credit_liquidity",
+      "target": "asset_crypto",
+      "sign": 1,
+      "weight": 0.85,
+      "description": "Digital assets rely heavily on speculative liquidity; credit freezes lead to forced deleveraging liquidations."
+    },
+    {
+      "source": "driver_geopolitical_risk",
+      "target": "driver_crude_oil",
+      "sign": 1,
+      "weight": 0.95,
+      "description": "Maritime choke-point blockades and conflicts immediately curtail global crude availability."
+    },
+    {
+      "source": "driver_crude_oil",
+      "target": "sector_energy",
+      "sign": 1,
+      "weight": 0.95,
+      "description": "Upstream crude spikes directly expand top-line revenues and operating margins for oil extractors."
+    },
+    {
+      "source": "driver_crude_oil",
+      "target": "driver_inflation",
+      "sign": 1,
+      "weight": 0.88,
+      "description": "Energy price spikes cascade across logistics, manufacturing, and food processing into core consumer inflation."
+    },
+    {
+      "source": "driver_crude_oil",
+      "target": "channel_refining_margin",
+      "sign": 1,
+      "weight": 0.85,
+      "description": "Elevated fossil fuel prices increase power utility operating costs and transport fuel expenditures."
+    },
+    {
+      "source": "channel_refining_margin",
+      "target": "channel_consumer_demand",
+      "sign": -1,
+      "weight": 0.80,
+      "description": "Gasoline and heating bills crowd out discretionary family spending budgets."
+    },
+    {
+      "source": "driver_geopolitical_risk",
+      "target": "channel_safe_haven_flow",
+      "sign": 1,
+      "weight": 0.90,
+      "description": "War and geopolitical instability induce defensive flight-to-safety portfolio rotations."
+    },
+    {
+      "source": "driver_inflation",
+      "target": "driver_policy_rate",
+      "sign": 1,
+      "weight": 0.85,
+      "description": "Persistent consumer inflation forces central banks to implement emergency monetary tightening."
+    },
+    {
+      "source": "driver_inflation",
+      "target": "asset_gold",
+      "sign": 1,
+      "weight": 0.80,
+      "description": "High structural inflation accelerates gold's role as a store of purchasing power."
+    },
+    {
+      "source": "driver_inflation",
+      "target": "channel_consumer_demand",
+      "sign": -1,
+      "weight": 0.85,
+      "description": "Real purchasing power erosion forces consumers to curb discretionary outlays."
+    },
+    {
+      "source": "channel_consumer_demand",
+      "target": "sector_fmcg",
+      "sign": 1,
+      "weight": 0.70,
+      "description": "Staples benefit from inelastic demand even when discretionary spending shrinks."
+    },
+    {
+      "source": "driver_climate_weather",
+      "target": "channel_rural_income",
+      "sign": 1,
+      "weight": 0.92,
+      "description": "Adequate monsoon rains produce bumper agricultural yields; severe droughts decimate farm output."
+    },
+    {
+      "source": "channel_rural_income",
+      "target": "sector_fmcg",
+      "sign": 1,
+      "weight": 0.90,
+      "description": "Rural farm income is the primary demand driver for domestic FMCG consumer goods."
+    },
+    {
+      "source": "driver_climate_weather",
+      "target": "driver_crude_oil",
+      "sign": 1,
+      "weight": 0.75,
+      "description": "Severe winter freezes increase heating oil and natural gas demand to critical capacity."
+    },
+    {
+      "source": "driver_tech_breakthrough",
+      "target": "sector_it",
+      "sign": 1,
+      "weight": 0.95,
+      "description": "AI breakthroughs and enterprise automation spur explosive software demand and semiconductor orders."
+    },
+    {
+      "source": "driver_tech_breakthrough",
+      "target": "channel_capex_investment",
+      "sign": 1,
+      "weight": 0.88,
+      "description": "Enterprises aggressively allocate capital toward compute infrastructure and digital transformation."
+    },
+    {
+      "source": "channel_capex_investment",
+      "target": "channel_corporate_earnings",
+      "sign": 1,
+      "weight": 0.80,
+      "description": "Long-term automation capex increases structural profit margins and labor efficiency."
+    },
+    {
+      "source": "driver_tech_breakthrough",
+      "target": "asset_crypto",
+      "sign": 1,
+      "weight": 0.70,
+      "description": "Technological optimism frequently spills over into speculative decentralized technology benchmarks."
+    },
+    {
+      "source": "driver_trade_tariffs",
+      "target": "channel_supply_chain",
+      "sign": 1,
+      "weight": 0.92,
+      "description": "Punitive import duties create administrative friction and supply bottlenecks at maritime ports."
+    },
+    {
+      "source": "channel_supply_chain",
+      "target": "sector_it",
+      "sign": -1,
+      "weight": 0.88,
+      "description": "Semiconductor trade barriers interrupt global hardware assembly and delay device shipments."
+    },
+    {
+      "source": "channel_supply_chain",
+      "target": "driver_inflation",
+      "sign": 1,
+      "weight": 0.78,
+      "description": "Supply chain snarls add import cost surcharges that pass through to consumer retail prices."
+    },
+    {
+      "source": "driver_health_pandemic",
+      "target": "channel_consumer_demand",
+      "sign": -1,
+      "weight": 0.95,
+      "description": "Stay-at-home orders shut down physical retail, commercial travel, and entertainment venues."
+    },
+    {
+      "source": "driver_health_pandemic",
+      "target": "sector_healthcare",
+      "sign": 1,
+      "weight": 0.92,
+      "description": "Health emergencies create surge demand for diagnostic kits, therapeutics, and hospital capacity."
+    },
+    {
+      "source": "driver_health_pandemic",
+      "target": "sector_it",
+      "sign": 1,
+      "weight": 0.80,
+      "description": "Remote-work mandates drive immediate cloud infrastructure and collaboration software adoption."
+    },
+    {
+      "source": "driver_fiscal_stimulus",
+      "target": "channel_capex_investment",
+      "sign": 1,
+      "weight": 0.90,
+      "description": "Direct sovereign subsidy infusions sponsor major infrastructure, energy transition, and construction works."
+    },
+    {
+      "source": "channel_capex_investment",
+      "target": "sector_realestate",
+      "sign": 1,
+      "weight": 0.85,
+      "description": "Civil infrastructure contracts directly fuel industrial REITs and civil construction revenues."
+    },
+    {
+      "source": "driver_fiscal_stimulus",
+      "target": "channel_consumer_demand",
+      "sign": 1,
+      "weight": 0.85,
+      "description": "Tax rebates and direct household subsidies inject immediate spending power into consumer markets."
+    },
+    {
+      "source": "driver_fiscal_stimulus",
+      "target": "sector_energy",
+      "sign": 1,
+      "weight": 0.80,
+      "description": "Green infrastructure funds accelerate renewable energy grid installations and battery storage subsidies."
+    },
+    {
+      "source": "driver_crypto_regulation",
+      "target": "asset_crypto",
+      "sign": -1,
+      "weight": 0.95,
+      "description": "Strict compliance mandates and enforcement actions trigger immediate institutional liquidity exits."
+    },
+    {
+      "source": "channel_corporate_earnings",
+      "target": "asset_equities",
+      "sign": 1,
+      "weight": 0.95,
+      "description": "Aggregate equity market performance tracks structural corporate earnings growth over time."
+    },
+    {
+      "source": "sector_it",
+      "target": "asset_equities",
+      "sign": 1,
+      "weight": 0.85,
+      "description": "Information Technology represents a dominant weighting in modern equity indices."
+    },
+    {
+      "source": "sector_banks",
+      "target": "asset_equities",
+      "sign": 1,
+      "weight": 0.80,
+      "description": "Commercial financials represent a foundational pillar of market capitalization."
+    },
+    {
+      "source": "channel_capex_investment",
+      "target": "asset_silver",
+      "sign": 1,
+      "weight": 0.78,
+      "description": "Solar PV and electronics manufacturing consume significant industrial physical silver."
+    }
+  ],
+  "event_mappings": {
+    "EVENT_MONETARY_HIKE": {
+      "primary_driver": "driver_policy_rate",
+      "secondary_driver": "driver_inflation",
+      "polarity": 1,
+      "shock_intensity": 1.0,
+      "description": "Central bank announces aggressive 100bps rate hike to extinguish inflation expectations."
+    },
+    "EVENT_RATE_CUT_QE": {
+      "primary_driver": "driver_policy_rate",
+      "secondary_driver": "channel_credit_liquidity",
+      "polarity": -1,
+      "shock_intensity": 0.9,
+      "description": "Central banks coordinate 75bps rate cut and inject systemic liquidity via quantitative easing."
+    },
+    "EVENT_GEOPOLITICAL_OIL": {
+      "primary_driver": "driver_geopolitical_risk",
+      "secondary_driver": "driver_crude_oil",
+      "polarity": 1,
+      "shock_intensity": 1.0,
+      "description": "Maritime strait blockade triggers supply shortage and sends crude oil surging."
+    },
+    "EVENT_BANK_RUN_PANIC": {
+      "primary_driver": "driver_banking_stress",
+      "secondary_driver": "channel_credit_liquidity",
+      "polarity": 1,
+      "shock_intensity": 1.0,
+      "description": "Regional bank failure triggers deposit runs, credit contraction, and flight to safe havens."
+    },
+    "EVENT_MONSOON_DEFICIT": {
+      "primary_driver": "driver_climate_weather",
+      "secondary_driver": "channel_rural_income",
+      "polarity": -1,
+      "shock_intensity": 0.85,
+      "description": "El Nino weather pattern causes severe monsoon rain shortfall, depressing rural demand."
+    },
+    "EVENT_BUMPER_MONSOON": {
+      "primary_driver": "driver_climate_weather",
+      "secondary_driver": "channel_rural_income",
+      "polarity": 1,
+      "shock_intensity": 0.9,
+      "description": "Optimal monsoon rains drive record harvests and rural consumer spending surge."
+    },
+    "EVENT_TARIFF_CHIPS": {
+      "primary_driver": "driver_trade_tariffs",
+      "secondary_driver": "channel_supply_chain",
+      "polarity": 1,
+      "shock_intensity": 0.95,
+      "description": "Punitive import duties on semiconductor chips disrupt technology supply chains."
+    },
+    "EVENT_PANDEMIC_LOCKDOWN": {
+      "primary_driver": "driver_health_pandemic",
+      "secondary_driver": "channel_consumer_demand",
+      "polarity": 1,
+      "shock_intensity": 1.0,
+      "description": "Global health emergency mandates economic freeze, border closures, and emergency healthcare mobilization."
+    },
+    "EVENT_AI_PRODUCTIVITY_BOOM": {
+      "primary_driver": "driver_tech_breakthrough",
+      "secondary_driver": "channel_capex_investment",
+      "polarity": 1,
+      "shock_intensity": 1.0,
+      "description": "Breakthrough in generative AI drives massive enterprise automation and tech earnings re-rating."
+    },
+    "EVENT_SUBSIDY_GREEN": {
+      "primary_driver": "driver_fiscal_stimulus",
+      "secondary_driver": "sector_energy",
+      "polarity": 1,
+      "shock_intensity": 0.85,
+      "description": "Multi-billion dollar sovereign fund announced for renewable energy and clean grid infrastructure."
+    },
+    "EVENT_SOVEREIGN_INFRA_INJECTION": {
+      "primary_driver": "driver_fiscal_stimulus",
+      "secondary_driver": "sector_realestate",
+      "polarity": 1,
+      "shock_intensity": 0.9,
+      "description": "Sovereign infrastructure injection awards major civil construction and logistics contracts."
+    },
+    "EVENT_CORPORATE_TAX_CUT": {
+      "primary_driver": "driver_fiscal_stimulus",
+      "secondary_driver": "channel_corporate_earnings",
+      "polarity": 1,
+      "shock_intensity": 0.95,
+      "description": "Sweeping corporate income tax cut increases net after-tax corporate profit margins."
+    },
+    "EVENT_GST_CONSUMPTION_BOOST": {
+      "primary_driver": "driver_fiscal_stimulus",
+      "secondary_driver": "channel_consumer_demand",
+      "polarity": 1,
+      "shock_intensity": 0.8,
+      "description": "Targeted consumption tax rebates and wage adjustments boost disposable retail spending."
+    },
+    "EVENT_REAL_ESTATE_COOLING": {
+      "primary_driver": "driver_fiscal_stimulus",
+      "secondary_driver": "channel_mortgage_rate",
+      "polarity": 1,
+      "shock_intensity": 0.85,
+      "description": "Macroprudential stamp duties and loan-to-value caps cool speculative property price growth."
+    },
+    "EVENT_CRYPTO_CRACKDOWN": {
+      "primary_driver": "driver_crypto_regulation",
+      "secondary_driver": "asset_crypto",
+      "polarity": 1,
+      "shock_intensity": 1.0,
+      "description": "Regulators issue severe restrictions on digital asset exchanges, prompting speculative liquidation."
+    },
+    "EVENT_WINTER_ENERGY_FREEZE": {
+      "primary_driver": "driver_climate_weather",
+      "secondary_driver": "driver_crude_oil",
+      "polarity": 1,
+      "shock_intensity": 0.9,
+      "description": "Unprecedented polar vortex depletes natural gas reserves and drives utility demand higher."
+    },
+    "EVENT_SOVEREIGN_DEBT_DOWNGRADE": {
+      "primary_driver": "driver_banking_stress",
+      "secondary_driver": "channel_sovereign_yield",
+      "polarity": 1,
+      "shock_intensity": 0.9,
+      "description": "Credit agency downgrades sovereign outlook, raising borrowing spreads and triggering flight to gold."
+    },
+    "EVENT_DEFENSE_BUDGET_SURGE": {
+      "primary_driver": "driver_geopolitical_risk",
+      "secondary_driver": "driver_fiscal_stimulus",
+      "polarity": 1,
+      "shock_intensity": 0.85,
+      "description": "Emergency 25% defense appropriation increases industrial spending amid rising geopolitical friction."
+    },
+    "EVENT_BIOTECH_FAST_TRACK": {
+      "primary_driver": "driver_fiscal_stimulus",
+      "secondary_driver": "sector_healthcare",
+      "polarity": 1,
+      "shock_intensity": 0.85,
+      "description": "Regulatory overhaul accelerates life-saving drug approvals and clinical trials."
+    },
+    "EVENT_GOLDILOCKS_SOFT_LANDING": {
+      "primary_driver": "driver_inflation",
+      "secondary_driver": "driver_policy_rate",
+      "polarity": -1,
+      "shock_intensity": 0.85,
+      "description": "Inflation cools toward 2% target without triggering a recession, easing discount rates."
+    },
+    "EVENT_FREE_TRADE_ACCORD": {
+      "primary_driver": "driver_trade_tariffs",
+      "secondary_driver": "channel_supply_chain",
+      "polarity": -1,
+      "shock_intensity": 0.8,
+      "description": "Multilateral free trade pact slashes export duties and streamlines logistics corridors."
+    },
+    "EVENT_FISCAL_TAX_LOSS": {
+      "primary_driver": "driver_fiscal_stimulus",
+      "secondary_driver": "asset_equities",
+      "polarity": -1,
+      "shock_intensity": 0.7,
+      "description": "Calendar year-end tax-loss selling triggers short-term institutional equity liquidity dips."
+    }
+  }
+}
+

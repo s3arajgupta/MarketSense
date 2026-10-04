@@ -51,11 +51,13 @@ USER'S PORTFOLIO:
 - Top Holdings: {top_holdings}
 - Alpha vs All-Weather: {alpha:+.1f}%
 
+{causal_path_context}
+
 {wisdom_context}
 
 Provide your debrief following this structure:
 1. 📉 What Happened — Explain the event's market impact in 2-3 sentences
-2. 🔗 Causal Chain — Trace the transmission: Event → Mechanism → Sector Impact
+2. 🔗 Causal Chain — Explicitly trace the step-by-step transmission using the verified Knowledge Graph path above: Macro Driver ➔ Intermediate Channels ➔ Sector/Asset Valuation Impact
 3. 📚 What the Masters Say — Quote 1-2 relevant principles from the retrieved wisdom
 4. 💡 Your Portfolio — Comment specifically on how the user's holdings were affected, their real purchasing-power return after inflation, and whether holding cash protected them or suffered from cash drag / money illusion
 """

@@ -80,30 +80,34 @@ The app works immediately — the AI Mentor activates once you configure an LLM 
 
 ```
 MarketSense/
-├── app.py                    # Streamlit application entry point
+├── app.py                    # Streamlit application entry point (with XAI & What-If tabs)
 ├── config.py                 # Centralized configuration (.env loading)
-├── requirements.txt          # Python dependencies
+├── requirements.txt          # Python dependencies (Streamlit, NetworkX, Pyvis, ChromaDB)
 ├── .env.example              # Configuration template
 │
-├── engine/                   # Simulation Engine (Phase 1)
+├── engine/                   # Simulation Engine (Phase 1 & 3)
 │   ├── pricing.py            # Deterministic pricing with sector/cap/leverage modeling
 │   ├── portfolio.py          # Portfolio management, NAV, dividends, capital gains
 │   ├── friction.py           # Brokerage fees, tax calculations, mentor tips
-│   └── benchmarks.py         # Passive benchmark tracking (Equity, 60/40, All-Weather)
+│   ├── benchmarks.py         # Passive benchmark tracking (Equity, 60/40, All-Weather)
+│   └── simulator.py          # Batch simulation runner & counterfactual "What-If" engine
 │
-├── intelligence/             # AI Reasoning Layer (Phase 2)
+├── intelligence/             # AI Reasoning & XAI Layer (Phase 2 & 3)
+│   ├── knowledge_graph.py    # NetworkX causal graph & shortest path extraction engine
 │   ├── llm_client.py         # Abstract LLM interface + provider factory
 │   ├── gemini_provider.py    # Gemini API provider (google-genai SDK)
 │   ├── ollama_provider.py    # Ollama local inference provider
 │   ├── rag_engine.py         # Hybrid retrieval: tag-filter + semantic search
 │   ├── knowledge_loader.py   # JSON corpus → ChromaDB ingestion
 │   ├── mentor.py             # AI Mentor orchestrator (debrief, insights, health check)
-│   └── prompts.py            # All prompt templates with hard safety rules
+│   └── prompts.py            # All prompt templates with hard safety rules & KG grounding
 │
 ├── data/
 │   ├── assets.json           # 24 instrument definitions with financial parameters
 │   ├── crisis_cards.json     # 22 curated macro events with impacts & precedents
-│   └── knowledge/            # RAG corpus — investor wisdom chunks
+│   └── knowledge/            # RAG corpus & Causal Graph data
+│       ├── causal_graph.json # 36 nodes, 48 edges, all 22 event mappings
+│       ├── crisis_precedents.json # 22 twin crisis precedents with comparative metrics
 │       ├── graham.json       # Benjamin Graham — margin of safety, intrinsic value
 │       ├── dalio.json        # Ray Dalio — debt cycles, all-weather, deleveraging
 │       ├── marks.json        # Howard Marks — second-level thinking, risk, cycles
@@ -111,9 +115,14 @@ MarketSense/
 │       ├── bogle.json        # John Bogle — cost matters, passive indexing
 │       └── crisis_cases.json # 7 historical crises (1973–2022) with lessons
 │
+├── tests/                    # Automated Test Suite (25/25 passing)
+│   ├── test_engine.py        # 10 pricing, portfolio & benchmark tests
+│   ├── test_intelligence.py  # 5 LLM client, prompt & RAG tests
+│   └── test_knowledge_graph.py # 10 NetworkX, Pyvis, XAI & counterfactual tests
+│
 └── Documentations/
     ├── salient_features.md   # Comprehensive catalog of implemented features
-    ├── phases_information.md # Master project roadmap
+    ├── phases_information.md # Master project roadmap (Phases 1-3 Completed)
     └── architecture.jpg      # System architecture diagram
 ```
 
@@ -220,11 +229,13 @@ When deploying MarketSense to cloud environments (e.g., Azure Container Apps, Az
 
 | Component | Technology |
 |-----------|-----------|
-| Frontend | Streamlit, Plotly |
+| Frontend | Streamlit, Plotly, Pyvis |
+| Causal Knowledge Graph | NetworkX (directed weighted multigraph) |
 | Simulation Engine | Pure Python (no ML dependencies) |
 | LLM Integration | Google Gemini API (google-genai SDK) / Ollama |
 | Vector Database | ChromaDB (embedded, zero infrastructure) |
 | Embeddings | all-MiniLM-L6-v2 (ONNX, auto-downloaded) |
+| Testing | pytest (25 unit tests) |
 
 ---
 
