@@ -60,11 +60,13 @@ def test_prompt_template_formatting():
         cash_pct=26.3,
         top_holdings="Tech Large Cap",
         alpha=-1.5,
+        causal_path_context="[1] Rate Hike -> Borrowing Cost -> Discount Rate -> Tech",
         wisdom_context="[1] 'Margin of safety' — Benjamin Graham",
     )
     assert "Test Event" in formatted
     assert "Margin of safety" in formatted
     assert "7.8% annualized" in formatted
+    assert "Borrowing Cost" in formatted
     assert "HARD RULES" in SYSTEM_PROMPT_BASE
 
 
@@ -160,6 +162,8 @@ def test_offline_inference_simulation():
     assert provider == "Offline-Simulated" or "offline" in provider.lower()
     assert "Emergency 100bps Central Bank Rate Hike" in mock_client.last_user_prompt
     assert "Sudden" in mock_client.last_user_prompt
+    assert "SYMBOLIC CAUSAL TRANSMISSION PATHS" in mock_client.last_user_prompt
+    assert "Central Bank Policy Rate" in mock_client.last_user_prompt
 
 
 def test_career_retrospective_simulation():

@@ -11,7 +11,12 @@ from engine.portfolio import Portfolio
 from engine.pricing import calculate_new_prices
 from engine.benchmarks import BenchmarkTracker
 from engine.friction import preview_sell_friction, preview_buy_friction
-from engine.simulator import simulate_multi_quarters
+from engine.simulator import (
+    simulate_multi_quarters,
+    compute_counterfactual,
+    COUNTERFACTUAL_STRATEGIES,
+)
+import streamlit.components.v1 as components
 
 INITIAL_TARGET_WEIGHTS = {
     "EQ_IT_LC": 0.10,
@@ -34,6 +39,13 @@ try:
 except ImportError:
     LLM_AVAILABLE = False
 
+# Phase 3: Knowledge Graph (XAI)
+try:
+    from intelligence.knowledge_graph import CausalKnowledgeGraph
+    KG_AVAILABLE = True
+except ImportError:
+    KG_AVAILABLE = False
+
 # 1. Page Configuration
 st.set_page_config(
     page_title="MarketSense AI | Investment Flight Simulator",
@@ -41,6 +53,65 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# Custom Compact Institutional CSS & Sticky Floating Flight Controls
+st.markdown("""
+<style>
+/* 1. Ensure proper top clearance so metrics ribbon is never cut off by Streamlit header */
+.block-container {
+    padding-top: 3.5rem !important;
+    padding-bottom: 2.5rem !important;
+    max-width: 96% !important;
+}
+
+/* 2. Sleek, compact top KPI metric cards with full visibility */
+[data-testid="stMetric"] {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 10px 14px !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    overflow: visible !important;
+    min-height: 80px !important;
+}
+[data-testid="stMetricLabel"] {
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.03em !important;
+    text-transform: uppercase !important;
+    color: #94A3B8 !important;
+    margin-bottom: 2px !important;
+    white-space: nowrap !important;
+}
+[data-testid="stMetricValue"] {
+    font-size: 1.35rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+}
+[data-testid="stMetricDelta"] {
+    font-size: 0.78rem !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
+}
+
+/* 3. Floating Sticky Flight Controls Bar - scoped strictly to bordered wrapper with anchor */
+div[data-testid="stVerticalBlockBorderWrapper"]:has(#flight-controls-anchor) {
+    position: sticky !important;
+    top: 3.25rem !important;
+    z-index: 990 !important;
+    background: rgba(14, 17, 23, 0.95) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 12px !important;
+    padding: 8px 14px 6px 14px !important;
+    margin-top: 6px !important;
+    margin-bottom: 12px !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6) !important;
+}
+</style>
+""", unsafe_allow_html=True)
 
 # 2. Data Loaders
 @st.cache_data
@@ -57,6 +128,17 @@ assets_data = load_assets()
 assets_list = assets_data["assets"]
 assets_dict = {a["id"]: a for a in assets_list}
 events_list = load_events()
+events_dict = {e["id"]: e for e in events_list}
+
+@st.cache_resource
+def get_knowledge_graph():
+    """Loads and caches the symbolic Causal Knowledge Graph for Phase 3 XAI."""
+    if not KG_AVAILABLE:
+        return None
+    try:
+        return CausalKnowledgeGraph()
+    except Exception:
+        return None
 
 def reset_simulation():
     """Resets simulation state to institutional S$100k diversified portfolio (30% Cash, 70% Invested)."""
@@ -225,7 +307,7 @@ total_return_pct = ((cur_nav - portfolio.initial_cash) / portfolio.initial_cash)
 alpha_vs_equity = total_return_pct - (((benchmarks.nav_100_equity - 100000.0) / 100000.0) * 100.0)
 real_return_pct = benchmarks.get_real_return_pct(total_return_pct)
 
-# Top Status Metrics Row
+# Top Status Metrics Row (Compact Institutional Ribbon)
 top_c1, top_c2, top_c3, top_c4, top_c5 = st.columns([1.1, 1.4, 1.3, 1.2, 1.1])
 top_c1.metric("Timeline", f"Quarter Q{portfolio.current_quarter}", f"Year {(portfolio.current_quarter // 4) + 1} of 30")
 top_c2.metric(
@@ -238,78 +320,119 @@ top_c3.metric("Liquid Cash", f"S${portfolio.cash:,.2f}", f"{(portfolio.cash / cu
 top_c4.metric("Alpha vs S&P", f"{alpha_vs_equity:+.2f}%")
 top_c5.metric("Friction Paid", f"S${(portfolio.total_tax_paid + portfolio.total_brokerage_paid):,.0f}", f"Tax: S${portfolio.total_tax_paid:,.0f}")
 
-st.markdown("---")
-
-# ── Simulation Playback Flight Controls ──
+# ── Simulation Playback Flight Controls (Sticky Floating Toolbar) ──
 is_playing = st.session_state.get("is_playing", False)
 is_fast = st.session_state.get("is_fast", False)
 
-p_c1, p_c2, p_c3, p_c4, p_c5 = st.columns([1.3, 1.3, 1.3, 1.3, 2.5])
+with st.container(border=True):
+    st.markdown('<span id="flight-controls-anchor"></span>', unsafe_allow_html=True)
+    p_c1, p_c2, p_c3, p_c4, p_c5 = st.columns([1.3, 1.3, 1.3, 1.3, 2.5])
 
-if is_playing:
-    with p_c1:
-        if st.button("⏸️ Pause Simulation", type="primary", width="stretch", help="Halt simulation on current quarter to inspect or trade"):
-            st.session_state.is_playing = False
-            st.session_state.is_fast = False
-            st.rerun()
-
-    with p_c2:
-        if is_fast:
-            if st.button("▶️ Normal Speed (1x)", width="stretch", help="Slow down playback to 1x normal speed (~0.8s/quarter)"):
+    if is_playing:
+        with p_c1:
+            if st.button("⏸️ Pause Simulation", type="primary", width="stretch", help="Halt simulation on current quarter to inspect or trade"):
+                st.session_state.is_playing = False
                 st.session_state.is_fast = False
                 st.rerun()
-        else:
-            if st.button("⏩ Fast Forward (3x)", width="stretch", help="Speed up simulation to 3x speed (~0.2s/quarter)"):
+
+        with p_c2:
+            if is_fast:
+                if st.button("▶️ Normal Speed (1x)", width="stretch", help="Slow down playback to 1x normal speed (~0.8s/quarter)"):
+                    st.session_state.is_fast = False
+                    st.rerun()
+            else:
+                if st.button("⏩ Fast Forward (3x)", width="stretch", help="Speed up simulation to 3x speed (~0.2s/quarter)"):
+                    st.session_state.is_fast = True
+                    st.rerun()
+
+        with p_c3:
+            st.button("🎲 Draw Event", width="stretch", disabled=True)
+
+        with p_c4:
+            st.button("➡️ Advance Qtr", width="stretch", disabled=True)
+
+        with p_c5:
+            speed_tag = "⚡ Fast Forwarding (3x Speed)" if is_fast else "🟢 Playing Simulation (1x Speed)"
+            prog = min(1.0, portfolio.current_quarter / 120.0)
+            st.progress(prog, text=f"{speed_tag} | Q{portfolio.current_quarter}/120 (Year {portfolio.current_quarter // 4}/30)")
+
+    else:
+        with p_c1:
+            if st.button("▶️ Play Simulation", type="primary", width="stretch", help="Run simulation continuously quarter-by-quarter"):
+                st.session_state.is_playing = True
+                st.session_state.is_fast = False
+                st.rerun()
+
+        with p_c2:
+            if st.button("⏩ Fast Forward", width="stretch", help="Run simulation continuously at 3x fast speed"):
+                st.session_state.is_playing = True
                 st.session_state.is_fast = True
                 st.rerun()
 
-    with p_c3:
-        st.button("🎲 Draw Event", width="stretch", disabled=True)
+        with p_c3:
+            has_pending_event = st.session_state.event_phase in ("PLANNING", "SHOCKED")
+            draw_disabled = (portfolio.current_quarter >= 120) or has_pending_event
+            if st.button("🎲 Draw Event", width="stretch", disabled=draw_disabled, help="Manually draw upcoming scenario to preview or plan"):
+                ev = events_list[st.session_state.event_queue_idx % len(events_list)]
+                st.session_state.event_queue_idx += 1
+                st.session_state.active_event = ev
+                st.session_state.event_phase = "PLANNING" if ev.get("event_type") == "Seasonal" else "SHOCKED"
+                st.session_state.mentor_debrief = None
+                st.rerun()
 
-    with p_c4:
-        st.button("➡️ Advance Qtr", width="stretch", disabled=True)
+        with p_c4:
+            advance_disabled = (portfolio.current_quarter >= 120)
+            has_pending_event = st.session_state.event_phase in ("PLANNING", "SHOCKED")
+            adv_btn_label = "➡️ Absorb Shock" if has_pending_event else "➡️ Next Quarter"
+            adv_btn_help = "Absorb pending event shock into asset prices and complete quarter" if has_pending_event else "Simulate next quarter with upcoming macro scenario"
+            if st.button(adv_btn_label, width="stretch", disabled=advance_disabled, help=adv_btn_help):
+                step_simulation_quarter()
+                st.rerun()
 
-    with p_c5:
-        speed_tag = "⚡ Fast Forwarding (3x Speed)" if is_fast else "🟢 Playing Simulation (1x Speed)"
-        prog = min(1.0, portfolio.current_quarter / 120.0)
-        st.progress(prog, text=f"{speed_tag} | Q{portfolio.current_quarter}/120 (Year {portfolio.current_quarter // 4}/30)")
+        with p_c5:
+            prog = min(1.0, portfolio.current_quarter / 120.0)
+            st.progress(prog, text=f"Timeline Horizon: Q{portfolio.current_quarter}/120 (Year {portfolio.current_quarter // 4}/30)")
 
-else:
-    with p_c1:
-        if st.button("▶️ Play Simulation", type="primary", width="stretch", help="Run simulation continuously quarter-by-quarter"):
-            st.session_state.is_playing = True
-            st.session_state.is_fast = False
-            st.rerun()
+# Persistent Quick Controls in Sidebar
+with st.sidebar:
+    st.divider()
+    st.markdown("### 🎮 Quick Time-Travel Controls")
+    is_playing_sb = st.session_state.get("is_playing", False)
+    is_fast_sb = st.session_state.get("is_fast", False)
 
-    with p_c2:
-        if st.button("⏩ Fast Forward", width="stretch", help="Run simulation continuously at 3x fast speed"):
-            st.session_state.is_playing = True
-            st.session_state.is_fast = True
-            st.rerun()
+    sb_c1, sb_c2 = st.columns(2)
+    if is_playing_sb:
+        with sb_c1:
+            if st.button("⏸️ Pause", key="sb_pause_btn", type="primary", width="stretch"):
+                st.session_state.is_playing = False
+                st.session_state.is_fast = False
+                st.rerun()
+        with sb_c2:
+            sb_spd_txt = "▶️ 1x" if is_fast_sb else "⏩ 3x"
+            if st.button(sb_spd_txt, key="sb_speed_btn", width="stretch"):
+                st.session_state.is_fast = not is_fast_sb
+                st.rerun()
+    else:
+        with sb_c1:
+            if st.button("▶️ Play", key="sb_play_btn", type="primary", width="stretch"):
+                st.session_state.is_playing = True
+                st.session_state.is_fast = False
+                st.rerun()
+        with sb_c2:
+            if st.button("⏩ Fast", key="sb_fast_btn", width="stretch"):
+                st.session_state.is_playing = True
+                st.session_state.is_fast = True
+                st.rerun()
 
-    with p_c3:
-        has_pending_event = st.session_state.event_phase in ("PLANNING", "SHOCKED")
-        draw_disabled = (portfolio.current_quarter >= 120) or has_pending_event
-        if st.button("🎲 Draw Event", width="stretch", disabled=draw_disabled, help="Manually draw upcoming scenario to preview or plan"):
-            ev = events_list[st.session_state.event_queue_idx % len(events_list)]
-            st.session_state.event_queue_idx += 1
-            st.session_state.active_event = ev
-            st.session_state.event_phase = "PLANNING" if ev.get("event_type") == "Seasonal" else "SHOCKED"
-            st.session_state.mentor_debrief = None
-            st.rerun()
+    has_pending_sb = st.session_state.event_phase in ("PLANNING", "SHOCKED")
+    sb_adv_label = "➡️ Absorb Shock" if has_pending_sb else "➡️ Next Quarter"
+    sb_adv_disabled = (portfolio.current_quarter >= 120 or is_playing_sb)
+    if st.button(sb_adv_label, key="sb_advance_btn", width="stretch", disabled=sb_adv_disabled):
+        step_simulation_quarter()
+        st.rerun()
 
-    with p_c4:
-        advance_disabled = (portfolio.current_quarter >= 120)
-        has_pending_event = st.session_state.event_phase in ("PLANNING", "SHOCKED")
-        adv_btn_label = "➡️ Absorb Shock" if has_pending_event else "➡️ Next Quarter"
-        adv_btn_help = "Absorb pending event shock into asset prices and complete quarter" if has_pending_event else "Simulate next quarter with upcoming macro scenario"
-        if st.button(adv_btn_label, width="stretch", disabled=advance_disabled, help=adv_btn_help):
-            step_simulation_quarter()
-            st.rerun()
-
-    with p_c5:
-        prog = min(1.0, portfolio.current_quarter / 120.0)
-        st.progress(prog, text=f"Timeline Horizon: Q{portfolio.current_quarter}/120 (Year {portfolio.current_quarter // 4}/30)")
+    sb_prog = min(1.0, portfolio.current_quarter / 120.0)
+    st.caption(f"Q{portfolio.current_quarter}/120 (Year {portfolio.current_quarter // 4}/30)")
 
 # ── 🏛️ Multi-Decade Performance Scorecard (Rendered if paused after 3+ years) ──
 if not is_playing and portfolio.current_quarter >= 12:
@@ -382,10 +505,12 @@ left_col, right_col = st.columns([0.58, 0.42])
 
 # ----------------- LEFT COLUMN: Portfolio & Market Intelligence -----------------
 with left_col:
-    tab_charts, tab_holdings, tab_heatmap = st.tabs([
+    tab_charts, tab_holdings, tab_heatmap, tab_xai, tab_whatif = st.tabs([
         "📈 Performance vs. Benchmarks",
         "💼 Holdings & Tax Ledger",
-        "🗺️ Sector Heatmap"
+        "🗺️ Sector Heatmap",
+        "🌐 Causal XAI Graph",
+        "🔮 Counterfactual 'What-If'",
     ])
 
     with tab_charts:
@@ -471,6 +596,127 @@ with left_col:
             )
         else:
             st.info("Sector movements will populate after the first market shock is processed.")
+
+    with tab_xai:
+        st.subheader("🌐 Symbolic Macroeconomic Causal Graph (XAI)")
+        st.caption(
+            "Interactive physics-based causal network modeling cause-and-effect transmission pathways "
+            "from macroeconomic shock drivers through financial channels into sectors and asset classes."
+        )
+
+        # Legend and node categories
+        c1, c2, c3, c4 = st.columns(4)
+        c1.markdown("🔴 **Macro Drivers**")
+        c2.markdown("🟠 **Transmission Channels**")
+        c3.markdown("🔵 **Economic Sectors**")
+        c4.markdown("🟢 **Asset Classes**")
+
+        kg = get_knowledge_graph()
+        if kg:
+            # Event selection to inspect
+            current_active_ev = st.session_state.get("active_event") or st.session_state.get("last_resolved_event")
+            default_ev_id = current_active_ev.get("id") if current_active_ev else events_list[0]["id"]
+
+            event_options = [e["id"] for e in events_list]
+            selected_event_id = st.selectbox(
+                "Select Macro Event to Inspect Active Causal Transmission:",
+                options=event_options,
+                index=event_options.index(default_ev_id) if default_ev_id in event_options else 0,
+                format_func=lambda x: f"[{events_dict[x].get('event_type', 'Shock')}] {events_dict[x].get('title', x)}"
+            )
+
+            # Display active transmission pathways
+            active_paths = kg.get_event_paths_to_targets(selected_event_id)
+            if active_paths:
+                with st.expander(f"🔗 Verified Symbolic Transmission Pathways ({len(active_paths)} paths mapped)", expanded=True):
+                    for i, p in enumerate(active_paths[:4], 1):
+                        chain_repr = " ➔ ".join([step["from_label"] for step in p["steps"]] + [kg.graph.nodes[p["target"]].get("label", p["target"])])
+                        badge_color = "green" if p["event_adjusted_polarity"] > 0 else "red"
+                        st.markdown(f"**[{i}]** {chain_repr} — :{badge_color}[**{p['event_adjusted_impact']}**]")
+
+            # Display Grounded Historical Twin Precedent
+            mentor = st.session_state.get("mentor")
+            if mentor and hasattr(mentor, "_rag"):
+                try:
+                    precedents = mentor._rag.retrieve_twin_precedents(selected_event_id, top_k=1)
+                    if precedents:
+                        top_p = precedents[0]
+                        st.info(f"🏛️ **Historical Twin Precedent:** {top_p.text}\n\n*Source: {top_p.source}*")
+                except Exception:
+                    pass
+
+            # Visual Navigation Guide
+            st.caption("💡 **Graph Guide:** `⚡` = Primary Shock Root Node | **Bold White Labels** = Active Transmission Chain | **Faded Nodes** = Inactive Market Channels | Use on-screen controls or mouse wheel to zoom/pan.")
+
+            # Render Pyvis physics interactive HTML graph with st.iframe
+            try:
+                pyvis_html = kg.render_pyvis_subgraph_html(selected_event_id, height="580px")
+                if hasattr(st, "iframe"):
+                    st.iframe(pyvis_html, height=600, width="stretch")
+                else:
+                    components.html(pyvis_html, height=600, scrolling=False)
+            except Exception as e:
+                st.error(f"Error rendering Pyvis graph: {e}")
+        else:
+            st.warning("Knowledge Graph engine is loading or unavailable.")
+
+    with tab_whatif:
+        st.subheader("🔮 Counterfactual 'What-If' Simulation Sandbox")
+        st.caption(
+            "Evaluate what your portfolio NAV and return would have been under alternative institutional "
+            "allocation strategies during the active macroeconomic shock."
+        )
+
+        last_ev = st.session_state.get("last_resolved_event") or st.session_state.get("active_event")
+        if not last_ev:
+            st.info("Advance through or draw a market event first to enable Counterfactual 'What-If' analysis.")
+        else:
+            st.markdown(f"**Active Shock Evaluated:** *{last_ev.get('title', 'Market Shock')}* ({last_ev.get('event_type', 'Shock')})")
+
+            # Strategy selector
+            strat_keys = list(COUNTERFACTUAL_STRATEGIES.keys())
+            selected_strat = st.selectbox(
+                "Select Counterfactual Reference Allocation Strategy:",
+                options=strat_keys,
+                format_func=lambda x: f"{COUNTERFACTUAL_STRATEGIES[x]['name']} — {COUNTERFACTUAL_STRATEGIES[x]['description']}"
+            )
+
+            # Compute user actual return for the shock
+            new_nav = portfolio.get_nav(current_prices)
+            prev_nav = portfolio.history[-2]["nav"] if len(portfolio.history) >= 2 else 100000.0
+            actual_qtr_return = ((new_nav - prev_nav) / prev_nav * 100.0) if prev_nav > 0 else 0.0
+
+            cf_result = compute_counterfactual(
+                capital=prev_nav,
+                event=last_ev,
+                current_prices=current_prices,
+                assets_list=assets_list,
+                user_actual_return_pct=actual_qtr_return,
+                strategy=selected_strat,
+            )
+
+            # Metrics display
+            m1, m2, m3, m4 = st.columns(4)
+            m1.metric("Your Active Portfolio NAV", f"S${cf_result['actual_nav']:,.2f}", f"{cf_result['actual_return_pct']:+.2f}%")
+            m2.metric(f"Counterfactual ({cf_result['strategy_name']})", f"S${cf_result['counterfactual_nav']:,.2f}", f"{cf_result['counterfactual_return_pct']:+.2f}%")
+            
+            diff_label = "Alpha Over Counterfactual" if cf_result['diff_nav'] >= 0 else "Drag vs Counterfactual"
+            m3.metric(diff_label, f"S${cf_result['diff_nav']:+,.2f}", f"{cf_result['diff_return_pct']:+.2f}%")
+            
+            sentiment_color = "green" if cf_result["sentiment"] == "positive" else ("red" if cf_result["sentiment"] == "negative" else "orange")
+            m4.markdown(f"**Verdict:**\n:{sentiment_color}[**{cf_result['verdict']}**]")
+
+            with st.expander("📊 View Asset-by-Asset Counterfactual Movements"):
+                cf_weights_df = pd.DataFrame([
+                    {
+                        "Asset / Proxy": aid,
+                        "Strategy Weight": f"{w*100:.1f}%",
+                        "Shock Movement %": f"{cf_result['asset_movements'].get(aid, 0.0):+.2f}%",
+                        "Weighted Contribution %": f"{(w * cf_result['asset_movements'].get(aid, 0.0)):+.2f}%"
+                    }
+                    for aid, w in cf_result["weights"].items()
+                ])
+                st.dataframe(cf_weights_df, hide_index=True, width="stretch")
 
     # ── Trading & Rebalancing Desk (Positioned below Portfolio & Benchmarks) ──
     st.divider()

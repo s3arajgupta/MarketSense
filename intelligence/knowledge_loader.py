@@ -40,15 +40,27 @@ def _load_json_chunks(knowledge_dir: Path) -> list[dict]:
 def _build_metadata(chunk: dict) -> dict:
     """
     Convert a wisdom chunk's metadata into ChromaDB-compatible format.
-    ChromaDB metadata values must be str, int, float, or bool.
+    ChromaDB supports str, int, float, bool, and lists of strings.
     """
+    app_events = chunk.get("applicable_events", [])
+    if isinstance(app_events, str):
+        app_events = [e.strip() for e in app_events.split(",") if e.strip()]
+
+    tags = chunk.get("tags", [])
+    if isinstance(tags, str):
+        tags = [t.strip() for t in tags.split(",") if t.strip()]
+
+    assets = chunk.get("asset_class_relevance", [])
+    if isinstance(assets, str):
+        assets = [a.strip() for a in assets.split(",") if a.strip()]
+
     return {
         "source": chunk.get("source", ""),
         "author": chunk.get("author", ""),
-        "tags": ",".join(chunk.get("tags", [])),
-        "applicable_events": ",".join(chunk.get("applicable_events", [])),
+        "tags": tags,
+        "applicable_events": app_events,
         "market_cycle": chunk.get("market_cycle", ""),
-        "asset_class_relevance": ",".join(chunk.get("asset_class_relevance", [])),
+        "asset_class_relevance": assets,
     }
 
 

@@ -104,6 +104,34 @@ class RAGEngine:
 
         return results[:top_k]
 
+    def retrieve_twin_precedents(
+        self,
+        event_id: str,
+        query: str = "",
+        top_k: int = 1,
+    ) -> list[RetrievedChunk]:
+        """
+        Retrieve historical twin precedent case studies for a specific crisis event.
+
+        Args:
+            event_id: Crisis event ID (e.g., 'EVENT_MONETARY_HIKE')
+            query: Optional semantic context string.
+            top_k: Number of twin precedent chunks to retrieve.
+
+        Returns:
+            List of RetrievedChunk objects matching the twin precedent.
+        """
+        search_query = query or f"historical twin precedent comparative metric {event_id}"
+        where_filter = {"applicable_events": {"$contains": event_id}}
+        results = self._search(search_query, top_k * 2, where_filter)
+
+        # Prioritize chunks with twin_precedent tag or historical source
+        precedents = [r for r in results if "twin_precedent" in r.tags or "Historical" in r.source]
+        if not precedents:
+            precedents = results
+
+        return precedents[:top_k]
+
     def get_context_for_prompt(
         self,
         query: str,
@@ -115,7 +143,8 @@ class RAGEngine:
         Retrieve chunks and format them as a prompt-ready context block.
 
         Returns a formatted string ready to inject into the system prompt,
-        with numbered citations.
+        with numbered citations including grounded investor wisdom and
+        historical twin precedents.
         """
         chunks = self.retrieve(
             query=query,
@@ -125,11 +154,22 @@ class RAGEngine:
             top_k=RAG_CONTEXT_CHUNKS,
         )
 
-        if not chunks:
+        twin_chunks = []
+        if event_id:
+            twin_chunks = self.retrieve_twin_precedents(event_id, query=query, top_k=1)
+
+        seen_ids = set()
+        all_chunks = []
+        for chunk in twin_chunks + chunks:
+            if chunk.id not in seen_ids:
+                seen_ids.add(chunk.id)
+                all_chunks.append(chunk)
+
+        if not all_chunks:
             return "No relevant investor wisdom found for this scenario."
 
-        lines = ["RELEVANT INVESTOR WISDOM (cite these in your analysis):"]
-        for i, chunk in enumerate(chunks, 1):
+        lines = ["RELEVANT INVESTOR WISDOM & HISTORICAL PRECEDENTS (cite these in your analysis):"]
+        for i, chunk in enumerate(all_chunks[:RAG_CONTEXT_CHUNKS + 1], 1):
             lines.append(f"\n[{i}] {chunk.format_citation()}")
 
         return "\n".join(lines)
@@ -159,6 +199,9 @@ class RAGEngine:
                 metadata = results["metadatas"][0][i] if results["metadatas"] else {}
                 distance = results["distances"][0][i] if results["distances"] else 1.0
 
+                raw_tags = metadata.get("tags", [])
+                parsed_tags = raw_tags if isinstance(raw_tags, list) else [t for t in str(raw_tags).split(",") if t]
+
                 chunks.append(RetrievedChunk(
                     id=chunk_id,
                     text=results["documents"][0][i],
@@ -166,7 +209,7 @@ class RAGEngine:
                     author=metadata.get("author", "Unknown"),
                     relevance_score=1.0 - distance,  # Convert distance to similarity
                     market_cycle=metadata.get("market_cycle", ""),
-                    tags=metadata.get("tags", "").split(","),
+                    tags=parsed_tags,
                 ))
 
         return chunks

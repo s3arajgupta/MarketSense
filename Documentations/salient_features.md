@@ -97,7 +97,7 @@ Tracks three institutional reference portfolios dynamically alongside the traine
 
 ## 9. Comprehensive Automated Test Suite
  
-- **15 Automated Pytest Verifications (`tests/`):**
+- **25 Automated Pytest Verifications (`tests/`):**
    - Asset universe schema & attribute integrity.
    - Crisis event categorization & inflation rates.
    - Deterministic pricing engine bounds & cash non-negativity.
@@ -112,6 +112,16 @@ Tracks three institutional reference portfolios dynamically alongside the traine
    - Multi-decade career retrospective prompt formatting and streaming.
    - Quarterly macro event progression variety across 10+ quarters.
    - Pre-drawn pending event absorption without double-stepping.
+   - Causal graph integrity (36 nodes, 48 edges, categories, edge resistance).
+   - Verification that all 22 crisis cards have valid primary driver mappings.
+   - Shortest weighted causal transmission path calculation and sign polarity.
+   - Oil shock transmission to energy sector.
+   - Unreachable or non-existent node handling.
+   - Multi-target transmission paths extraction for events.
+   - Formatted ASCII prompt grounding generation.
+   - Interactive Pyvis HTML visualization generation.
+   - Counterfactual "What-If" simulation NAV math, asset movements, and verdicts.
+   - RAG v2 historical twin precedents retrieval and prompt context injection.
 
 ---
 
@@ -130,3 +140,57 @@ Tracks three institutional reference portfolios dynamically alongside the traine
   - Calculates total lifetime friction drag (taxes vs brokerage fees).
 - **AI Mentor Multi-Decade Career Retrospective:**
   - Socratic evaluation analyzing whether the trainee's strategy defeated inflation, suffered from cash drag, or surrendered excessive wealth to portfolio turnover.
+
+---
+
+## 11. Symbolic Macroeconomic Knowledge Graph & Causal Path Engine (`NetworkX`)
+
+- **36 Economic & Financial Nodes:**
+  - 11 Macro Drivers (Policy Rates, Inflation, Crude Oil, Sovereign Debt, etc.)
+  - 12 Financial Channels (Borrowing Costs, Discount Rates, CAPEX, Consumer Demand, etc.)
+  - 6 Economic Sectors (IT, FMCG, Banking, Healthcare, Energy, Real Estate)
+  - 7 Asset Classes (Cash MMF, Gold, Silver, Short T-Bills, Long Bonds, Crypto Benchmark)
+- **48 Directed Weighted Causal Edges:**
+  - Quantified transmission weights and polarity ($+1$ or $-1$).
+  - Resistance-weighted shortest path algorithm finds the strongest economic transmission chain.
+  - Cumulative polarity calculation explains contractionary vs expansionary ripples.
+- **100% Event Mapping:**
+  - All 22 crisis cards mapped to primary macro shock nodes and target sectors/assets.
+- **Neuro-Symbolic Prompt Grounding:**
+  - Formatted ASCII transmission chains automatically injected into AI Mentor debriefs, preventing economic hallucinations.
+
+---
+
+## 12. Interactive Physics Network Visualizer (`Pyvis`)
+
+- **Interactive In-Browser Visualizer:**
+  - Dedicated Streamlit tab (`"🌐 Causal XAI Graph"`).
+  - Physics-based force-directed layout using Pyvis and Vis.js.
+  - Color-coded node taxonomy: Macro Drivers (Red), Channels (Orange), Sectors (Blue), Asset Classes (Green).
+  - Highlighted active transmission pathways in glowing colors with hoverable edge rationales.
+  - Event Inspector allows trainees to explore how any of the 22 crisis scenarios ripples across the economy.
+
+---
+
+## 13. Counterfactual "What-If" Simulation Sandbox
+
+- **Instant Scenario Re-Play:**
+  - Dedicated Streamlit tab (`"🔮 Counterfactual 'What-If'"`).
+  - Evaluates trainee's actual portfolio performance against 4 institutional benchmark strategies during the exact shock just resolved:
+    1. *Ray Dalio All-Weather* (30% Equities, 40% Long Bonds, 15% T-Bills, 7.5% Gold, 7.5% Commodities)
+    2. *Pure Cash Fortress* (100% Cash MMF)
+    3. *Gold Defense Hedge* (50% Gold, 25% Silver, 25% Cash)
+    4. *Tech Aggressive Growth* (100% IT Large/Mid/Small Cap)
+- **Pedagogical Feedback:**
+  - Visual delta metrics: Actual NAV, Counterfactual NAV, Alpha/Drag, and a clear educational verdict.
+  - Asset-by-asset movement contribution table.
+
+---
+
+## 14. RAG v2 — Historical Crisis Twin Precedents
+
+- **Expanded Knowledge Corpus (52 Chunks):**
+  - Matches each simulated crisis card with twin historical episodes (e.g., 1980 Volcker Shock vs 2022 Fed Rate Hike; 1918 Spanish Flu vs 2020 COVID; 1931 Creditanstalt vs 2023 SVB Run; 1973 OPEC vs Energy Shock).
+  - Enriched with comparative quantitative metrics (peak inflation, asset drawdowns, recovery durations).
+- **Context Injection & UI Callouts:**
+  - Precedent summaries displayed directly in the Causal XAI Graph tab and cited in AI Mentor prompt contexts.

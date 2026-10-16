@@ -9,6 +9,7 @@ This is the main entry point for all AI Mentor interactions.
 from dataclasses import dataclass
 from intelligence.llm_client import LLMClient, LLMResponse, create_llm_client
 from intelligence.rag_engine import RAGEngine
+from intelligence.knowledge_graph import CausalKnowledgeGraph
 from intelligence.prompts import (
     SYSTEM_PROMPT_BASE,
     POST_EVENT_DEBRIEF,
@@ -38,16 +39,18 @@ class AIMentor:
 
     Workflow for each interaction:
     1. Gather game context (portfolio state, event, prices)
-    2. Query RAG engine for relevant wisdom chunks
-    3. Assemble prompt with context + wisdom + task instructions
-    4. Send to LLM provider
-    5. Return structured response with citations
+    2. Query symbolic Causal Knowledge Graph for verified transmission paths
+    3. Query RAG engine for relevant wisdom chunks
+    4. Assemble prompt with context + causal path + wisdom + task instructions
+    5. Send to LLM provider
+    6. Return structured response with citations
     """
 
     def __init__(
         self,
         llm_client: LLMClient | None = None,
         rag_engine: RAGEngine | None = None,
+        knowledge_graph: CausalKnowledgeGraph | None = None,
     ):
         """
         Initialize the AI Mentor.
@@ -55,9 +58,16 @@ class AIMentor:
         Args:
             llm_client: LLM provider. If None, creates from config.
             rag_engine: RAG engine. If None, creates with default collection.
+            knowledge_graph: Causal knowledge graph. If None, creates from default JSON.
         """
         self._llm = llm_client
         self._rag = rag_engine or RAGEngine()
+        self._kg = knowledge_graph or CausalKnowledgeGraph()
+
+    @property
+    def knowledge_graph(self) -> CausalKnowledgeGraph:
+        """Access the underlying causal knowledge graph."""
+        return self._kg
 
     @property
     def llm(self) -> LLMClient:
@@ -111,6 +121,9 @@ class AIMentor:
         real_return = portfolio_state.get("real_return_pct", portfolio_state.get("nominal_return_pct", 0.0))
         nominal_return = portfolio_state.get("nominal_return_pct", portfolio_state.get("nav_change_pct", 0.0))
 
+        # Extract grounded symbolic causal paths from NetworkX knowledge graph
+        causal_path_context = self._kg.format_causal_path_for_prompt(event_id=event_id)
+
         # Assemble prompt
         user_prompt = POST_EVENT_DEBRIEF.format(
             quarter=quarter,
@@ -129,6 +142,7 @@ class AIMentor:
             cash_pct=portfolio_state.get("cash_pct", 0),
             top_holdings=top_holdings,
             alpha=portfolio_state.get("alpha_aw", 0),
+            causal_path_context=causal_path_context,
             wisdom_context=wisdom_context,
         )
 
@@ -161,6 +175,9 @@ class AIMentor:
         )
         citations = self._extract_citations_from_context(wisdom_context)
 
+        # Extract grounded symbolic causal paths from NetworkX knowledge graph
+        causal_path_context = self._kg.format_causal_path_for_prompt(event_id=event_id)
+
         # Extract inflation & real return metrics
         inflation_rate = event.get("annualized_inflation", 0.025) * 100.0
         cpi_hurdle = portfolio_state.get("cpi_hurdle", 100000.0)
@@ -184,6 +201,7 @@ class AIMentor:
             cash_pct=portfolio_state.get("cash_pct", 0),
             top_holdings=top_holdings,
             alpha=portfolio_state.get("alpha_aw", 0),
+            causal_path_context=causal_path_context,
             wisdom_context=wisdom_context,
         )
 

@@ -1,0 +1,11 @@
+if unable to edit files, let me I will delete telemetry and restart
+I have changed Gemini model to Opus
+Refer documentation folder, let me know if there are inconsistencies with phases_information.md.
+We have implemented and tested phase 2. I want to validate/refactor all things done in phase 2. Ask me for question if some previous conversation is missing, I will answer them first. I want to produce a report in Reports by Opus folder like phase 1 if all things are perfect.
+
+if unable to edit files, let me I will delete telemetry and restart
+Refer documentation folder, let me know if there are inconsistencies or mistakes with phases_information.md.
+We have implemented and tested phase 2. I want to validate/refactor all things done in phase 2. Ask me for question if some previous conversation memory  is missing, I will answer them first. I want to produce a report in Reports by Gemini folder like phase 1 report in Report by Opus folder if all things are perfect.
+find phase 1 in "E:\NUS-ISS\GC1 Practice Module\MarketSense\Reports by Opus".
+find all other docs in "E:\NUS-ISS\GC1 Practice Module\MarketSense\Documentations".
+please let me if something is problematic.
