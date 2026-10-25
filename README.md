@@ -1,8 +1,11 @@
 ### [ Practice Module ] Project Submission Template: Github Repository & Zip File
 
-**[ Naming Convention ]** CourseCode-StartDate-BatchCode-TeamName-ProjectName.zip
-
-* **[ Individual / Group Project Submission Format ]** `IRS-PM-2026-09-13-GRP217-GuptaSwaraj-MarketSense.zip`
+* **Group Name:** TeamChamp
+* **Group Number:** 26
+* **Team Member:** Gupta Swaraj (Student ID: A0357457N)
+* **GitHub Project Repository:** [https://github.com/s3arajgupta/MarketSense/tree/main](https://github.com/s3arajgupta/MarketSense/tree/main)
+* **[ Naming Convention ]** CourseCode-StartDate-BatchCode-TeamName-ProjectName.zip
+* **[ Project Submission Zip Naming ]** `IRS-PM-2026-09-13-GRP26-TeamChamp-MarketSense.zip`
 
 [Online editor for this README.md markdown file](https://pandao.github.io/editor.md/en.html "pandao")
 
@@ -45,9 +48,9 @@ MarketSense AI bridges theoretical macroeconomic reasoning and practical portfol
 
 ## SECTION 3 : CREDITS / PROJECT CONTRIBUTION
 
-| Official Full Name | Student ID (MTech Applicable) | Work Items (Who Did What) | Email (Optional) |
-| :------------ | :---------------: | :----- | :----- |
-| **Gupta Swaraj** | **A0357457N** | • End-to-end neuro-symbolic architecture design and implementation.<br>• Deterministic pricing engine, capital preservation bounds, and portfolio accounting (`engine/`).<br>• Real-world financial friction engine (STCG vs LTCG tax drag, brokerage costs, circuit breaker rules).<br>• NetworkX macroeconomic causal knowledge graph (36 nodes, 48 edges) and Dijkstra shortest transmission path extraction.<br>• Interactive Pyvis physics-based graph visualizer and Streamlit XAI integration.<br>• RAG v2 knowledge base ingestion in ChromaDB (52 chunks across 6 masters & 22 crisis twins).<br>• Dual-runtime AI Mentor orchestrator (Google Gemini 2.5 Flash + offline air-gapped Ollama).<br>• Counterfactual "What-If" sandbox and passive institutional benchmark tracking (All-Weather, 60/40, Equity, CPI Hurdle).<br>• Automated verification test suite (25/25 unit tests passing in pytest).<br>• Comprehensive academic documentation and modular course mappings. | <A0357457N@u.nus.edu> |
+| Official Full Name | Student ID (MTech Applicable) | Group & Team | Work Items (Who Did What) | Email (Optional) |
+| :------------ | :---------------: | :-----: | :----- | :----- |
+| **Gupta Swaraj** | **A0357457N** | **TeamChamp (Group 26)** | • End-to-end neuro-symbolic architecture design and implementation.<br>• Deterministic pricing engine, capital preservation bounds, and portfolio accounting (`engine/`).<br>• Real-world financial friction engine (STCG vs LTCG tax drag, brokerage costs, circuit breaker rules).<br>• NetworkX macroeconomic causal knowledge graph (36 nodes, 48 edges) and Dijkstra shortest transmission path extraction.<br>• Interactive Pyvis physics-based graph visualizer and Streamlit XAI integration.<br>• RAG v2 knowledge base ingestion in ChromaDB (52 chunks across 6 masters & 22 crisis twins).<br>• Dual-runtime AI Mentor orchestrator (Google Gemini 2.5 Flash + offline air-gapped Ollama).<br>• Counterfactual "What-If" sandbox and passive institutional benchmark tracking (All-Weather, 60/40, Equity, CPI Hurdle).<br>• Automated verification test suite (25/25 unit tests passing in pytest).<br>• Comprehensive academic documentation and modular course mappings. | <A0357457N@u.nus.edu> |
 
 ---
 
@@ -188,6 +191,17 @@ pytest
 ---
 
 ### <<<<<<<<<<<<<<<<<<<< End of Template >>>>>>>>>>>>>>>>>>>>
+
+---
+
+### Project Submission Summary
+
+* **Project Title:** MarketSense AI: A Neuro-Symbolic Intelligent Reasoning Simulator for Macroeconomic Shocks & Portfolio Adaptability
+* **Team Name:** TeamChamp
+* **Group Number:** Group 26
+* **Student:** Gupta Swaraj (Student ID: A0357457N)
+* **GitHub Project Repository:** [https://github.com/s3arajgupta/MarketSense/tree/main](https://github.com/s3arajgupta/MarketSense/tree/main)
+* **Project Submission Archive:** `IRS-PM-2026-09-13-GRP26-TeamChamp-MarketSense.zip`
 
 ---
 
