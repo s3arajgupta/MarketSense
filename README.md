@@ -19,6 +19,17 @@
 
 ## MarketSense AI: A Neuro-Symbolic Intelligent Reasoning Simulator for Macroeconomic Shocks & Portfolio Adaptability
 
+### [ 1 ] Interactive Portfolio Flight Simulator & Institutional Benchmarks
+<img src="assets/Screenshot 2026-10-26 073840.png"
+     style="max-width: 100%; height: auto; margin-bottom: 20px;"
+     alt="MarketSense AI Interactive Simulator User Interface" />
+
+### [ 2 ] Explainable AI (XAI) Macroeconomic Causal Knowledge Graph & Socratic AI Mentor
+<img src="assets/Screenshot 2026-10-26 074748.png"
+     style="max-width: 100%; height: auto; margin-bottom: 20px;"
+     alt="MarketSense AI Symbolic Macroeconomic Causal Graph and Grounded AI Mentor" />
+
+### [ 3 ] End-to-End Neuro-Symbolic System Architecture
 <img src="documentations/architecture.jpg"
      style="max-width: 100%; height: auto; margin-bottom: 20px;"
      alt="MarketSense AI System Architecture" />
@@ -139,6 +150,16 @@ streamlit run app.py
 
 Open your browser to `http://localhost:8501`.
 
+* **1. Interactive Flight Simulator & Portfolio Flight Controls:**
+<img src="assets/Screenshot 2026-10-26 073840.png"
+     style="max-width: 100%; height: auto; margin-top: 10px; margin-bottom: 20px;"
+     alt="MarketSense AI Interactive Dashboard & Portfolio Flight Controls" />
+
+* **2. Symbolic Causal Graph (XAI) & Grounded AI Mentor:**
+<img src="assets/Screenshot 2026-10-26 074748.png"
+     style="max-width: 100%; height: auto; margin-top: 10px; margin-bottom: 20px;"
+     alt="MarketSense AI Symbolic Causal Graph (XAI) & Grounded AI Mentor" />
+
 #### Step 5: Run Automated Test Suite
 
 ```bash
@@ -205,7 +226,7 @@ pytest
 * **Group Number:** Group 26
 * **Student:** Gupta Swaraj (Student ID: A0357457N)
 * **GitHub Project Repository:** [https://github.com/s3arajgupta/MarketSense/tree/main](https://github.com/s3arajgupta/MarketSense/tree/main)
-* **Project Submission Archive:** `IRS-PM-2026-09-13-GRP26-TeamChamp-MarketSense.zip`
+* **Project Submission Archive:** `IRS-PM-2026-10-25-GRP26-TeamChamp-MarketSense.zip`
 
 ---
 
