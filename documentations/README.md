@@ -15,6 +15,10 @@ MarketSense is an interactive portfolio flight simulator that teaches macroecono
      style="max-width: 100%; height: auto; margin-bottom: 20px;"
      alt="MarketSense AI Interactive Simulator User Interface" />
 
+<img src="../assets/Screenshot 2026-10-26 074748.png"
+     style="max-width: 100%; height: auto; margin-bottom: 20px;"
+     alt="MarketSense AI Symbolic Macroeconomic Causal Knowledge Graph (XAI) and Grounded AI Mentor" />
+
 ---
 
 ## Architecture

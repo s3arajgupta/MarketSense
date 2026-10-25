@@ -19,6 +19,7 @@ from docx.oxml.ns import nsdecls, qn
 OUTPUT_PATH = Path("documentations") / "MarketSense_Final_Group_Project_Report.docx"
 IMAGE_PATH = Path("documentations") / "architecture.jpg"
 UI_IMAGE_PATH = Path("assets") / "Screenshot 2026-10-26 073840.png"
+XAI_IMAGE_PATH = Path("assets") / "Screenshot 2026-10-26 074748.png"
 
 # ----------------- Color Palette Tokens -----------------
 COLOR_PRIMARY_HEX = "1B365D"       # Deep Institutional Navy
@@ -377,6 +378,7 @@ def build_report():
     figures = [
         ("Figure 1", "MarketSense AI End-to-End System Architecture (Four-Tier Neuro-Symbolic Pipeline)", "Section 5"),
         ("Figure 2", "MarketSense AI Interactive Portfolio Flight Simulator Dashboard & Socratic Mentor UI", "Appendix C"),
+        ("Figure 3", "MarketSense AI Symbolic Macroeconomic Causal Knowledge Graph (XAI) & Socratic Mentor Interface", "Section 9"),
     ]
     for fig_id, fig_desc, sec in figures:
         p_fig = doc.add_paragraph()
@@ -676,6 +678,19 @@ def build_report():
         r"Simultaneously, cumulative sign polarity is tracked via stepwise multiplication ($P = \prod sign_i$), determining whether the net impact "
         r"is expansionary (+1) or contractionary (-1)."
     )
+
+    if XAI_IMAGE_PATH.exists():
+        print("Inserting XAI Causal Graph Diagram into Section 9.2...")
+        doc.add_paragraph().paragraph_format.space_after = Pt(4)
+        doc.add_picture(str(XAI_IMAGE_PATH), width=Inches(6.2))
+        cap3 = doc.add_paragraph()
+        cap3.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        cap3_run = cap3.add_run("Figure 3: MarketSense AI Symbolic Macroeconomic Causal Knowledge Graph (XAI) & Grounded Socratic AI Mentor Interface")
+        cap3_run.font.name = "Calibri"
+        cap3_run.font.size = Pt(8.5)
+        cap3_run.italic = True
+        cap3_run.font.color.rgb = COLOR_MUTED_TEXT
+        doc.add_paragraph().paragraph_format.space_after = Pt(6)
 
     add_styled_heading(doc, "9.3 Counterfactual 'What-If' Formulation", level=2)
     add_styled_paragraph(
