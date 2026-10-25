@@ -13,16 +13,30 @@ except ImportError:
     pass  # python-dotenv not installed — rely on environment variables
 
 
+def _get_setting(key: str, default: str = "") -> str:
+    """Reads setting from environment variable or Streamlit Community Cloud secrets."""
+    val = os.getenv(key)
+    if val:
+        return val
+    try:
+        import streamlit as st
+        if hasattr(st, "secrets") and key in st.secrets:
+            return str(st.secrets[key])
+    except Exception:
+        pass
+    return default
+
+
 # ── LLM Provider ──
-LLM_PROVIDER = os.getenv("LLM_PROVIDER", "gemini").lower()
+LLM_PROVIDER = _get_setting("LLM_PROVIDER", "gemini").lower()
 
 # ── Gemini API ──
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
+GEMINI_API_KEY = _get_setting("GEMINI_API_KEY", "")
+GEMINI_MODEL = _get_setting("GEMINI_MODEL", "gemini-2.5-flash")
 
 # ── Ollama ──
-OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.1:8b")
-OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://localhost:11434")
+OLLAMA_MODEL = _get_setting("OLLAMA_MODEL", "llama3.1:8b")
+OLLAMA_HOST = _get_setting("OLLAMA_HOST", "http://localhost:11434")
 
 # ── Paths ──
 BASE_DIR = Path(__file__).parent
