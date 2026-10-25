@@ -1,5 +1,7 @@
 # Notes & Reports
-documentations
+documentations/
+reports_by_gemini/
+reports_by_opus/
 
 # Environment
 .env
