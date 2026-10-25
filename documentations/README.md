@@ -11,11 +11,15 @@
 
 MarketSense is an interactive portfolio flight simulator that teaches macroeconomic reasoning through experience. Players manage a S$100,000 portfolio across 24 instruments while navigating 22 curated crisis scenarios — from pandemic shocks to rate hikes — with an AI Mentor providing literature-grounded Socratic guidance after each event.
 
+<img src="../assets/Screenshot 2026-10-26 073840.png"
+     style="max-width: 100%; height: auto; margin-bottom: 20px;"
+     alt="MarketSense AI Interactive Simulator User Interface" />
+
 ---
 
 ## Architecture
 
-![System Architecture](Documentations/architecture.jpg)
+![System Architecture](architecture.jpg)
 
 **Key Design Principle:** The LLM never generates prices. Mathematics handles numbers; AI handles explanation.
 
