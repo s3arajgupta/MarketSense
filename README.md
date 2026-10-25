@@ -5,7 +5,7 @@
 * **Team Member:** Gupta Swaraj (Student ID: A0357457N)
 * **GitHub Project Repository:** [https://github.com/s3arajgupta/MarketSense/tree/main](https://github.com/s3arajgupta/MarketSense/tree/main)
 * **[ Naming Convention ]** CourseCode-StartDate-BatchCode-TeamName-ProjectName.zip
-* **[ Project Submission Zip Naming ]** `IRS-PM-2026-09-13-GRP26-TeamChamp-MarketSense.zip`
+* **[ Project Submission Zip Naming ]** `IRS-PM-2026-10-25-GRP26-TeamChamp-MarketSense.zip`
 
 [Online editor for this README.md markdown file](https://pandao.github.io/editor.md/en.html "pandao")
 
@@ -80,7 +80,8 @@ MarketSense AI bridges theoretical macroeconomic reasoning and practical portfol
 
 ### [ 1 ] Prerequisites
 
-- Python 3.10+ (tested on Python 3.10, 3.11, 3.12, 3.14).
+* Python 3.10+ (tested on Python 3.10, 3.11, 3.12, 3.14).
+
 * Modern web browser (Chrome, Edge, Brave, Firefox) with WebGL enabled for Pyvis network physics.
 
 ### [ 2 ] Quickstart Installation & Execution
@@ -172,19 +173,22 @@ pytest
 
 ### [ 1 ] Curated Macroeconomic Knowledge Corpus (`data/knowledge/`)
 
-- `causal_graph.json`: 36 economic nodes (Drivers, Channels, Sectors, Assets) and 48 directed weighted edges with resistance metrics and polarity mappings for all 22 crisis scenarios.
+* `causal_graph.json`: 36 economic nodes (Drivers, Channels, Sectors, Assets) and 48 directed weighted edges with resistance metrics and polarity mappings for all 22 crisis scenarios.
+
 * `crisis_precedents.json`: 22 empirical historical crisis twin case studies with quantitative comparative metrics (1980 Volcker, 1973 OPEC, 1931 Creditanstalt, 1918 Flu, 2000 Dot-Com).
 * `dalio.json`, `graham.json`, `marks.json`, `lynch.json`, `bogle.json`: 30 concept-chunked investor axioms covering debt cycles, margin of safety, second-level thinking, and indexing.
 * `crisis_cases.json`: 7 landmark historical crisis post-mortems (1973–2022).
 
 ### [ 2 ] Financial Data Assets (`data/`)
 
-- `assets.json`: 24 institutional instruments with explicit Beta, Debt Ratio, Cash Resilience, and Dividend Yield attributes.
+* `assets.json`: 24 institutional instruments with explicit Beta, Debt Ratio, Cash Resilience, and Dividend Yield attributes.
+
 * `crisis_cards.json`: 22 curated macroeconomic crisis cards with annualized inflation rates and sector impact vectors.
 
 ### [ 3 ] Verification & Phase Audit Reports
 
-- `reports_by_gemini/Phase2.md`: Phase 2 LLM mentor, friction engine, and flight controls verification.
+* `reports_by_gemini/Phase2.md`: Phase 2 LLM mentor, friction engine, and flight controls verification.
+
 * `reports_by_gemini/Phase3.md`: Phase 3 Knowledge graph, Pyvis visualizer, and What-If sandbox verification.
 * `reports_by_opus/Phase1.md`: Phase 1 MVP simulation engine verification.
 
