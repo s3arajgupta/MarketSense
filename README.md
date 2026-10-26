@@ -4,6 +4,7 @@
 * **Group Number:** 26
 * **Team Member:** Gupta Swaraj (Student ID: A0357457N)
 * **GitHub Project Repository:** [https://github.com/s3arajgupta/MarketSense/tree/main](https://github.com/s3arajgupta/MarketSense/tree/main)
+* **Live Web Application (Streamlit Cloud):** [https://marketsense-ai-nus.streamlit.app/](https://marketsense-ai-nus.streamlit.app/)
 * **[ Naming Convention ]** CourseCode-StartDate-BatchCode-TeamName-ProjectName.zip
 * **[ Project Submission Zip Naming ]** `IRS-PM-2026-10-25-GRP26-TeamChamp-MarketSense.zip`
 
@@ -19,17 +20,23 @@
 
 ## MarketSense AI: A Neuro-Symbolic Intelligent Reasoning Simulator for Macroeconomic Shocks & Portfolio Adaptability
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://marketsense-ai-nus.streamlit.app/)  
+> 🚀 **Live Interactive Web Application:** [https://marketsense-ai-nus.streamlit.app/](https://marketsense-ai-nus.streamlit.app/)
+
 ### [ 1 ] Interactive Portfolio Flight Simulator & Institutional Benchmarks
+
 <img src="assets/Screenshot 2026-10-26 073840.png"
      style="max-width: 100%; height: auto; margin-bottom: 20px;"
      alt="MarketSense AI Interactive Simulator User Interface" />
 
 ### [ 2 ] Explainable AI (XAI) Macroeconomic Causal Knowledge Graph & Socratic AI Mentor
+
 <img src="assets/Screenshot 2026-10-26 074748.png"
      style="max-width: 100%; height: auto; margin-bottom: 20px;"
      alt="MarketSense AI Symbolic Macroeconomic Causal Graph and Grounded AI Mentor" />
 
 ### [ 3 ] End-to-End Neuro-Symbolic System Architecture
+
 <img src="documentations/architecture.jpg"
      style="max-width: 100%; height: auto; margin-bottom: 20px;"
      alt="MarketSense AI System Architecture" />
@@ -144,21 +151,14 @@ ollama pull llama3.1:8b
 
 #### Step 4: Run Application
 
+**Option A: Instant Live Web Application (Zero Setup)**
+* Access directly on Streamlit Community Cloud: [https://marketsense-ai-nus.streamlit.app/](https://marketsense-ai-nus.streamlit.app/)
+
+**Option B: Run Locally**
 ```bash
 streamlit run app.py
 ```
-
 Open your browser to `http://localhost:8501`.
-
-* **1. Interactive Flight Simulator & Portfolio Flight Controls:**
-<img src="assets/Screenshot 2026-10-26 073840.png"
-     style="max-width: 100%; height: auto; margin-top: 10px; margin-bottom: 20px;"
-     alt="MarketSense AI Interactive Dashboard & Portfolio Flight Controls" />
-
-* **2. Symbolic Causal Graph (XAI) & Grounded AI Mentor:**
-<img src="assets/Screenshot 2026-10-26 074748.png"
-     style="max-width: 100%; height: auto; margin-top: 10px; margin-bottom: 20px;"
-     alt="MarketSense AI Symbolic Causal Graph (XAI) & Grounded AI Mentor" />
 
 #### Step 5: Run Automated Test Suite
 
@@ -226,6 +226,7 @@ pytest
 * **Group Number:** Group 26
 * **Student:** Gupta Swaraj (Student ID: A0357457N)
 * **GitHub Project Repository:** [https://github.com/s3arajgupta/MarketSense/tree/main](https://github.com/s3arajgupta/MarketSense/tree/main)
+* **Live Web Application (Streamlit Cloud):** [https://marketsense-ai-nus.streamlit.app/](https://marketsense-ai-nus.streamlit.app/)
 * **Project Submission Archive:** `IRS-PM-2026-10-25-GRP26-TeamChamp-MarketSense.zip`
 
 ---
