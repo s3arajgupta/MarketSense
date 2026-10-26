@@ -1,5 +1,3 @@
-### [ Practice Module ] Project Submission Template: Github Repository & Zip File
-
 * **Group Name:** TeamChamp
 * **Group Number:** 26
 * **Team Member:** Gupta Swaraj (Student ID: A0357457N)
