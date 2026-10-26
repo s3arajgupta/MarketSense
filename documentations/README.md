@@ -4,9 +4,11 @@
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://python.org)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.30%2B-FF4B4B.svg)](https://streamlit.io)
-[![Gemini API](https://img.shields.io/badge/Gemini_API-2.0_Flash-4285F4.svg)](https://aistudio.google.com)
+[![Gemini API](https://img.shields.io/badge/Gemini_API-2.5_Flash-4285F4.svg)](https://aistudio.google.com)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://marketsense-ai-nus.streamlit.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
+> 🚀 **Live Deployed Application:** [https://marketsense-ai-nus.streamlit.app/](https://marketsense-ai-nus.streamlit.app/)  
 > **Explainable investment training through causal reasoning — not black-box prediction.**
 
 MarketSense is an interactive portfolio flight simulator that teaches macroeconomic reasoning through experience. Players manage a S$100,000 portfolio across 24 instruments while navigating 22 curated crisis scenarios — from pandemic shocks to rate hikes — with an AI Mentor providing literature-grounded Socratic guidance after each event.
