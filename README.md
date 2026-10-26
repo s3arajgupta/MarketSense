@@ -15,7 +15,7 @@
 ## MarketSense AI: A Neuro-Symbolic Intelligent Reasoning Simulator for Macroeconomic Shocks & Portfolio Adaptability
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://marketsense-ai-nus.streamlit.app/)  
-> 🚀 **Live Interactive Web Application:** [https://marketsense-ai-nus.streamlit.app/](https://marketsense-ai-nus.streamlit.app/)
+> 🚀 **Interact with Live Application within seconds:** [https://marketsense-ai-nus.streamlit.app/](https://marketsense-ai-nus.streamlit.app/)
 
 ### [ 1 ] Interactive Portfolio Flight Simulator & Institutional Benchmarks
 
