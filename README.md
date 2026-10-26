@@ -12,10 +12,6 @@
 
 ---
 
-### <<<<<<<<<<<<<<<<<<<< Start of Template >>>>>>>>>>>>>>>>>>>>
-
----
-
 ## SECTION 1 : PROJECT TITLE
 
 ## MarketSense AI: A Neuro-Symbolic Intelligent Reasoning Simulator for Macroeconomic Shocks & Portfolio Adaptability
@@ -76,16 +72,18 @@ MarketSense AI bridges theoretical macroeconomic reasoning and practical portfol
 
 ### [ 1 ] Promotional Pitch & Use Case Demo (5 Minutes)
 
-[![MarketSense Promotional Pitch](https://img.shields.io/badge/Video_1-Promotional_Pitch_%26_Use_Case_Demo-4285F4?style=for-the-badge&logo=youtube&logoColor=white)](# "MarketSense Promotional Pitch Video")
+[![IRS PM 2026 10 25 GRP26 TeamChamp MarketSense Promotion](https://img.shields.io/badge/Video_1-Promotional_Pitch_%26_Use_Case_Demo-4285F4?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/Oq-QEI3UvJw "IRS PM 2026 10 25 GRP26 TeamChamp MarketSense Promotion")
 
-* *YouTube Video Link:* `https://youtu.be/<video_id_1>`
+* **Video Title:** `IRS PM 2026 10 25 GRP26 TeamChamp MarketSense Promotion`
+* **YouTube Video Link:** [https://youtu.be/Oq-QEI3UvJw](https://youtu.be/Oq-QEI3UvJw)
 * **Coverage:** Business Pain & Retail Investor Crisis; MarketSense Solution & Novelty; Live Interactive Use Case Demo (24 Assets, Rate Hike Shock, Circuit Breakers, Causal XAI Graph, Counterfactual Sandbox); Business Model & 3-Tier Pricing Strategy.
 
 ### [ 2 ] High-Level System Design & Course Mapping (5 Minutes)
 
-[![MarketSense System Design](https://img.shields.io/badge/Video_2-System_Design_%26_Technical_Architecture-2EA44F?style=for-the-badge&logo=youtube&logoColor=white)](# "MarketSense System Design Video")
+[![IRS PM 2026 10 25 GRP26 TeamChamp MarketSense System](https://img.shields.io/badge/Video_2-System_Design_%26_Technical_Architecture-2EA44F?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/l_06wWVMz8U "IRS PM 2026 10 25 GRP26 TeamChamp MarketSense System")
 
-* *YouTube Video Link:* `https://youtu.be/<video_id_2>`
+* **Video Title:** `IRS PM 2026 10 25 GRP26 TeamChamp MarketSense System`
+* **YouTube Video Link:** [https://youtu.be/l_06wWVMz8U](https://youtu.be/l_06wWVMz8U)
 * **Coverage:** Tripartite Deliberative/Reactive Neuro-Symbolic Architecture; Deterministic Pricing & CSP Constraints (MR); NetworkX Causal Graph & Dijkstra Polarity Propagation (MR & CGS); Grounded RAG v2 & Dual Runtime Socratic Mentor (RS & CGS); Automated Verification & Benchmarks.
 
 *Note: In strict compliance with assessment rules, all presentation speech is delivered by human voice (no AI-synthesized voices).*
@@ -152,12 +150,15 @@ ollama pull llama3.1:8b
 #### Step 4: Run Application
 
 **Option A: Instant Live Web Application (Zero Setup)**
+
 * Access directly on Streamlit Community Cloud: [https://marketsense-ai-nus.streamlit.app/](https://marketsense-ai-nus.streamlit.app/)
 
 **Option B: Run Locally**
+
 ```bash
 streamlit run app.py
 ```
+
 Open your browser to `http://localhost:8501`.
 
 #### Step 5: Run Automated Test Suite
@@ -212,10 +213,6 @@ pytest
 
 * `reports_by_gemini/Phase3.md`: Phase 3 Knowledge graph, Pyvis visualizer, and What-If sandbox verification.
 * `reports_by_opus/Phase1.md`: Phase 1 MVP simulation engine verification.
-
----
-
-### <<<<<<<<<<<<<<<<<<<< End of Template >>>>>>>>>>>>>>>>>>>>
 
 ---
 

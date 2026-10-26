@@ -270,20 +270,23 @@ def build_report():
 
     doc.add_paragraph().paragraph_format.space_after = Pt(24)
 
-    # Metadata Table
-    meta_table = doc.add_table(rows=6, cols=2)
-    meta_table.alignment = WD_TABLE_ALIGNMENT.CENTER
-    meta_widths = [Inches(2.2), Inches(4.3)]
-    set_table_borders(meta_table, "CCCCCC", "4")
-
     metadata = [
         ("Group / Team Name:", "TeamChamp"),
         ("Group Number:", "Group 26"),
         ("Student Full Name:", "Gupta Swaraj"),
         ("Student Matriculation ID:", "A0357457N"),
         ("GitHub Project Repository:", "https://github.com/s3arajgupta/MarketSense/tree/main"),
+        ("Live Streamlit Web App:", "https://marketsense-ai-nus.streamlit.app/"),
+        ("Video 1 (Promotional Pitch):", "https://youtu.be/Oq-QEI3UvJw"),
+        ("Video 2 (Technical System Design):", "https://youtu.be/l_06wWVMz8U"),
         ("Submission Date / Term:", "26 October 2026 | Academic Year 2026/2027"),
     ]
+
+    # Metadata Table
+    meta_table = doc.add_table(rows=len(metadata), cols=2)
+    meta_table.alignment = WD_TABLE_ALIGNMENT.CENTER
+    meta_widths = [Inches(2.4), Inches(4.1)]
+    set_table_borders(meta_table, "CCCCCC", "4")
 
     for row_idx, (k, v) in enumerate(metadata):
         row = meta_table.rows[row_idx]
