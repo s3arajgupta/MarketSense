@@ -2,20 +2,16 @@
 * **Group Number:** 26
 * **Team Member:** Gupta Swaraj (Student ID: A0357457N)
 * **GitHub Project Repository:** [https://github.com/s3arajgupta/MarketSense/tree/main](https://github.com/s3arajgupta/MarketSense/tree/main)
-* **Live Web Application (Streamlit Cloud):** [https://marketsense-ai-nus.streamlit.app/](https://marketsense-ai-nus.streamlit.app/)
 * **[ Naming Convention ]** CourseCode-StartDate-BatchCode-TeamName-ProjectName.zip
 * **[ Project Submission Zip Naming ]** `IRS-PM-2026-10-25-GRP26-TeamChamp-MarketSense.zip`
-
-[Online editor for this README.md markdown file](https://pandao.github.io/editor.md/en.html "pandao")
+> 🚀 **Interact with Live Application within seconds:** [https://marketsense-ai-nus.streamlit.app/](https://marketsense-ai-nus.streamlit.app/)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://marketsense-ai-nus.streamlit.app/)  
 
 ---
 
 ## SECTION 1 : PROJECT TITLE
 
 ## MarketSense AI: A Neuro-Symbolic Intelligent Reasoning Simulator for Macroeconomic Shocks & Portfolio Adaptability
-
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://marketsense-ai-nus.streamlit.app/)  
-> 🚀 **Interact with Live Application within seconds:** [https://marketsense-ai-nus.streamlit.app/](https://marketsense-ai-nus.streamlit.app/)
 
 ### [ 1 ] Interactive Portfolio Flight Simulator & Institutional Benchmarks
 
