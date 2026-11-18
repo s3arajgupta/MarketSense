@@ -1,45 +1,17 @@
-# MarketSense AI: A Neuro-Symbolic Intelligent Reasoning Simulator for Macroeconomic Shocks & Portfolio Adaptability
-
-**Macroeconomic shock reasoning and portfolio adaptability.** MarketSense AI is an institutional-grade portfolio flight simulator powered by a hybrid neuro-symbolic intelligent reasoning architecture, navigating retail investors through 22 historical macroeconomic crisis scenarios across a 30-year horizon with grounded causal explanations and realistic financial friction mechanics.
-
-NUS-ISS Graduate Certificate in Intelligent Reasoning Systems (IRS), Practice Module, Group 26 (TeamChamp).
-
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://marketsense-ai-nus.streamlit.app/)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)](requirements.txt)
-[![Pytest passing](https://img.shields.io/badge/pytest-25%20passed-2EA44F?style=flat-square&logo=pytest&logoColor=white)](pytest.ini)
-[![Dual Runtime](https://img.shields.io/badge/LLM-Gemini%202.5%20%7C%20Ollama-blueviolet?style=flat-square)](app.py)
-
-**Video Demos:**
-* 🎥 **Video 1 (Promotional Pitch & Use Case Demo):** [YouTube: MarketSense Promotion](https://youtu.be/Oq-QEI3UvJw) — Executive pain points, flight simulator walkthrough, circuit breakers & causal XAI graph (5 min).
-* 🎥 **Video 2 (Technical Architecture & System Design):** [YouTube: MarketSense System](https://youtu.be/l_06wWVMz8U) — Neuro-symbolic architecture, deterministic core, NetworkX Dijkstra causal graph & RAG v2 course mapping (5 min).
-
-> 🚀 **Live Interactive Web Application:** [https://marketsense-ai-nus.streamlit.app/](https://marketsense-ai-nus.streamlit.app/)
-
-<details>
-<summary><b>📋 Academic Project Submission & Team Metadata (NUS-ISS IRS-PM)</b></summary>
-
-| Field | Details |
-| :--- | :--- |
-| **Course** | NUS-ISS Graduate Certificate in Intelligent Reasoning Systems (IRS) — Practice Module |
-| **Group Name & Number** | TeamChamp (Group 26) |
-| **Team Member** | Gupta Swaraj (Student ID: `A0357457N`, Email: `A0357457N@u.nus.edu`) |
-| **GitHub Repository** | [https://github.com/s3arajgupta/MarketSense/tree/main](https://github.com/s3arajgupta/MarketSense/tree/main) |
-| **Live Web Application** | [https://marketsense-ai-nus.streamlit.app/](https://marketsense-ai-nus.streamlit.app/) |
-| **Naming Convention** | `CourseCode-StartDate-BatchCode-TeamName-ProjectName.zip` |
-| **Project Submission Zip Naming** | `IRS-PM-2026-10-25-GRP26-TeamChamp-MarketSense.zip` |
-| **Video 1 (Promotional Demo)** | [https://youtu.be/Oq-QEI3UvJw](https://youtu.be/Oq-QEI3UvJw) |
-| **Video 2 (Technical Design)** | [https://youtu.be/l_06wWVMz8U](https://youtu.be/l_06wWVMz8U) |
-
-</details>
+* **Group Name:** TeamChamp
+* **Group Number:** 26
+* **Team Member:** Gupta Swaraj (Student ID: A0357457N)
+* **GitHub Project Repository:** [https://github.com/s3arajgupta/MarketSense/tree/main](https://github.com/s3arajgupta/MarketSense/tree/main)
+* **[ Naming Convention ]** CourseCode-StartDate-BatchCode-TeamName-ProjectName.zip
+* **[ Project Submission Zip Naming ]** `IRS-PM-2026-10-25-GRP26-TeamChamp-MarketSense.zip`
+> 🚀 **Interact with Live Application within seconds:** [https://marketsense-ai-nus.streamlit.app/](https://marketsense-ai-nus.streamlit.app/)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://marketsense-ai-nus.streamlit.app/)  
 
 ---
 
 ## SECTION 1 : PROJECT TITLE & SYSTEM SHOWCASE
 
 ### MarketSense AI: A Neuro-Symbolic Intelligent Reasoning Simulator for Macroeconomic Shocks & Portfolio Adaptability
-
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://marketsense-ai-nus.streamlit.app/)  
-> 🚀 **Live Interactive Web Application:** [https://marketsense-ai-nus.streamlit.app/](https://marketsense-ai-nus.streamlit.app/)
 
 ### [ 1 ] Interactive Portfolio Flight Simulator & Institutional Benchmarks
 
@@ -86,7 +58,7 @@ MarketSense AI bridges theoretical macroeconomic reasoning and practical portfol
 
 | Official Full Name | Student ID (MTech Applicable) | Group & Team | Work Items (Who Did What) | Email (Optional) |
 | :------------ | :---------------: | :-----: | :----- | :----- |
-| **Gupta Swaraj** | **A0357457N** | **TeamChamp (Group 26)** | • End-to-end neuro-symbolic architecture design and implementation.<br>• Deterministic pricing engine, capital preservation bounds, and portfolio accounting (`engine/`).<br>• Real-world financial friction engine (STCG vs LTCG tax drag, brokerage costs, circuit breaker rules).<br>• NetworkX macroeconomic causal knowledge graph (36 nodes, 48 edges) and Dijkstra shortest transmission path extraction.<br>• Interactive Pyvis physics-based graph visualizer and Streamlit XAI integration.<br>• RAG v2 knowledge base ingestion in ChromaDB (52 chunks across 6 masters & 22 crisis twins).<br>• Dual-runtime AI Mentor orchestrator (Google Gemini 2.5 Flash + offline air-gapped Ollama).<br>• Counterfactual "What-If" sandbox and passive institutional benchmark tracking (All-Weather, 60/40, Equity, CPI Hurdle).<br>• Automated verification test suite (25/25 unit tests passing in pytest).<br>• Comprehensive academic documentation and modular course mappings. | <A0357457N@u.nus.edu> |
+| **Gupta Swaraj** | **A0357457N** | **TeamChamp (Group 26)** | • End-to-end neuro-symbolic architecture design and implementation.<br>• Deterministic pricing engine, capital preservation bounds, and portfolio accounting (`engine/`).<br>• Real-world financial friction engine (STCG vs LTCG tax drag, brokerage costs, circuit breaker rules).<br>• NetworkX macroeconomic causal knowledge graph (36 nodes, 48 edges) and Dijkstra shortest transmission path extraction.<br>• Interactive Pyvis physics-based graph visualizer and Streamlit XAI integration.<br>• RAG v2 knowledge base ingestion in ChromaDB (52 chunks across 6 masters & 22 crisis twins).<br>• Dual-runtime AI Mentor orchestrator (Google Gemini 2.5 Flash + offline air-gapped Ollama).<br>• Counterfactual "What-If" sandbox and passive institutional benchmark tracking (All-Weather, 60/40, Equity, CPI Hurdle).<br>• Automated verification test suite (25/25 unit tests passing in pytest).<br>• Comprehensive academic documentation and modular course mappings. | <swaraj.gupta@u.nus.edu> |
 
 ---
 
@@ -285,4 +257,4 @@ pytest
 
 ---
 
-**This [Machine Reasoning (MR)](https://www.iss.nus.edu.sg/executive-education/course/detail/machine-reasoning "Machine Reasoning") course is part of the Analytics and Intelligent Systems and Graduate Certificate in [Intelligent Reasoning Systems (IRS)](https://www.iss.nus.edu.sg/stackable-certificate-programmes/intelligent-systems "Intelligent Reasoning Systems") series offered by [NUS-ISS](https://www.iss.nus.edu.sg "Institute of Systems Science, National University of Singapore").**
+**These courses are part of the Graduate Certificate in [Intelligent Reasoning Systems (IRS)](https://www.iss.nus.edu.sg/stackable-certificate-programmes/intelligent-systems "Intelligent Reasoning Systems") series offered by [NUS-ISS](https://www.iss.nus.edu.sg "Institute of Systems Science, National University of Singapore").**
