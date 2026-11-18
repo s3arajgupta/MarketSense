@@ -1,7 +1,6 @@
 * **Group Name:** TeamChamp
 * **Group Number:** 26
 * **Team Member:** Gupta Swaraj (Student ID: A0357457N)
-* **GitHub Project Repository:** [https://github.com/s3arajgupta/MarketSense/tree/main](https://github.com/s3arajgupta/MarketSense/tree/main)
 > 🚀 **Interact with Live Application within seconds:** [https://marketsense-ai-nus.streamlit.app/](https://marketsense-ai-nus.streamlit.app/)
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://marketsense-ai-nus.streamlit.app/)  
 
