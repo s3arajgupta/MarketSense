@@ -9,9 +9,9 @@
 
 ---
 
-## SECTION 1 : PROJECT TITLE
+## SECTION 1 : PROJECT TITLE & SYSTEM SHOWCASE
 
-## MarketSense AI: A Neuro-Symbolic Intelligent Reasoning Simulator for Macroeconomic Shocks & Portfolio Adaptability
+### MarketSense AI: A Neuro-Symbolic Intelligent Reasoning Simulator for Macroeconomic Shocks & Portfolio Adaptability
 
 ### [ 1 ] Interactive Portfolio Flight Simulator & Institutional Benchmarks
 
@@ -64,23 +64,41 @@ MarketSense AI bridges theoretical macroeconomic reasoning and practical portfol
 
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 
+Both demonstration videos are hosted on YouTube and delivered with human voiceover in strict compliance with NUS-ISS assessment standards.
+
+| Video 1: Promotional Pitch & Live Flight Simulator Demo | Video 2: System Design & Technical Architecture |
+| :---: | :---: |
+| [![Video 1: Promotional Pitch & Demo](https://img.youtube.com/vi/Oq-QEI3UvJw/hqdefault.jpg)](https://youtu.be/Oq-QEI3UvJw "Click to watch Promotional Pitch & Demo on YouTube") | [![Video 2: System Design & Architecture](https://img.youtube.com/vi/l_06wWVMz8U/hqdefault.jpg)](https://youtu.be/l_06wWVMz8U "Click to watch System Design & Architecture on YouTube") |
+| [▶ **Watch Video 1 on YouTube (5:00)**](https://youtu.be/Oq-QEI3UvJw) | [▶ **Watch Video 2 on YouTube (5:00)**](https://youtu.be/l_06wWVMz8U) |
+| **Duration:** 5 Minutes · **Focus:** Executive & Live Demo | **Duration:** 5 Minutes · **Focus:** Technical Architecture |
+
+---
+
 ### [ 1 ] Promotional Pitch & Use Case Demo (5 Minutes)
 
-[![IRS PM 2026 10 25 GRP26 TeamChamp MarketSense Promotion](https://img.shields.io/badge/Video_1-Promotional_Pitch_%26_Use_Case_Demo-4285F4?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/Oq-QEI3UvJw "IRS PM 2026 10 25 GRP26 TeamChamp MarketSense Promotion")
-
-* **Video Title:** `IRS PM 2026 10 25 GRP26 TeamChamp MarketSense Promotion`
 * **YouTube Video Link:** [https://youtu.be/Oq-QEI3UvJw](https://youtu.be/Oq-QEI3UvJw)
-* **Coverage:** Business Pain & Retail Investor Crisis; MarketSense Solution & Novelty; Live Interactive Use Case Demo (24 Assets, Rate Hike Shock, Circuit Breakers, Causal XAI Graph, Counterfactual Sandbox); Business Model & 3-Tier Pricing Strategy.
+* **Official Video Title:** `IRS PM 2026 10 25 GRP26 TeamChamp MarketSense Promotion`
+* **Direct Watch Link:** [YouTube: MarketSense Promotional Demo](https://youtu.be/Oq-QEI3UvJw)
+* **Coverage:**
+  - **Business Pain & Retail Investor Crisis:** 80%+ capital drawdowns, fee churning, behavioral panics during macroeconomic turbulence.
+  - **MarketSense Solution & Novelty:** Institutional-grade flight simulator with deterministic guardrails.
+  - **Live Interactive Demo:** Virtual S$100,000 multi-asset portfolio, 24 granular instruments, 1980 Volcker / 2022 Fed rate hike shock, automated circuit breakers freezing trades, real-world friction drag (STCG @ 25% vs LTCG @ 10%), interactive Pyvis Causal Knowledge Graph, and Counterfactual Sandbox.
+  - **Business Model & Monetization:** 3-tier commercial pricing model (Free Simulator, Investor Pro @ S$19/mo, Institutional/Academic @ S$499/mo).
 
 ### [ 2 ] High-Level System Design & Course Mapping (5 Minutes)
 
-[![IRS PM 2026 10 25 GRP26 TeamChamp MarketSense System](https://img.shields.io/badge/Video_2-System_Design_%26_Technical_Architecture-2EA44F?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/l_06wWVMz8U "IRS PM 2026 10 25 GRP26 TeamChamp MarketSense System")
-
-* **Video Title:** `IRS PM 2026 10 25 GRP26 TeamChamp MarketSense System`
 * **YouTube Video Link:** [https://youtu.be/l_06wWVMz8U](https://youtu.be/l_06wWVMz8U)
-* **Coverage:** Tripartite Deliberative/Reactive Neuro-Symbolic Architecture; Deterministic Pricing & CSP Constraints (MR); NetworkX Causal Graph & Dijkstra Polarity Propagation (MR & CGS); Grounded RAG v2 & Dual Runtime Socratic Mentor (RS & CGS); Automated Verification & Benchmarks.
+* **Official Video Title:** `IRS PM 2026 10 25 GRP26 TeamChamp MarketSense System`
+* **Direct Watch Link:** [YouTube: MarketSense System Design](https://youtu.be/l_06wWVMz8U)
+* **Coverage:**
+  - **Tripartite Deliberative/Reactive Neuro-Symbolic Architecture:** Seamless division between symbolic reasoning and neural generation.
+  - **Core Design Invariant:** *Mathematics handles numbers; AI handles explanation. The LLM never computes asset prices.*
+  - **Deterministic Pricing Core & Constraint Satisfaction (Machine Reasoning):** Closed-form formulas, debt ratio penalty thresholds ($> 0.40$), and cash buffers.
+  - **NetworkX Causal Knowledge Graph (MR & CGS):** 36 nodes, 48 directed weighted edges, Dijkstra shortest transmission path extraction, and sign polarity tracking ($+ \times + \times + \times - = -$).
+  - **Persistent ChromaDB Cognitive Grounded RAG v2 & Dual Runtime Socratic Mentor (RS & CGS):** 52 chunks across 6 masters & 22 crisis twin precedents, dual runtime (Cloud Gemini 2.5 Flash / offline Ollama) with anti-hallucination guardrails.
+  - **Verification & Institutional Benchmarks:** 25/25 automated unit tests passing in pytest, tracking against All-Weather, Cash, Gold, and Tech aggressive strategies.
 
-*Note: In strict compliance with assessment rules, all presentation speech is delivered by human voice (no AI-synthesized voices).*
+> *Note: In strict compliance with assessment rules, all presentation speech is delivered entirely by human voice (no AI-synthesized voices).*
 
 ---
 
@@ -169,17 +187,32 @@ pytest
 
 `Refer to project documentation and formal appendices located in: documentations/`
 
+### Project Deliverables & Artifacts Table
+
+| Resource | Contents | Link |
+| :--- | :--- | :--- |
+| **Video Demo 1** | Promotional Pitch & Live Flight Simulator Walkthrough (5 mins) | [YouTube: MarketSense Promotion](https://youtu.be/Oq-QEI3UvJw) |
+| **Video Demo 2** | High-Level System Design & Academic Course Mapping (5 mins) | [YouTube: MarketSense System](https://youtu.be/l_06wWVMz8U) |
+| **Live Web App** | Deployed interactive Streamlit Cloud application | [MarketSense Flight Simulator](https://marketsense-ai-nus.streamlit.app/) |
+| **Final Group Report** | Complete institutional Word project report (.docx) | [`documentations/MarketSense_Final_Group_Project_Report.docx`](documentations/MarketSense_Final_Group_Project_Report.docx) |
+| **Individual Report** | Individual report and contribution audit (.pdf) | [`documentations/Individual Project Report IRS-PM-2026-10-25-GRP26-TeamChamp-MarketSense.pdf`](documentations/Individual%20Project%20Report%20IRS-PM-2026-10-25-GRP26-TeamChamp-MarketSense.pdf) |
+| **System Architecture** | High-resolution end-to-end neuro-symbolic architecture diagram | [`documentations/architecture.jpg`](documentations/architecture.jpg) |
+| **Appendix A** | Project Proposal Baseline & Problem Statement | [`documentations/appendix_project_proposal.md`](documentations/appendix_project_proposal.md) |
+| **Appendix B** | Course Mapping against MR, RS, and CGS Modular Courses | [`documentations/appendix_course_mapping.md`](documentations/appendix_course_mapping.md) |
+| **Appendix C** | Installation and User Guide (Prerequisites, Setup, Execution) | [`documentations/appendix_installation_user_guide.md`](documentations/appendix_installation_user_guide.md) |
+| **Salient Features** | Technical design notes, friction models & causal XAI graph | [`documentations/salient_features.md`](documentations/salient_features.md) |
+| **Course Compliance** | Technique group and modular assessment matrix | [`documentations/compliance.md`](documentations/compliance.md) |
+
 **Project Report Sections & Appendices:**
 
 1. **Executive Summary & Abstract:** [`documentations/appendix_project_proposal.md`](documentations/appendix_project_proposal.md)
 2. **Business Problem & Retail Investor Crisis:** [`documentations/salient_features.md`](documentations/salient_features.md)
 3. **System Architecture & Neuro-Symbolic Design:** [`documentations/README.md`](documentations/README.md), [`documentations/architecture.jpg`](documentations/architecture.jpg)
 4. **Causal Knowledge Graph & Path Extraction (XAI):** [`documentations/salient_features.md#11`](documentations/salient_features.md)
-5. **System Verification & Pytest Results:** [`reports_by_gemini/Phase3.md`](reports_by_gemini/Phase3.md)
-6. **Technique Group Compliance Assessment:** [`documentations/compliance.md`](documentations/compliance.md)
-7. **Appendix A: Project Proposal Baseline:** [`documentations/appendix_project_proposal.md`](documentations/appendix_project_proposal.md)
-8. **Appendix B: Mapped System Functionalities against Modular Courses (MR, RS, CGS):** [`documentations/appendix_course_mapping.md`](documentations/appendix_course_mapping.md)
-9. **Appendix C: Installation and User Guide:** [`documentations/appendix_installation_user_guide.md`](documentations/appendix_installation_user_guide.md)
+5. **Technique Group Compliance Assessment:** [`documentations/compliance.md`](documentations/compliance.md)
+6. **Appendix A: Project Proposal Baseline:** [`documentations/appendix_project_proposal.md`](documentations/appendix_project_proposal.md)
+7. **Appendix B: Mapped System Functionalities against Modular Courses (MR, RS, CGS):** [`documentations/appendix_course_mapping.md`](documentations/appendix_course_mapping.md)
+8. **Appendix C: Installation and User Guide:** [`documentations/appendix_installation_user_guide.md`](documentations/appendix_installation_user_guide.md)
 
 ---
 
@@ -219,6 +252,8 @@ pytest
 * **GitHub Project Repository:** [https://github.com/s3arajgupta/MarketSense/tree/main](https://github.com/s3arajgupta/MarketSense/tree/main)
 * **Live Web Application (Streamlit Cloud):** [https://marketsense-ai-nus.streamlit.app/](https://marketsense-ai-nus.streamlit.app/)
 * **Project Submission Archive:** `IRS-PM-2026-10-25-GRP26-TeamChamp-MarketSense.zip`
+* **Video 1 (Promotional Pitch & Demo Walkthrough):** [https://youtu.be/Oq-QEI3UvJw](https://youtu.be/Oq-QEI3UvJw)
+* **Video 2 (Technical Architecture & Course Mapping):** [https://youtu.be/l_06wWVMz8U](https://youtu.be/l_06wWVMz8U)
 
 ---
 
